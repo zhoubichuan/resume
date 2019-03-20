@@ -44,7 +44,6 @@ export default {
 .photo {
   width: 100px;
   height: 100px;
-  background: url("http://www.90she.win/personnet/img/ico.jpg") no-repeat 0 0;
   border-radius: 50%;
   background-size: 100%;
   margin: 10px auto;
