@@ -17,21 +17,48 @@
         <el-col :span="6">
           <div class="grid-content bg-purple">
             <el-button type="success" icon="el-icon-check" circle></el-button>
+              <div class="col-md-3 col-sm-6 service"> <i class="fa fa-laptop"></i>
+                <h4><strong>个人信息</strong></h4>
+                <p>
+            性名: 周必川 &nbsp;性别：男<br>
+            年龄: 27岁 籍贯：湖北
+            </p>
+              </div>
           </div>
         </el-col>
         <el-col :span="6">
           <div class="grid-content bg-purple">
             <el-button type="info" icon="el-icon-message" circle></el-button>
+            <div class="col-md-3 col-sm-6 service"> <i class="fa fa-code"></i>
+                <h4><strong>专业学历</strong></h4>
+                <p>
+            专业：机械设计制造及其自动化<br>
+            学历：大学本科<br>
+            
+            </p>
+              </div>
           </div>
         </el-col>
         <el-col :span="6">
           <div class="grid-content bg-purple">
             <el-button type="warning" icon="el-icon-star-off" circle></el-button>
+            <div class="col-md-3 col-sm-6 service"> <i class="fa fa-rocket"></i>
+                <h4><strong>毕业学校</strong></h4>
+                <p>
+              毕业学校：湖北工业大学工程技术学院<br>
+              学习技能：编程
+            </p>
+              </div>
           </div>
         </el-col>
         <el-col :span="6">
           <div class="grid-content bg-purple">
             <el-button type="danger" icon="el-icon-delete" circle></el-button>
+            <div class="col-md-3 col-sm-6 service"> <i class="fa fa-bullseye"></i>
+                <h4><strong>联系方式</strong></h4>
+                <p>weixie:zbc159x<br>
+              邮箱：zhoubichuan@iclud.com</p>
+              </div>
           </div>
         </el-col>
       </el-row>
@@ -43,12 +70,7 @@ export default {
   name: "AboutMe",
   data() {
     return {
-      content: [
-        "三年互联网经验,两年半全职前端开发经验",
-        "熟悉MV*开发,深谙自动化,模块化开发之道",
-        "高效的自学能力,具备独立分析解决问题能力",
-        "强烈的自我驱动力,代码强迫症患者"
-      ]
+      content: []
     };
   },
   methods: {}

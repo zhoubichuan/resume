@@ -22,7 +22,7 @@ export default {
     return {
       content: [
         "我叫周必川",
-        "一名全栈工程师",
+        "一名前端工程师",
         "zhoubichuan@icloud.com",
         "深圳"
       ]
@@ -34,7 +34,8 @@ export default {
 
 <style scoped>
 .show {
-  background-color: #4d5e8f;
+  width: 100%;
+  background: url(./img/img.jpg) no-repeat bottom center;
   height: 100vh;
 }
 .center {

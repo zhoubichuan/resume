@@ -2,6 +2,14 @@
   <el-container>
     <el-header>
       <div class="title">{{title}}</div>
+      <ul class="tab">
+        <li>基本资料</li>
+        <li>项目经验</li>
+        <li>专业技能</li>
+        <li>工作经历</li>
+        <li>自我评价</li>
+        <li>联系方式</li>
+      </ul>
     </el-header>
     <el-main>
       <IntroduceComponents/>
@@ -49,5 +57,11 @@ export default {
 .center {
   margin-top: 20px;
   text-align: center;
+}
+.tab {
+  float: right;
+}
+.tab li {
+  display: inline-block;
 }
 </style>
