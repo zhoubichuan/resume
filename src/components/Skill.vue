@@ -15,81 +15,81 @@
 
 <script>
 export default {
-  name: "Skill",
-  data() {
+  name: 'Skill',
+  data () {
     return {
       skill: [
-        { ele: $(".myChart")[0], e: 80, name: "javascript" },
-        { ele: $(".myChart")[1], e: 70, name: "css" },
-        { ele: $(".myChart")[2], e: 90, name: "html" }
+        { ele: $('.myChart')[0], e: 80, name: 'javascript' },
+        { ele: $('.myChart')[1], e: 70, name: 'css' },
+        { ele: $('.myChart')[2], e: 90, name: 'html' }
       ]
-    };
+    }
   },
-  mounted() {
-    let $ = document.querySelectorAll.bind(document);
+  mounted () {
+    let $ = document.querySelectorAll.bind(document)
     let arr = [
-      { ele: $(".myChart")[0], e: 80, name: "javascript" },
-      { ele: $(".myChart")[1], e: 70, name: "css" },
-      { ele: $(".myChart")[2], e: 90, name: "html" }
-    ];
-    this.drawLine(arr);
+      { ele: $('.myChart')[0], e: 80, name: 'javascript' },
+      { ele: $('.myChart')[1], e: 70, name: 'css' },
+      { ele: $('.myChart')[2], e: 90, name: 'html' }
+    ]
+    this.drawLine(arr)
   },
   methods: {
-    drawLine(arr) {
+    drawLine (arr) {
       for (let i = 0; i < arr.length; i++) {
-        let myChart = this.$echarts.init(arr[i].ele);
+        let myChart = this.$echarts.init(arr[i].ele)
         let option = {
           title: [
             {
               show: true,
-              text: arr[i].e + "%",
-              x: "center",
-              y: "center",
+              text: arr[i].e + '%',
+              x: 'center',
+              y: 'center',
               textStyle: {
-                fontSize: "15",
-                color: "red",
-                fontWeight: "normal"
+                fontSize: '15',
+                color: 'red',
+                fontWeight: 'normal'
               }
             },
             {
               show: true,
               text: arr[i].name,
-              x: "center",
-              y: "bottom",
+              x: 'center',
+              y: 'bottom',
               textStyle: {
-                fontSize: "15",
-                color: "blue",
-                fontWeight: "normal"
+                fontSize: '15',
+                color: 'blue',
+                fontWeight: 'normal'
               }
             }
           ],
           tooltip: {
-            trigger: "item",
-            formatter: "{d}%",
+            trigger: 'item',
+            formatter: '{d}%',
             show: false
           },
           legend: {
-            orient: "vertical",
-            x: "left",
+            orient: 'vertical',
+            x: 'left',
             show: false
           },
           series: [
             {
-              name: "访问来源",
-              type: "pie",
-              radius: ["50%", "70%"],
+              name: '访问来源',
+              type: 'pie',
+              radius: ['50%', '70%'],
               avoidLabelOverlap: true,
               hoverAnimation: false,
               label: {
                 normal: {
                   show: false,
-                  position: "center"
+                  position: 'center'
                 },
                 emphasis: {
                   show: false,
                   textStyle: {
-                    fontSize: "30",
-                    fontWeight: "bold"
+                    fontSize: '30',
+                    fontWeight: 'bold'
                   }
                 }
               },
@@ -99,17 +99,17 @@ export default {
                 }
               },
               data: [
-                { value: arr[i].e, name: "" },
-                { value: 100 - arr[i].e, name: "" }
+                { value: arr[i].e, name: '' },
+                { value: 100 - arr[i].e, name: '' }
               ]
             }
           ]
-        };
-        myChart.setOption(option);
+        }
+        myChart.setOption(option)
       }
     }
   }
-};
+}
 </script>
 
 <style scoped>

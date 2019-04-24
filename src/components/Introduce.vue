@@ -2,7 +2,7 @@
   <div class="show" id="show">
     <el-row :gutter="20">
       <el-col :span="12" :offset="6">
-        <div class="grid-content bg-purple">  
+        <div class="grid-content bg-purple">
           <i class="photo"></i>
         </div>
       </el-col>
@@ -17,25 +17,24 @@
 
 <script>
 export default {
-  name: "Introduce",
-  data() {
+  name: 'Introduce',
+  data () {
     return {
       content: [
-        "我叫周必川",
-        "一名前端工程师",
-        "zhoubichuan@icloud.com",
-        "深圳"
+        '我叫周必川',
+        '一名前端工程师',
+        'zhoubichuan@icloud.com',
+        '深圳'
       ]
-    };
+    }
   },
   methods: {}
-};
+}
 </script>
 
-<style scoped>
+<style lang='scss' scoped="" type="type/css">
 .show {
   width: 100%;
-  background: url(./img/img.jpg) no-repeat bottom center;
   height: 100vh;
 }
 .center {

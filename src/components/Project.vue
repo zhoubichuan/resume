@@ -19,145 +19,145 @@
 
 <script>
 export default {
-  name: "Project",
-  data() {
+  name: 'Project',
+  data () {
     return {
       currentDate: new Date(),
       project: [
         {
-          name: "原生javaScript",
+          name: '原生javaScript',
           items: [
             {
-              title: "企业网站",
-              skills: "javaScript",
-              link: "wwww.123.com"
+              title: '企业网站',
+              skills: 'javaScript',
+              link: 'wwww.123.com'
             }
           ]
         },
         {
-          name: "jQuery",
+          name: 'jQuery',
           items: [
             {
-              title: "后台管理系统",
-              skills: "Egg.js+AntDesignPro+MySQL",
-              link: "wwww.123.com"
+              title: '后台管理系统',
+              skills: 'Egg.js+AntDesignPro+MySQL',
+              link: 'wwww.123.com'
             }
           ]
         },
         {
-          name: "vue.js",
+          name: 'vue.js',
           items: [
             {
-              title: "vue微信",
-              skills: "Egg.js+AntDesignPro+MySQL",
-              link: "https://zhoubichuan.github.io/vue-weixin/#/"
+              title: 'vue微信',
+              skills: 'Egg.js+AntDesignPro+MySQL',
+              link: 'https://zhoubichuan.github.io/vue-weixin/#/'
             },
             {
-              title: "vue饿了么app",
-              skills: "Egg.js+AntDesignPro+MySQL",
-              link: "wwww.123.com"
+              title: 'vue饿了么app',
+              skills: 'Egg.js+AntDesignPro+MySQL',
+              link: 'wwww.123.com'
             }
           ]
         },
         {
-          name: "react.js",
+          name: 'react.js',
           items: [
             {
-              title: "react微信",
-              skills: "Egg.js+AntDesignPro+MySQL",
-              link: "https://zhoubichuan.github.io/react-weixin/#/"
+              title: 'react微信',
+              skills: 'Egg.js+AntDesignPro+MySQL',
+              link: 'https://zhoubichuan.github.io/react-weixin/#/'
             }
           ]
         },
         {
-          name: "微信公众号",
+          name: '微信公众号',
           items: [
             {
-              title: "CMS系统",
-              skills: "Egg.js+AntDesignPro+MySQL",
-              link: "wwww.123.com"
+              title: 'CMS系统',
+              skills: 'Egg.js+AntDesignPro+MySQL',
+              link: 'wwww.123.com'
             }
           ]
         },
         {
-          name: "微信小程序",
+          name: '微信小程序',
           items: [
             {
-              title: "CMS系统",
-              skills: "Egg.js+AntDesignPro+MySQL",
-              link: "wwww.123.com"
+              title: 'CMS系统',
+              skills: 'Egg.js+AntDesignPro+MySQL',
+              link: 'wwww.123.com'
             }
           ]
         },
         {
-          name: "node.js",
+          name: 'node.js',
           items: [
             {
-              title: "CMS系统",
-              skills: "Egg.js+AntDesignPro+MySQL",
-              link: "wwww.123.com"
+              title: 'CMS系统',
+              skills: 'Egg.js+AntDesignPro+MySQL',
+              link: 'wwww.123.com'
             }
           ]
         },
         {
-          name: "express",
+          name: 'express',
           items: [
             {
-              title: "CMS系统",
-              skills: "Egg.js+AntDesignPro+MySQL",
-              link: "wwww.123.com"
+              title: 'CMS系统',
+              skills: 'Egg.js+AntDesignPro+MySQL',
+              link: 'wwww.123.com'
             }
           ]
         },
         {
-          name: "koa",
+          name: 'koa',
           items: [
             {
-              title: "CMS系统",
-              skills: "Egg.js+AntDesignPro+MySQL",
-              link: "wwww.123.com"
+              title: 'CMS系统',
+              skills: 'Egg.js+AntDesignPro+MySQL',
+              link: 'wwww.123.com'
             }
           ]
         },
         {
-          name: "全栈",
+          name: '全栈',
           items: [
             {
-              title: "CMS系统",
-              skills: "Egg.js+AntDesignPro+MySQL",
-              link: "wwww.123.com"
+              title: 'CMS系统',
+              skills: 'Egg.js+AntDesignPro+MySQL',
+              link: 'wwww.123.com'
             },
             {
-              title: "多人聊天室",
-              skills: "React+Mongodb+websocket",
-              link: "wwww.123.com"
+              title: '多人聊天室',
+              skills: 'React+Mongodb+websocket',
+              link: 'wwww.123.com'
             },
             {
-              title: "新闻爬虫",
-              skills: "cheerio+mysql+nodemailer",
-              link: "wwww.123.com"
+              title: '新闻爬虫',
+              skills: 'cheerio+mysql+nodemailer',
+              link: 'wwww.123.com'
             },
             {
-              title: "珠峰课堂",
-              skills: "React+Redux",
-              link: "wwww.123.com"
+              title: '珠峰课堂',
+              skills: 'React+Redux',
+              link: 'wwww.123.com'
             },
             {
-              title: "flappy bird",
-              skills: "canvas",
-              link: "wwww.123.com"
+              title: 'flappy bird',
+              skills: 'canvas',
+              link: 'wwww.123.com'
             },
             {
-              title: "微信跳一跳",
-              skills: "thress.js",
-              link: "wwww.123.com"
+              title: '微信跳一跳',
+              skills: 'thress.js',
+              link: 'wwww.123.com'
             }
           ]
         }
       ]
-    };
+    }
   }
-};
+}
 </script>
 
 <style scoped>

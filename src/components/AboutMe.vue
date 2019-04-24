@@ -2,13 +2,13 @@
   <div class="show" id="show">
     <el-row :gutter="20">
       <el-col :span="12" :offset="6">
-        <div class="grid-content bg-purple">  
+        <div class="grid-content bg-purple">
           <h1 class="center">关于我</h1>
         </div>
       </el-col>
-      
+
       <el-col :span="12" :offset="6">
-        <div class="grid-content bg-purple">  
+        <div class="grid-content bg-purple">
           <p class="center" v-for="(item,index) in content" :key="index">{{item}}</p>
         </div>
       </el-col>
@@ -34,7 +34,7 @@
                 <p>
             专业：机械设计制造及其自动化<br>
             学历：大学本科<br>
-            
+
             </p>
               </div>
           </div>
@@ -67,17 +67,20 @@
 
 <script>
 export default {
-  name: "AboutMe",
-  data() {
+  name: 'AboutMe',
+  data () {
     return {
       content: []
-    };
+    }
   },
   methods: {}
-};
+}
 </script>
 
 <style scoped>
+.center {
+  margin: 60px 0 40px;
+}
 .show {
   background-color: #85aea3;
   height: 100vh;
@@ -93,5 +96,11 @@ export default {
   background-size: 100%;
   margin: 10px auto;
   display: block;
+}
+.grid-content {
+  text-align: center;
+}
+.grid-content .col-md-3 {
+  margin-top: 20px;
 }
 </style>
