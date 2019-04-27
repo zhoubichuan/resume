@@ -1,6 +1,6 @@
 <template>
   <div id="skill" class="skill">
-    <h1 class="center">专业技能</h1>
+    <h1 class="center">前端技能</h1>
     <ul >
       <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
       <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
@@ -14,6 +14,8 @@
 </template>
 
 <script>
+let $ = document.querySelectorAll.bind(document)
+
 export default {
   name: 'Skill',
   data () {
@@ -26,7 +28,6 @@ export default {
     }
   },
   mounted () {
-    let $ = document.querySelectorAll.bind(document)
     let arr = [
       { ele: $('.myChart')[0], e: 80, name: 'javascript' },
       { ele: $('.myChart')[1], e: 70, name: 'css' },

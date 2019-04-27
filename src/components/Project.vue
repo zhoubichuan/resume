@@ -1,6 +1,6 @@
 <template>
   <div class="project" id="project">
-    <h1 class="center">业余项目</h1>
+    <h1 class="center">作品展示</h1>
     <ul>
       <li v-for="(item,index) in project" :key="index">
         <el-card class="box-card">
