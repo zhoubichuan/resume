@@ -1,12 +1,7 @@
 <template>
-  <div class="show" id="about">
+<common :op="op">
+  <div class="show" >
     <el-row :gutter="20">
-      <el-col :span="12" :offset="6">
-        <div class="grid-content bg-purple">
-          <h1 class="center">关于我</h1>
-        </div>
-      </el-col>
-
       <el-col :span="12" :offset="6">
         <div class="grid-content bg-purple">
           <p class="center" v-for="(item,index) in content" :key="index">{{item}}</p>
@@ -63,14 +58,24 @@
         </el-col>
       </el-row>
   </div>
+</common>
 </template>
 
 <script>
+import Common from '../common/Common'
 export default {
   name: 'AboutMe',
+  components: {
+    Common
+  },
   data () {
     return {
-      content: []
+      content: [],
+      op: {
+        id: 'about',
+        color: '#85aea3',
+        title: '关于我'
+      }
     }
   },
   methods: {}
@@ -78,16 +83,7 @@ export default {
 </script>
 
 <style scoped>
-.center {
-  margin: 60px 0 40px;
-}
-.show {
-  background-color: #85aea3;
-  height: 100vh;
-}
-.center {
-  text-align: center;
-}
+
 .photo {
   width: 100px;
   height: 100px;

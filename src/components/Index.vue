@@ -6,6 +6,8 @@
       <about-me/>
       <skill/>
       <project/>
+      <link-me/>
+      <message/>
     </el-main>
     <el-footer class="center">Design by：周必川 备案号： 鄂ICP备14014598号</el-footer>
 </el-container>
@@ -17,6 +19,8 @@ import Introduce from '@/components/Introduce'
 import AboutMe from '@/components/AboutMe'
 import Skill from '@/components/Skill'
 import Project from '@/components/Project'
+import LinkMe from '@/components/Link'
+import Message from '@/components/Message'
 export default {
   name: 'Index',
   data () {
@@ -36,7 +40,9 @@ export default {
     AboutMe,
     Skill,
     Project,
-    NavItem
+    NavItem,
+    LinkMe,
+    Message
   }
 }
 </script>

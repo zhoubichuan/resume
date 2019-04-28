@@ -1,25 +1,32 @@
 <template>
-  <div id="skill" class="skill">
-    <h1 class="center">前端技能</h1>
-    <ul >
-      <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
-      <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
-      <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
-      <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
-      <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
-      <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
-      <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
-    </ul>
-  </div>
+  <common :op="op">
+    <div  class="skill">
+      <h1 class="center">前端技能</h1>
+      <ul >
+        <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
+        <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
+        <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
+        <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
+        <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
+        <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
+        <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
+      </ul>
+    </div>
+  </common>
 </template>
 
 <script>
+import Common from '../common/Common'
 let $ = document.querySelectorAll.bind(document)
 
 export default {
   name: 'Skill',
+  components: {
+    Common
+  },
   data () {
     return {
+      op: {id: 'skill', color: '#4a839e'},
       skill: [
         { ele: $('.myChart')[0], e: 80, name: 'javascript' },
         { ele: $('.myChart')[1], e: 70, name: 'css' },
@@ -119,7 +126,6 @@ export default {
   text-align: center;
 }
 .skill {
-  background-color: #4a839e;
   height: 100vh;
 }
 li {

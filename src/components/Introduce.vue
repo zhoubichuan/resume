@@ -1,5 +1,7 @@
 <template>
-  <div class="show" id="introduce">
+<Common  :op="op">
+  <template slot="tiltle">首页</template>
+  <div class="show">
     <el-row :gutter="20">
       <el-col :span="12" :offset="6">
         <div class="grid-content bg-purple">
@@ -13,13 +15,22 @@
       </el-col>
     </el-row>
   </div>
+</Common>
 </template>
 
 <script>
+import Common from '../common/Common'
 export default {
   name: 'Introduce',
+  components: {
+    Common
+  },
   data () {
     return {
+      op: {
+        id: 'introduce',
+        color: 'white'
+      },
       content: [
         '我叫周必川',
         '一名前端工程师',

@@ -1,5 +1,6 @@
 <template>
-  <div class="project" id="project">
+<common :op="op">
+  <div class="project">
     <h1 class="center">作品展示</h1>
     <ul>
       <li v-for="(item,index) in project" :key="index">
@@ -15,13 +16,23 @@
       </li>
     </ul>
   </div>
+</common>
 </template>
 
 <script>
+import Common from '../common/Common'
 export default {
   name: 'Project',
+  components: {
+    Common
+  },
   data () {
     return {
+      op: {
+        id: 'project',
+        color: 'red',
+        title: '项目'
+      },
       currentDate: new Date(),
       project: [
         {
