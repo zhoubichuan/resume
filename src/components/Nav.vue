@@ -1,5 +1,5 @@
 <template>
-  <el-header >
+  <el-header  ref="nav" id="head">
       <div class="left">
         <img src="" alt="" >
         <div>
@@ -24,6 +24,26 @@ export default {
         { name: '联系我', link: 'link' },
         { name: '留言板', link: 'message' }
       ]
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll, true)
+  },
+  methods: {
+    handleScroll: function () {
+      let clientHeight = document.documentElement.clientHeight || document.body.clientHeight
+      let scrollObj = document.querySelector('#head')
+      // let scrollTop = scrollObj.scrollTop
+      let scrollHeight = scrollObj.scrollHeight
+      let height = window.pageYOffset
+      if (clientHeight < height + scrollHeight) {
+        this.$emit('stopScoll', true)
+      } else {
+        this.$emit('stopScoll', false)
+      }
+    },
+    destory () {
+      window.removeEventListener('scroll', this.handleScroll)
     }
   }
 }

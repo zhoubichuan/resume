@@ -1,120 +1,30 @@
 <template>
   <common :op="op">
-    <div  class="skill">
-      <h1 class="center">前端技能</h1>
       <ul >
-        <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
-        <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
-        <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
-        <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
-        <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
-        <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
-        <li class="myChart" :style="{width:'200px',height:'200px'}"></li>
+        <Knowledge v-for="(item,index) in knowledgeOp" :key="index" :op="item"/>
       </ul>
-    </div>
   </common>
 </template>
 
 <script>
 import Common from '../common/Common'
-let $ = document.querySelectorAll.bind(document)
+import Knowledge from '../common/Knowledge'
 
 export default {
   name: 'Skill',
   components: {
-    Common
+    Common,
+    Knowledge
   },
   data () {
     return {
-      op: {id: 'skill', color: '#4a839e'},
-      skill: [
-        { ele: $('.myChart')[0], e: 80, name: 'javascript' },
-        { ele: $('.myChart')[1], e: 70, name: 'css' },
-        { ele: $('.myChart')[2], e: 90, name: 'html' }
-      ]
-    }
-  },
-  mounted () {
-    let arr = [
-      { ele: $('.myChart')[0], e: 80, name: 'javascript' },
-      { ele: $('.myChart')[1], e: 70, name: 'css' },
-      { ele: $('.myChart')[2], e: 90, name: 'html' }
-    ]
-    this.drawLine(arr)
-  },
-  methods: {
-    drawLine (arr) {
-      for (let i = 0; i < arr.length; i++) {
-        let myChart = this.$echarts.init(arr[i].ele)
-        let option = {
-          title: [
-            {
-              show: true,
-              text: arr[i].e + '%',
-              x: 'center',
-              y: 'center',
-              textStyle: {
-                fontSize: '15',
-                color: 'red',
-                fontWeight: 'normal'
-              }
-            },
-            {
-              show: true,
-              text: arr[i].name,
-              x: 'center',
-              y: 'bottom',
-              textStyle: {
-                fontSize: '15',
-                color: 'blue',
-                fontWeight: 'normal'
-              }
-            }
-          ],
-          tooltip: {
-            trigger: 'item',
-            formatter: '{d}%',
-            show: false
-          },
-          legend: {
-            orient: 'vertical',
-            x: 'left',
-            show: false
-          },
-          series: [
-            {
-              name: '访问来源',
-              type: 'pie',
-              radius: ['50%', '70%'],
-              avoidLabelOverlap: true,
-              hoverAnimation: false,
-              label: {
-                normal: {
-                  show: false,
-                  position: 'center'
-                },
-                emphasis: {
-                  show: false,
-                  textStyle: {
-                    fontSize: '30',
-                    fontWeight: 'bold'
-                  }
-                }
-              },
-              labelLine: {
-                normal: {
-                  show: false
-                }
-              },
-              data: [
-                { value: arr[i].e, name: '' },
-                { value: 100 - arr[i].e, name: '' }
-              ]
-            }
-          ]
-        }
-        myChart.setOption(option)
-      }
+      op: {id: 'skill', color: '#4a839e', title: '知识储备'},
+      knowledgeOp: [
+        {e: 80, name: '前端技能'},
+        {e: 80, name: '后端技能'},
+        {e: 80, name: 'js'},
+        {e: 80, name: 'js'},
+        {e: 80, name: 'js'}]
     }
   }
 }
@@ -124,9 +34,6 @@ export default {
 .center {
   margin-top: 20px;
   text-align: center;
-}
-.skill {
-  height: 100vh;
 }
 li {
   list-style: none;

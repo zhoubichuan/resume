@@ -1,13 +1,7 @@
 <template>
 <Common  :op="op">
-  <template slot="tiltle">首页</template>
-  <div class="show">
+  <div >
     <el-row :gutter="20">
-      <el-col :span="12" :offset="6">
-        <div class="grid-content bg-purple">
-          <i class="photo"></i>
-        </div>
-      </el-col>
       <el-col :span="12" :offset="6">
         <div class="grid-content bg-purple">
           <p class="center" v-for="(item,index) in content" :key="index">{{item}}</p>
@@ -29,7 +23,8 @@ export default {
     return {
       op: {
         id: 'introduce',
-        color: 'white'
+        title: 'Hell Word',
+        color: '#e1e1e3'
       },
       content: [
         '我叫周必川',
@@ -44,10 +39,6 @@ export default {
 </script>
 
 <style lang='scss' scoped="" type="type/css">
-.show {
-  width: 100%;
-  height: 100vh;
-}
 .center {
   margin-top: 20px;
   text-align: center;

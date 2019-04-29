@@ -9,7 +9,8 @@ export default {
   data () {
     return {op: {
       id: 'message',
-      color: 'yellow'
+      color: 'yellow',
+      title: '留言板'
     }}
   },
   components: {

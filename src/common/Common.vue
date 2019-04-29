@@ -13,11 +13,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 .show {
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
   .title{
     text-align: center;
     margin: 60px 0 40px;
   }
-  width: 100%;
-  height: 100vh;
 }
 </style>

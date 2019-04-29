@@ -1,7 +1,6 @@
 <template>
 <common :op="op">
   <div class="project">
-    <h1 class="center">作品展示</h1>
     <ul>
       <li v-for="(item,index) in project" :key="index">
         <el-card class="box-card">
@@ -31,7 +30,7 @@ export default {
       op: {
         id: 'project',
         color: 'red',
-        title: '项目'
+        title: '作品展示'
       },
       currentDate: new Date(),
       project: [
@@ -176,11 +175,7 @@ export default {
   margin-top: 20px;
   text-align: center;
 }
-.project {
-  background-color: #915a4a;
-  min-height: 100vh;
-  overflow: hidden;
-}
+
 li {
   list-style: none;
   float: left;

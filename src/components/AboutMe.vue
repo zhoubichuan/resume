@@ -1,6 +1,6 @@
 <template>
 <common :op="op">
-  <div class="show" >
+  <div>
     <el-row :gutter="20">
       <el-col :span="12" :offset="6">
         <div class="grid-content bg-purple">
@@ -9,52 +9,8 @@
       </el-col>
     </el-row>
     <el-row :gutter="20">
-        <el-col :span="6">
-          <div class="grid-content bg-purple">
-            <el-button type="success" icon="el-icon-check" circle></el-button>
-              <div class="col-md-3 col-sm-6 service"> <i class="fa fa-laptop"></i>
-                <h4><strong>个人信息</strong></h4>
-                <p>
-            性名: 周必川 &nbsp;性别：男<br>
-            年龄: 27岁 籍贯：湖北
-            </p>
-              </div>
-          </div>
-        </el-col>
-        <el-col :span="6">
-          <div class="grid-content bg-purple">
-            <el-button type="info" icon="el-icon-message" circle></el-button>
-            <div class="col-md-3 col-sm-6 service"> <i class="fa fa-code"></i>
-                <h4><strong>专业学历</strong></h4>
-                <p>
-            专业：机械设计制造及其自动化<br>
-            学历：大学本科<br>
-
-            </p>
-              </div>
-          </div>
-        </el-col>
-        <el-col :span="6">
-          <div class="grid-content bg-purple">
-            <el-button type="warning" icon="el-icon-star-off" circle></el-button>
-            <div class="col-md-3 col-sm-6 service"> <i class="fa fa-rocket"></i>
-                <h4><strong>毕业学校</strong></h4>
-                <p>
-              毕业学校：湖北工业大学工程技术学院<br>
-              学习技能：编程
-            </p>
-              </div>
-          </div>
-        </el-col>
-        <el-col :span="6">
-          <div class="grid-content bg-purple">
-            <el-button type="danger" icon="el-icon-delete" circle></el-button>
-            <div class="col-md-3 col-sm-6 service"> <i class="fa fa-bullseye"></i>
-                <h4><strong>联系方式</strong></h4>
-                <p>weixie:zbc159x<br>
-              邮箱：zhoubichuan@iclud.com</p>
-              </div>
-          </div>
+        <el-col :span="6" v-for="(item,index) in cardOp" :key="index">
+          <card :op="item"/>
         </el-col>
       </el-row>
   </div>
@@ -63,10 +19,12 @@
 
 <script>
 import Common from '../common/Common'
+import Card from '../common/Card'
 export default {
   name: 'AboutMe',
   components: {
-    Common
+    Common,
+    Card
   },
   data () {
     return {
@@ -75,7 +33,37 @@ export default {
         id: 'about',
         color: '#85aea3',
         title: '关于我'
-      }
+      },
+      cardOp: [
+        {
+          title: '个人信息',
+          content: '性名: 周必川 &nbsp;性别：男',
+          descript: '年龄: 27岁 籍贯：湖北',
+          type: 'success',
+          icon: 'el-icon-check'
+        },
+        {
+          title: '专业学历',
+          content: '专业：机械设计制造及其自动化',
+          descript: '学历：大学本科',
+          type: 'info',
+          icon: 'el-icon-message'
+        },
+        {
+          title: '毕业学校',
+          content: '毕业学校：湖北工业大学工程技术学院',
+          descript: '学习技能：编程',
+          type: 'warning',
+          icon: 'el-icon-star-off'
+        },
+        {
+          title: '联系方式',
+          content: 'weixie:zbc159x',
+          descript: '邮箱：zhoubichuan@iclud.com',
+          type: 'danger',
+          icon: 'el-icon-delete'
+        }
+      ]
     }
   },
   methods: {}

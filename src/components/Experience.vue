@@ -15,7 +15,7 @@ export default {
       op: {
         id: 'experience',
         color: 'gray',
-        title: '经验'
+        title: '我的经历'
       }
     }
   }
