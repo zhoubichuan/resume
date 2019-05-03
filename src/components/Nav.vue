@@ -2,13 +2,13 @@
   <el-header  ref="nav" id="head">
       <div class="left">
         <img src="" alt="" >
-        <div>
+        <div @click="handleToTop">
           <p>Resume</p>
           <p>个人简历</p>
         </div>
       </div>
-      <ul class="rigth">
-        <li  v-for="(item,index) in title" :key="index"><router-link :to="item.link">{{item.name}}</router-link></li>
+      <ul class="rigth" @click="handleClick">
+        <li  v-for="(item,index) in title" :key="index" :class="item.active ? 'active':''" :data-index="index">{{item.name}}</li>
       </ul>
     </el-header>
 </template>
@@ -17,12 +17,12 @@ export default {
   data () {
     return {
       title: [
-        { name: '关于我', link: 'about' },
-        { name: '前端技能', link: 'skill' },
-        { name: '作品展示', link: 'project' },
-        { name: '我的经历', link: 'experience' },
-        { name: '联系我', link: 'link' },
-        { name: '留言板', link: 'message' }
+        { name: '关于我', link: 'about', active: false },
+        { name: '前端技能', link: 'skill', active: false },
+        { name: '作品展示', link: 'project', active: false },
+        { name: '我的经历', link: 'experience', active: false },
+        { name: '留言板', link: 'message', active: false },
+        { name: '联系我', link: 'link', active: false }
       ]
     }
   },
@@ -31,9 +31,9 @@ export default {
   },
   methods: {
     handleScroll: function () {
-      let clientHeight = document.documentElement.clientHeight || document.body.clientHeight
+      let clientHeight =
+        document.documentElement.clientHeight || document.body.clientHeight
       let scrollObj = document.querySelector('#head')
-      // let scrollTop = scrollObj.scrollTop
       let scrollHeight = scrollObj.scrollHeight
       let height = window.pageYOffset
       if (clientHeight < height + scrollHeight) {
@@ -44,6 +44,22 @@ export default {
     },
     destory () {
       window.removeEventListener('scroll', this.handleScroll)
+    },
+    handleClick (e) {
+      if (e.target.nodeName.toLowerCase() === 'li') {
+        let index = +e.target.dataset.index + 1
+        this.title.forEach((item, index) => {
+          item.active = false
+        })
+        this.title[index - 1].active = true
+        console.log(this.title)
+        let clientHeight =
+          document.documentElement.clientHeight || document.body.clientHeight
+        document.documentElement.scrollTop = index * clientHeight - 60
+      }
+    },
+    handleToTop () {
+      document.documentElement.scrollTop = 0
     }
   }
 }
@@ -93,9 +109,14 @@ export default {
       text-align: center;
       color: #fff;
       cursor: pointer;
-      a{
-          color: #fff;
+      &:hover {
+        background: red;
+        border-radius: 15px;
       }
+    }
+    .active {
+      background: red;
+      border-radius: 15px;
     }
   }
 }

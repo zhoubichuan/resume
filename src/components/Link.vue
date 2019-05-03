@@ -9,7 +9,7 @@ export default {
   data () {
     return {op: {
       id: 'link',
-      color: 'green',
+      color: 'lightblue',
       title: '联系我'
     }}
   },

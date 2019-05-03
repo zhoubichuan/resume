@@ -37,7 +37,7 @@ export default {
       cardOp: [
         {
           title: '个人信息',
-          content: '性名: 周必川 &nbsp;性别：男',
+          content: '性名: 周必川;性别：男',
           descript: '年龄: 27岁 籍贯：湖北',
           type: 'success',
           icon: 'el-icon-check'

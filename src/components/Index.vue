@@ -6,9 +6,9 @@
       <about-me/>
       <skill/>
       <project/>
+      <Experience/>
       <link-me/>
       <message/>
-      <Experience/>
     </el-main>
     <el-footer class="center">Design by：周必川 备案号： 鄂ICP备14014598号</el-footer>
 </el-container>
@@ -20,9 +20,9 @@ import Introduce from '@/components/Introduce'
 import AboutMe from '@/components/AboutMe'
 import Skill from '@/components/Skill'
 import Project from '@/components/Project'
+import Experience from '@/components/Experience'
 import LinkMe from '@/components/Link'
 import Message from '@/components/Message'
-import Experience from '@/components/Experience'
 export default {
   name: 'Index',
   data () {

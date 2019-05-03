@@ -1,39 +1,29 @@
 <template>
 <common :op="op">
   <div class="project">
-    <ul>
-      <li v-for="(item,index) in project" :key="index">
-        <el-card class="box-card">
-          <div slot="header" class="clearfix">
-            <span>{{item.name+"项目"}}</span>
-            <el-button style="float: right; padding: 3px 0" type="text">操作按钮</el-button>
-          </div>
-          <div v-for="(item,index) in item.items" :key="index">
-            <a :href="item.link" :title="item.skill">{{item.title}}</a>
-          </div>
-        </el-card>
-      </li>
-    </ul>
+    <Work :op='workOp'/>
   </div>
 </common>
 </template>
 
 <script>
 import Common from '../common/Common'
+import Work from '../common/Work'
 export default {
   name: 'Project',
   components: {
-    Common
+    Common,
+    Work
   },
   data () {
     return {
       op: {
         id: 'project',
-        color: 'red',
+        color: 'lightblue',
         title: '作品展示'
       },
       currentDate: new Date(),
-      project: [
+      workOp: [
         {
           name: '原生javaScript',
           items: [
@@ -55,7 +45,7 @@ export default {
           ]
         },
         {
-          name: 'vue.js',
+          name: 'vue.js react.js',
           items: [
             {
               title: 'vue微信',
@@ -66,12 +56,7 @@ export default {
               title: 'vue饿了么app',
               skills: 'Egg.js+AntDesignPro+MySQL',
               link: 'wwww.123.com'
-            }
-          ]
-        },
-        {
-          name: 'react.js',
-          items: [
+            },
             {
               title: 'react微信',
               skills: 'Egg.js+AntDesignPro+MySQL',
@@ -176,11 +161,6 @@ export default {
   text-align: center;
 }
 
-li {
-  list-style: none;
-  float: left;
-  width: 30%;
-}
 .text {
   font-size: 14px;
 }

@@ -1,5 +1,8 @@
 <template>
-  <li ref="kno" :style="{width:'200px',height:'200px'}"></li>
+  <li >
+    <div ref="kno" :style="{width:'180px',height:'180px'}"></div>
+    <p>{{op.name}}</p>
+  </li>
 </template>
 <script>
 export default {
@@ -27,18 +30,18 @@ export default {
             x: 'center',
             y: 'center',
             textStyle: {
-              fontSize: '15',
+              fontSize: '14',
               color: 'red',
               fontWeight: 'normal'
             }
           },
           {
             show: true,
-            text: this.op.name,
+            text: this.op.title,
             x: 'center',
             y: 'bottom',
             textStyle: {
-              fontSize: '15',
+              fontSize: '14',
               color: 'blue',
               fontWeight: 'normal'
             }
@@ -69,7 +72,7 @@ export default {
               emphasis: {
                 show: false,
                 textStyle: {
-                  fontSize: '30',
+                  fontSize: '18',
                   fontWeight: 'bold'
                 }
               }
@@ -80,8 +83,8 @@ export default {
               }
             },
             data: [
-              { value: this.op.e, name: '' },
-              { value: 100 - this.op.e, name: '' }
+              { value: this.op.e, title: '' },
+              { value: 100 - this.op.e, title: '' }
             ]
           }
         ]
@@ -91,3 +94,18 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+li{
+  width:33.33%;
+  display: flex;
+    align-items: center;
+    flex-direction: column;
+  div{
+    text-align: center;
+  }
+  p{
+    text-align: left;
+    padding:0 10px;
+  }
+}
+</style>

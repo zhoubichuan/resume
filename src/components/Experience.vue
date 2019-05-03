@@ -1,14 +1,16 @@
 <template>
   <common :op="op">
-    <div>experience</div>
+    <tree :op="treeOp"></tree>
   </common>
 </template>
 <script>
 import Common from '../common/Common'
+import Tree from '../common/Tree'
 export default {
   name: 'AboutMe',
   components: {
-    Common
+    Common,
+    Tree
   },
   data () {
     return {
@@ -16,7 +18,25 @@ export default {
         id: 'experience',
         color: 'gray',
         title: '我的经历'
-      }
+      },
+      treeOp: [
+        {
+          title: '湖北工xxxxx',
+          content: '本科'
+        },
+        {
+          title: '深圳市xxxx',
+          content: '前端工程师'
+        },
+        {
+          title: '软xxxxx',
+          content: '前端工程师'
+        },
+        {
+          title: '柠檬xxxxx',
+          content: '前端工程师'
+        }
+      ]
     }
   }
 }
