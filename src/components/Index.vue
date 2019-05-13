@@ -55,6 +55,9 @@ export default {
 </script>
 
 <style lang='scss' scoped="" type="type/css">
+.el-main{
+  padding:0!important;
+}
 .navStop{
   position: fixed;
       top: 0;

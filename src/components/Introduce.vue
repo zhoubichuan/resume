@@ -30,7 +30,8 @@ export default {
         '我叫周必川',
         '一名前端工程师',
         'zhoubichuan@icloud.com',
-        '深圳'
+        '生活不止眼前的苟且',
+        '坐标：深圳'
       ]
     }
   },

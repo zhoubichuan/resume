@@ -1,30 +1,94 @@
-# resume
+## 个人简历
 
-> A Vue.js project
+* 基本信息姓 名：周必川 性别：男户籍：湖北孝感 年龄：27
+* 工作经验：4.5 年 毕业学校：湖北工业大学工程技术学院学历：本科 英语：CET-4
+* 毕业时间：2015-07 现居住地：深圳宝安区手机：17328706920 邮箱：zhoubichuan@icloud.com
+* 求职意向求职意向：HTML5/Web 前端工程师 、node 全栈工程师
+* 到岗时间：一周内专业技能
+  >
 
-## Build Setup
+- 1、精通 HTML、CSS、JavaScript、typeScript、Node.js 等基本技术，对 Web 标准和兼容性有良好认识。
+- 2、精通 angular、vue、react、jQuery、aem 等前端框架和库，掌握微信公众号、微信小程序开发，有大型跨终端项目开发经验。
+- 3、对设计模式、性能优化、监控、安全、可视化、爬虫有一定的理解和项目实践，掌握 tcp/HTTP 协议、算法、服务端渲染、有处理跨域及代理等常见开发问题的能力。
+- 5、掌握 express、koa、egg 等 web 开发框架，配合 MySql，MongoDB、redis 等数据库开发，具备良好的代码风格以及接口设计能力。
+- 6、掌握相关测试框架 mocha、jasmine、jest，对 angular、vue、react、node、egg 进行单元测试，提高代码的健壮性。
+- 7、熟练配置 webpack，利用 linux 部署代码，使用 git/svn 管理代码。
+- 8、热爱新技术：github：https://github.com/zhoubichuan
+  .掘金 ：https://juejin.im/user/5aabd522f265da237a4cc764/posts
+  博客：工作经验
 
-``` bash
-# install dependencies
-npm install
+- 2014.7—2017.6 深圳市指尖城市网络科技有限公司 前端工程师
+- 2017.7—2018.12 软通动力（外包到华为） 全栈工程师
+- 2019.1—至今 大连柠檬信息科技（外包到华为） 高级前端工程师项目经验
+  VUI 框架开发（内部前端框架，类似 vue）：项目描述：该项目是开发一个类似 vue 的前端框架。技术要点：vue + jest + typeScript
+  开发 vscode 插件
 
-# serve with hot reload at localhost:8080
-npm run dev
+---
 
-# build for production with minification
-npm run build
+### 性能检测工具（数据可视化）：
 
-# build for production and view the bundle analyzer report
-npm run build --report
+#### 项目描述：
 
-# run unit tests
-npm run unit
+该项目是以华为官网（www.huawei.com）为基础，为相关业务人员提供完整的性能监管理系统，实时监控服务器资源变化，全球访问者信息详情。
 
-# run e2e tests
-npm run e2e
+技术要点：react + dva + antdesign + less + egg.js+mysql
 
-# run all tests
-npm test
-```
+* 1、使用 antdesign+less 实现静态页面布局，webpack 配置 antdesign 按需加载，提高页面性能。
+* 2、使用 dva 将 Router 中的 Action 派发到 Model 中，将任务交给 reducer 和 effect 处理，统一状态 state 管理相关数据，实现与前端组件解耦，方便后续迭代与重构。
+* 3、使用 echarts 进行数据可视化开发，对网站页面性能进行实时监控、对服务器相关资源进行展示和设置、实时查看用户行为偏好，输出相关统计数据，方便相关人员分析数据调整策略，及时应对性能、资源、消费者业务等问题。
+* 4、使用 fetch 进行前后端通信，将不常修改的接口请求统一封装成一个模块，代码简洁明了逻辑清晰可见，方便其他开发人员调用接口和重构代码。
+* 5、后台使用 node 中的 egg.js 框架，用 egg 脚手架快速搭建后台开发环境，配合 postman 工具快速开发相关接口。
+* 6、使用 egg-mock 对后端代码进行单元测试，提升代码开发质量、减少 bug、减少开发周期，满足业务对项目快速开发的需求。
+* 7、数据库使用 mysql 数据库，配合 egg 框架配置相关数据，相关模块编写查询逻辑，后台路由调用相关查询条件，逻辑清晰代码有条理，方便维护。
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### 华为官网服务页面：consumer.huawei.com
+
+#### 项目描述：
+
+该项目是一个包含寄修、预约、上门服务、个人中心、搜索、玩机技巧等相关服务的国际化网站，同时兼容电脑、手机、平板等设备。
+
+技术要点：AEM + jQurey + express
+
+* 1、运用 HTML,CSS 等相关技术开发跨平台前端页面，提升用户体验，良好兼容 PC Android 和 IOS 设备,实现 WEB 多端响应式页面开发。
+* 2、前端框架建设（AEM 页面模板）与组件封装，并不断优化前端工具组件库，文件目录结构清晰，方便相关人员开发和维护。
+* 3、前端页面监控（页面性能、接口性能、用户行为），监听页面性能变化和用户行为，方便相关人员对页面优化和用户分析，促进消费者业务的提升。
+* 4、安全防范页面敏感输入输出部分，坚持做好安全工作，保障网站安全和用户利益，提升网站质量。
+* 5、封装 jQuery 的 ajax，将页面需要用到的接口放在一起集中处理，方便开发和后续维护工作。
+* 6、node 的 express 框架作为中间层，使用 axios 请求后端数据，将前后端紧密耦合的数据接口解耦，将大量需要前端处理的后端数据集中处理，在性能上实现异步并行，服务层的复用和缓存。
+
+---
+
+### 润·教育（app）/润·生活（app）：
+
+#### 项目描述：
+
+润·教育是一个才艺教育移动互联网平台，为才艺培训机构提供课程、活动信息的发布与展示；为广大学员、机构和艺术考级主管单位提供更便捷的艺术考级服务。润·生活是一款专为深圳人打造的“好用、好玩、好看、有惊喜”的随时随身移动互联网产品。
+
+技术要点：vue + elementUI+less+ssr
+
+* 1、使用 HTML5、CSS3、elementUI、less 实现静态页面布局。
+* 2、使用 Bus 实现组件间通讯、Vuex 实现统一的状态管理，采用单文件组件，指令，路由。
+* 3、首屏采用 ssr 渲染，减少请求次数提高访问效率。
+* 4、使用 vue-axios 实现前/后端数据通信。
+* 5、不断优化代码重构现有功能，增强代码的可维护性和可扩展性。
+* 6、采用 Phonegap 混合模式进行 Android 和 IOS 打包。
+
+### 润·教育（官网）： http://www.runjiaoyu.com.cn
+
+#### 项目描述：
+
+润·教育是一个才艺教育移动互联网平台，为才艺培训机构提供课程、活动信息的发布与展示；为广大学员、机构和艺术考级主管单位提供更便捷的艺术考级服务技术要点：Require + JQ + BootStrap
+
+* 1、运用 HTML，CSS 实现 WEB 页面的布局。
+* 2、使用 Require 进行模块化编程，项目文件结构清晰，各模块之间的依赖关系清晰。
+* 3、运用 jQuery 的 ajax 方法通过 http 加载远程数据，再用 underscore.js 进行界面渲染。
+* 4、运用谷歌浏览器调试工具进行抓包、调试；使用 Fiddler 抓包工具的代理功能实现真机调试。
+* 5、将团队常用的一些方法封装在单独的 js 文件里面，方便团队使用，提高团队开发效率。
+
+> 自我评价
+
+* 1 .喜欢编程，有独立开发的能力。
+* 2.有上进心，喜欢学习新技能，有一定的抗压能力。
+* 3.有良好的编码习惯、沟通协作能力和学习能力。
+* 4.细心、热爱技术、喜欢钻研，热爱前端技术，个性乐观开朗，逻辑性强。
+* 5.在工作中稳重成熟，保持积极认真的态度。
