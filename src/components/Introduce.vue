@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Common from '../common/Common'
+import Common from '../common/Common';
 export default {
   name: 'Introduce',
   components: {

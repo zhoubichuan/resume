@@ -1,12 +1,7 @@
 <template>
 <common :op="op">
   <div class="project">
-    <el-carousel :interval="4000" type="card" height="200px">
-    <el-carousel-item v-for="item in 6" :key="item">
-      <h3 class="medium">{{ item }}</h3>
-    </el-carousel-item>
-  </el-carousel>
-    <!-- <Work :op='workOp'/> -->
+    <Work :op='workOp'/>
   </div>
 </common>
 </template>
@@ -30,42 +25,60 @@ export default {
       currentDate: new Date(),
       workOp: [
         {
-          name: '原生javaScript',
+          name: 'javaScript',
           items: [
             {
               title: '企业网站',
-              skills: 'javaScript',
+              skill: 'javaScript',
               link: 'wwww.123.com'
-            }
-          ]
-        },
-        {
-          name: 'jQuery',
-          items: [
+            },
             {
               title: '后台管理系统',
-              skills: 'Egg.js+AntDesignPro+MySQL',
+              skill: 'jQuery+BootStrapt',
               link: 'wwww.123.com'
             }
           ]
         },
         {
-          name: 'vue.js react.js',
+          name: 'Vue',
           items: [
             {
               title: 'vue微信',
-              skills: 'Egg.js+AntDesignPro+MySQL',
+              skill: 'Egg.js+AntDesignPro+MySQL',
               link: 'https://zhoubichuan.github.io/vue-weixin/#/'
             },
             {
               title: 'vue饿了么app',
-              skills: 'Egg.js+AntDesignPro+MySQL',
+              skill: 'Egg.js+AntDesignPro+MySQL',
               link: 'wwww.123.com'
             },
             {
               title: 'react微信',
-              skills: 'Egg.js+AntDesignPro+MySQL',
+              skill: 'Egg.js+AntDesignPro+MySQL',
               link: 'https://zhoubichuan.github.io/react-weixin/#/'
+            },
+            {
+              title: 'vue点餐系统',
+              skill: 'vue',
+              link: 'https://zhoubichuan.github.io/Project-Vue-Ordering/'
+            }
+          ]
+        },
+        {
+          name: 'React',
+          items: [
+            {
+              title: '珠峰课堂',
+              link: 'https://zhoubichuan.github.io/Project-React.TS-app/'
+            }
+          ]
+        },
+        {
+          name: 'Angular',
+          items: [
+            {
+              title: '珠峰课堂',
+              link: 'https://zhoubichuan.github.io/Project-React.TS-app/'
             }
           ]
         },
@@ -74,7 +87,7 @@ export default {
           items: [
             {
               title: 'CMS系统',
-              skills: 'Egg.js+AntDesignPro+MySQL',
+              skill: 'Egg.js+AntDesignPro+MySQL',
               link: 'wwww.123.com'
             }
           ]
@@ -84,7 +97,7 @@ export default {
           items: [
             {
               title: 'CMS系统',
-              skills: 'Egg.js+AntDesignPro+MySQL',
+              skill: 'Egg.js+AntDesignPro+MySQL',
               link: 'wwww.123.com'
             }
           ]
@@ -94,7 +107,7 @@ export default {
           items: [
             {
               title: 'CMS系统',
-              skills: 'Egg.js+AntDesignPro+MySQL',
+              skill: 'Egg.js+AntDesignPro+MySQL',
               link: 'wwww.123.com'
             }
           ]
@@ -104,7 +117,7 @@ export default {
           items: [
             {
               title: 'CMS系统',
-              skills: 'Egg.js+AntDesignPro+MySQL',
+              skill: 'Egg.js+AntDesignPro+MySQL',
               link: 'wwww.123.com'
             }
           ]
@@ -114,7 +127,7 @@ export default {
           items: [
             {
               title: 'CMS系统',
-              skills: 'Egg.js+AntDesignPro+MySQL',
+              skill: 'Egg.js+AntDesignPro+MySQL',
               link: 'wwww.123.com'
             }
           ]
@@ -124,32 +137,32 @@ export default {
           items: [
             {
               title: 'CMS系统',
-              skills: 'Egg.js+AntDesignPro+MySQL',
+              skill: 'Egg.js+AntDesignPro+MySQL',
               link: 'wwww.123.com'
             },
             {
               title: '多人聊天室',
-              skills: 'React+Mongodb+websocket',
+              skill: 'React+Mongodb+websocket',
               link: 'wwww.123.com'
             },
             {
               title: '新闻爬虫',
-              skills: 'cheerio+mysql+nodemailer',
+              skill: 'cheerio+mysql+nodemailer',
               link: 'wwww.123.com'
             },
             {
               title: '珠峰课堂',
-              skills: 'React+Redux',
+              skill: 'React+Redux',
               link: 'wwww.123.com'
             },
             {
               title: 'flappy bird',
-              skills: 'canvas',
+              skill: 'canvas',
               link: 'wwww.123.com'
             },
             {
               title: '微信跳一跳',
-              skills: 'thress.js',
+              skill: 'thress.js',
               link: 'wwww.123.com'
             }
           ]
