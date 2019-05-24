@@ -1,5 +1,6 @@
 <template>
 <common :op="op">
+
   <div class="project">
     <Work :op='workOp'/>
   </div>
@@ -15,8 +16,14 @@ export default {
     Common,
     Work
   },
+  methods: {
+    handleClick (tab, event) {
+      console.log(tab, event)
+    }
+  },
   data () {
     return {
+      activeName: 'second',
       op: {
         id: 'project',
         color: 'lightblue',
