@@ -1,15 +1,16 @@
 <template>
-<el-row :gutter="24" type="flex"  justify="center">
-  <el-col :xs="20" :sm="20" :md="20" :lg="20" :xl="20" >
-    <el-tabs v-model="activeName" @tab-click="handleClick">
-      <el-tab-pane :label="item.name+'相关'" :name="index" v-for="(item,index) in op" :key="index">
-        <ul v-for="(item,index) in item.items" :key="index">
-          <li><a :href="item.link"><span>{{item.title}}</span>：<span>{{item.skill}}</span></a></li>
-        </ul>
-      </el-tab-pane>
-  </el-tabs>
-  </el-col>
-</el-row>
+<el-tabs v-model="activeName" @tab-click="handleClick">
+  <el-tab-pane :label="item.name+'相关'" :name="index" v-for="(item,index) in op" :key="index">
+    <el-row :gutter="24" >
+      <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="3"  v-for="(item,index) in item.items" :key="index" >
+        <a class="box" :href="item.link">
+          <p>{{item.title}}</p>
+          <p>技术要点：{{item.skill}}</p>
+        </a>
+      </el-col>
+    </el-row>
+  </el-tab-pane>
+</el-tabs>
 </template>
 <script>
 export default {
@@ -22,13 +23,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 .box {
-  width: 80%;
-  margin: 0 auto;
-  text-align: left;
-  .header {
-    span {
-      text-align: left;
-    }
-  }
+  width: 100%;
+  height: 200px;
+  background: white;
+  display: block;
+  color: #333333;
+  text-decoration: none;
 }
 </style>

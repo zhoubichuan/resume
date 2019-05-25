@@ -1,9 +1,6 @@
 <template>
 <common :op="op">
-
-  <div class="project">
-    <Work :op='workOp'/>
-  </div>
+    <Work class="work" :op='workOp'/>
 </common>
 </template>
 
@@ -23,7 +20,6 @@ export default {
   },
   data () {
     return {
-      activeName: 'second',
       op: {
         id: 'project',
         color: 'lightblue',
@@ -42,7 +38,8 @@ export default {
             {
               title: '后台管理系统',
               skill: 'jQuery+BootStrapt',
-              link: 'wwww.123.com'
+              link:
+                'https://github.com/zhoubichuan/Project-Bootstrapt-BackManagmentSystem'
             }
           ]
         },
@@ -181,6 +178,10 @@ export default {
 </script>
 
 <style scoped>
+.work {
+  width: 80%;
+  margin: 0 auto;
+}
 .el-carousel__item h3 {
   color: #475669;
   font-size: 14px;
