@@ -65,7 +65,7 @@ export default {
 }
 </script>
 
-<style lang='scss' scoped="" type="type/css">
+<style lang="scss" scoped>
 .el-header {
   z-index: 99;
   height: 50px;

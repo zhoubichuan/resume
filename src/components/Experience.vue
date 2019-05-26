@@ -1,6 +1,10 @@
 <template>
   <common :op="op">
-    <tree :op="treeOp"></tree>
+    <el-row :gutter="20">
+      <el-col :span="12" :offset="6">
+        <tree class="content" :op="treeOp"></tree>
+      </el-col>
+    </el-row>
   </common>
 </template>
 <script>
@@ -45,6 +49,6 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss" scoped >
 
 </style>

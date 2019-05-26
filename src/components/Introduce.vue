@@ -39,7 +39,7 @@ export default {
 }
 </script>
 
-<style lang='scss' scoped="" type="type/css">
+<style lang="scss" scoped>
 .center {
   margin-top: 20px;
   text-align: center;

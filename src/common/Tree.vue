@@ -1,5 +1,5 @@
 <template>
-  <el-timeline class="content">
+  <el-timeline >
     <el-timeline-item v-for="(item,index) in op" :timestamp="item.time" :key="index" placement="top">
       <el-card>
         <h4>{{item.title}}</h4>
@@ -11,13 +11,28 @@
 <script>
 export default {
   props: {
-    op: { type: Object }
+    op: { type: Array }
   }
 }
 </script>
-<style lang="scss" scoped>
-.content {
-  max-width: 500px;
-  margin: 0 auto;
+
+<style lang="scss" >
+ul.el-timeline.content {
+  margin-top: 50px;
+  li.el-timeline-item {
+    width: 50%;
+    margin-left: 50%;
+    position: relative;
+    &:nth-child(2n) {
+      .el-timeline-item__wrapper {
+        left: -50%;
+        transform: translateX(-50%);
+        padding: 0 20px 0 0;
+      }
+    }
+    .el-timeline-item__wrapper {
+      top: -58px;
+    }
+  }
 }
 </style>

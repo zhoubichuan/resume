@@ -1,6 +1,6 @@
 <template>
 <common :op="op">
-    <Work class="work" :op='workOp' style="width:80%;"/>
+    <Work class="work" :op='workOp'/>
 </common>
 </template>
 
@@ -32,7 +32,7 @@ export default {
           items: [
             {
               title: '企业网站',
-              skill: 'javaScript',
+              skill: '原生javaScript+css',
               link: 'wwww.123.com'
             },
             {
@@ -40,6 +40,16 @@ export default {
               skill: 'jQuery+BootStrapt',
               link:
                 'https://github.com/zhoubichuan/Project-Bootstrapt-BackManagmentSystem'
+            },
+            {
+              title: '微信小程序',
+              skill: '---',
+              link: 'wwww.123.com'
+            },
+            {
+              title: '微信公众号',
+              skill: '---',
+              link: 'wwww.123.com'
             }
           ]
         },
@@ -47,23 +57,18 @@ export default {
           name: 'Vue',
           items: [
             {
-              title: 'vue微信',
-              skill: 'Egg.js+AntDesignPro+MySQL',
+              title: 'weChateApp',
+              skill: 'Vue+less',
               link: 'https://zhoubichuan.github.io/vue-weixin/#/'
             },
             {
-              title: 'vue饿了么app',
-              skill: 'Egg.js+AntDesignPro+MySQL',
+              title: 'eleApp',
+              skill: 'Vue+less',
               link: 'wwww.123.com'
             },
             {
-              title: 'react微信',
-              skill: 'Egg.js+AntDesignPro+MySQL',
-              link: 'https://zhoubichuan.github.io/react-weixin/#/'
-            },
-            {
               title: 'vue点餐系统',
-              skill: 'vue',
+              skill: 'Vue+less',
               link: 'https://zhoubichuan.github.io/Project-Vue-Ordering/'
             }
           ]
@@ -72,8 +77,14 @@ export default {
           name: 'React',
           items: [
             {
-              title: '珠峰课堂',
+              title: 'zhufengCourseApp',
+              skill: 'React+TS+less',
               link: 'https://zhoubichuan.github.io/Project-React.TS-app/'
+            },
+            {
+              title: 'weChatApp',
+              skill: 'React+less',
+              link: 'https://zhoubichuan.github.io/react-weixin/#/'
             }
           ]
         },
@@ -83,26 +94,6 @@ export default {
             {
               title: '珠峰课堂',
               link: 'https://zhoubichuan.github.io/Project-React.TS-app/'
-            }
-          ]
-        },
-        {
-          name: '微信公众号',
-          items: [
-            {
-              title: 'CMS系统',
-              skill: 'Egg.js+AntDesignPro+MySQL',
-              link: 'wwww.123.com'
-            }
-          ]
-        },
-        {
-          name: '微信小程序',
-          items: [
-            {
-              title: 'CMS系统',
-              skill: 'Egg.js+AntDesignPro+MySQL',
-              link: 'wwww.123.com'
             }
           ]
         },
@@ -137,7 +128,7 @@ export default {
           ]
         },
         {
-          name: '全栈',
+          name: '全栈项目',
           items: [
             {
               title: 'CMS系统',
@@ -177,10 +168,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .work {
   margin: 0 auto;
+  width: 80%;
 }
+
 .el-carousel__item h3 {
   color: #475669;
   font-size: 14px;

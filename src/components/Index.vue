@@ -54,7 +54,7 @@ export default {
 }
 </script>
 
-<style lang='scss' scoped="" type="type/css">
+<style lang="scss" scoped>
 .el-main {
   padding: 0 !important;
 }

@@ -18,8 +18,8 @@ export default {
   }
 }
 </script>
-<style lang="less" scoped>
-.service{
-    margin-top: 30px;
+<style lang="scss" scoped>
+.service {
+  margin-top: 30px;
 }
 </style>

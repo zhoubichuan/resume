@@ -16,6 +16,7 @@ export default {
   width: 100%;
   min-height: 100vh;
   text-align: center;
+  overflow-x: hidden;
   .title {
     text-align: center;
     padding: 60px 0 40px;
