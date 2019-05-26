@@ -1,6 +1,6 @@
 <template>
 <common :op="op">
-    <Work class="work" :op='workOp'/>
+    <Work class="work" :op='workOp' style="width:80%;"/>
 </common>
 </template>
 
@@ -179,7 +179,6 @@ export default {
 
 <style scoped>
 .work {
-  width: 80%;
   margin: 0 auto;
 }
 .el-carousel__item h3 {

@@ -7,7 +7,7 @@
 <script>
 export default {
   props: {
-    op: {type: Object}
+    op: { type: Object }
   }
 }
 </script>
@@ -16,9 +16,9 @@ export default {
   width: 100%;
   min-height: 100vh;
   text-align: center;
-  .title{
+  .title {
     text-align: center;
-    margin: 60px 0 40px;
+    padding: 60px 0 40px;
   }
 }
 </style>

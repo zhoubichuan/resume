@@ -15,14 +15,14 @@
 </template>
 
 <script>
-import NavItem from './Nav'
-import Introduce from '@/components/Introduce'
-import AboutMe from '@/components/AboutMe'
-import Skill from '@/components/Skill'
-import Project from '@/components/Project'
-import Experience from '@/components/Experience'
-import LinkMe from '@/components/Link'
-import Message from '@/components/Message'
+import NavItem from './Nav';
+import Introduce from '@/components/Introduce';
+import AboutMe from '@/components/AboutMe';
+import Skill from '@/components/Skill';
+import Project from '@/components/Project';
+import Experience from '@/components/Experience';
+import LinkMe from '@/components/Link';
+import Message from '@/components/Message';
 export default {
   name: 'Index',
   data () {
@@ -55,22 +55,20 @@ export default {
 </script>
 
 <style lang='scss' scoped="" type="type/css">
-.el-main{
-  padding:0!important;
+.el-main {
+  padding: 0 !important;
 }
-.navStop{
+.navStop {
   position: fixed;
-      top: 0;
-    left: 0;
-    width: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .show {
   background-color: #0f8d82;
-  height: 100vh;
 }
 .center {
   margin-top: 20px;
   text-align: center;
 }
-
 </style>

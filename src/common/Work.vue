@@ -1,11 +1,11 @@
 <template>
-<el-tabs v-model="activeName" @tab-click="handleClick">
-  <el-tab-pane :label="item.name+'相关'" :name="index" v-for="(item,index) in op" :key="index">
+<el-tabs  v-model="activeName" @tab-click="handleClick">
+  <el-tab-pane :label="item.name+'相关'" :name="'_'+index" v-for="(item,index) in op" :key="index">
     <el-row :gutter="24" >
-      <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="3"  v-for="(item,index) in item.items" :key="index" >
-        <a class="box" :href="item.link">
-          <p>{{item.title}}</p>
-          <p>技术要点：{{item.skill}}</p>
+      <el-col :xs="24" :sm="12" :md="6" :lg="6" :xl="3"  v-for="(item2,index2) in item.items" :key="index2" >
+        <a class="box" :href="item2.link">
+          <p>{{item2.title}}</p>
+          <p>技术要点：{{item2.skill}}</p>
         </a>
       </el-col>
     </el-row>
@@ -18,6 +18,14 @@ export default {
     op: {
       type: Array
     }
+  },
+  data () {
+    return { activeName: 'second' }
+  },
+  methods: {
+    handleClick (tab, event) {
+      console.log(tab, event)
+    }
   }
 }
 </script>
@@ -29,5 +37,6 @@ export default {
   display: block;
   color: #333333;
   text-decoration: none;
+  margin-bottom: 20px;
 }
 </style>

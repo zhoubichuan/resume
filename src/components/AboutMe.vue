@@ -1,25 +1,16 @@
 <template>
 <common :op="op">
-  <div>
-    <el-row :gutter="20">
-      <el-col :span="12" :offset="6">
-        <div class="grid-content bg-purple">
-          <p class="center" v-for="(item,index) in content" :key="index">{{item}}</p>
-        </div>
-      </el-col>
-    </el-row>
-    <el-row :gutter="20">
-        <el-col :span="6" v-for="(item,index) in cardOp" :key="index">
-          <card :op="item"/>
-        </el-col>
-      </el-row>
-  </div>
+<el-row :gutter="24">
+  <el-col :span="6" :xs="24" :sm="12" :md="6" :lg="6" :xl="3" v-for="(item,index) in cardOp" :key="index">
+    <card :op="item"/>
+  </el-col>
+</el-row>
 </common>
 </template>
 
 <script>
-import Common from '../common/Common'
-import Card from '../common/Card'
+import Common from '../common/Common';
+import Card from '../common/Card';
 export default {
   name: 'AboutMe',
   components: {
@@ -71,7 +62,6 @@ export default {
 </script>
 
 <style scoped>
-
 .photo {
   width: 100px;
   height: 100px;
