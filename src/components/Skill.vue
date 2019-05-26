@@ -3,9 +3,15 @@
   <el-carousel :interval="15000" arrow="always" style="padding:0 40px">
     <el-carousel-item v-for="item in knowledgeOp" :key="JSON.stringify(item)">
       <el-row :gutter="24">
-        <el-col :span="4" class="left">
-          <h3>{{ item.title }}</h3>
-          <p>{{item.introduce}}</p>
+        <el-col :span="4">
+          <el-card class="box-card">
+            <div slot="header" class="clearfix">
+              <span>{{ item.title }}</span>
+            </div>
+            <div class="text item">
+              {{item.introduce}}
+            </div>
+          </el-card>
         </el-col>
         <el-col :span="20">
           <el-row :gutter="24">
@@ -100,7 +106,7 @@ export default {
           ]
         },
         {
-          title: 'node框架：',
+          title: 'node框架',
           introduce: '能够熟练使用node框架，擅长使用常见的功能如：ssr',
           content: [
             { skill: 'Express', ico: 'express', score: 70 },
@@ -109,7 +115,7 @@ export default {
           ]
         },
         {
-          title: '数据库：',
+          title: '数据库',
           introduce: '能够熟练使用常见的数据库，',
           content: [
             { skill: 'mySql', ico: 'mysql', score: 60 },
@@ -124,7 +130,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.left {
+.box-card {
   background: burlywood;
   height: 80vh;
 }

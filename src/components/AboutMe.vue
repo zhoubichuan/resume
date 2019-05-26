@@ -28,31 +28,23 @@ export default {
       cardOp: [
         {
           title: '个人信息',
-          content: '性名: 周必川;性别：男',
-          descript: '年龄: 27岁 籍贯：湖北',
-          type: 'success',
-          icon: 'el-icon-check'
+          content: ['性名: 周必川', '性别：男', '籍贯：湖北孝感', '年龄: 27岁']
         },
         {
-          title: '专业学历',
-          content: '专业：机械设计制造及其自动化',
-          descript: '学历：大学本科',
-          type: 'info',
-          icon: 'el-icon-message'
+          title: '学历信息',
+          content: [
+            '湖北工业大学工程技术学院',
+            '学历：本科',
+            '毕业时间：2015/07'
+          ]
         },
         {
-          title: '毕业学校',
-          content: '毕业学校：湖北工业大学工程技术学院',
-          descript: '学习技能：编程',
-          type: 'warning',
-          icon: 'el-icon-star-off'
+          title: '工作经验',
+          content: ['2年h5开发经验', '4年web开发经验', '2年node开发经验']
         },
         {
-          title: '联系方式',
-          content: 'weixie:zbc159x',
-          descript: '邮箱：zhoubichuan@iclud.com',
-          type: 'danger',
-          icon: 'el-icon-delete'
+          title: '求职意向',
+          content: ['Web/H5前端开发', 'node工程师', 'web全栈工程师']
         }
       ]
     }

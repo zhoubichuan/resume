@@ -6,7 +6,7 @@
               <el-input
                 type="text"
                 placeholder="请输入姓名"
-                v-model="text"
+                v-model="name"
                 maxlength="10"
                 show-word-limit
               >
@@ -20,12 +20,12 @@
             <el-input
               type="textarea"
               placeholder="请输入内容"
-              v-model="textarea"
+              v-model="content"
               maxlength="30"
               show-word-limit
             >
             </el-input>
-            <el-button class="btn" type="primary">留言</el-button>
+            <el-button class="btn" @click="handleClick" type="primary">留言</el-button>
           </div>
           <div class="message-box">
             大家的评论：
@@ -54,7 +54,9 @@ export default {
         'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg',
         'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg'
       ],
-      textarea: '',
+      ico: '',
+      name: '',
+      content: '',
       op: {
         id: 'message',
         color: 'lavender',
@@ -87,8 +89,16 @@ export default {
   },
   methods: {
     handleClick () {
-      this.message.push({ name: '小明', content: this.$refs.content.value })
-      this.$refs.content.value = '';
+      var message = {
+        img: this.imgUrl[0],
+        name: this.mame,
+        content: this.content,
+        time: new Date()
+      }
+      this.message.push(message)
+      this.img = '';
+      this.name = '';
+      this.content = '';
     }
   },
   components: {
