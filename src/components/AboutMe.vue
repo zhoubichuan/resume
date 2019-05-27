@@ -22,7 +22,6 @@ export default {
       content: [],
       op: {
         id: 'about',
-        color: '#85aea3',
         title: '关于我'
       },
       cardOp: [
@@ -67,6 +66,6 @@ export default {
   text-align: center;
 }
 .grid-content .col-md-3 {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 </style>

@@ -25,7 +25,6 @@ export default {
     return {
       op: {
         id: 'link',
-        color: 'lightblue',
         title: '联系我'
       },
       linkOp: [
@@ -59,6 +58,7 @@ export default {
   width: 80%;
   .el-card {
     margin: 10px 0;
+    background: #cccccc;
     img {
       width: 100px;
     }

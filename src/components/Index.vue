@@ -68,7 +68,8 @@ export default {
   background-color: #0f8d82;
 }
 .center {
-  margin-top: 20px;
+  padding-top: 20px;
   text-align: center;
+  background: #6699cc;
 }
 </style>

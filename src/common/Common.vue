@@ -1,5 +1,5 @@
 <template>
-<div class="show" :id="op.id" :style="'background-color:'+op.color">
+<div class="show" :id="op.id" >
     <h1 v-if="op.title" class="title">{{op.title}}</h1>
     <slot></slot>
 </div>
@@ -17,6 +17,7 @@ export default {
   min-height: 100vh;
   text-align: center;
   overflow-x: hidden;
+  background: #6699cc;
   .title {
     text-align: center;
     padding: 60px 0 40px;

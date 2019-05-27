@@ -20,7 +20,6 @@ export default {
     return {
       op: {
         id: 'experience',
-        color: 'gray',
         title: '我的经历'
       },
       treeOp: [

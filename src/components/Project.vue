@@ -22,7 +22,6 @@ export default {
     return {
       op: {
         id: 'project',
-        color: 'lightblue',
         title: '作品展示'
       },
       currentDate: new Date(),

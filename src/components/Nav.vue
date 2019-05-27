@@ -83,6 +83,7 @@ export default {
     }
     div {
       flex: 1;
+      cursor: pointer;
       p {
         height: 25px;
         line-height: 24px;
@@ -110,13 +111,13 @@ export default {
       color: #fff;
       cursor: pointer;
       &:hover {
-        background: red;
-        border-radius: 15px;
+        color: gray;
+        transform: scale(1.1);
       }
     }
     .active {
-      background: red;
-      border-radius: 15px;
+      color: gray;
+      transform: scale(1.1);
     }
   }
 }

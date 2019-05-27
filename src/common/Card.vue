@@ -28,5 +28,8 @@ h4 {
   width: 80%;
   margin: 0 auto;
   text-align: left;
+  margin-top: 20px;
+  min-height: 150px;
+  background: #cccccc;
 }
 </style>

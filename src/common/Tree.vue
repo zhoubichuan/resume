@@ -1,7 +1,7 @@
 <template>
   <el-timeline >
     <el-timeline-item v-for="(item,index) in op" :timestamp="item.time" :key="index" placement="top">
-      <el-card>
+      <el-card style="background:#cccccc;">
         <h4>{{item.title}}</h4>
         <p>{{item.content}}</p>
       </el-card>

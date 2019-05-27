@@ -23,8 +23,7 @@ export default {
     return {
       op: {
         id: 'introduce',
-        title: 'Hell Word',
-        color: '#e1e1e3'
+        title: 'Hell Word'
       },
       content: [
         '我叫周必川',

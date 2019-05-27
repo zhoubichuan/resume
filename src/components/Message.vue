@@ -59,7 +59,6 @@ export default {
       content: '',
       op: {
         id: 'message',
-        color: 'lavender',
         title: '留言板'
       },
       message: [

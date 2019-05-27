@@ -38,7 +38,7 @@ export default {
   },
   data () {
     return {
-      op: { id: 'skill', color: '#4a839e', title: '前端技能' },
+      op: { id: 'skill', title: '前端技能' },
       knowledgeOp: [
         {
           title: '静态页面',
@@ -131,7 +131,7 @@ export default {
 
 <style lang="scss" scoped>
 .box-card {
-  background: burlywood;
+  background: #cccccc;
   height: 80vh;
 }
 .center {
