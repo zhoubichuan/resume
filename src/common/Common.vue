@@ -17,7 +17,7 @@ export default {
   min-height: 100vh;
   text-align: center;
   overflow-x: hidden;
-  background: #6699cc;
+  background: wheat;
   .title {
     text-align: center;
     padding: 60px 0 40px;

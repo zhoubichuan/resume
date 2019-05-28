@@ -70,6 +70,6 @@ export default {
 .center {
   padding-top: 20px;
   text-align: center;
-  background: #6699cc;
+  background: wheat;
 }
 </style>

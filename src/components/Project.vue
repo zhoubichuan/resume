@@ -13,11 +13,6 @@ export default {
     Common,
     Work
   },
-  methods: {
-    handleClick (tab, event) {
-      console.log(tab, event)
-    }
-  },
   data () {
     return {
       op: {
@@ -58,12 +53,12 @@ export default {
             {
               title: 'weChateApp',
               skill: 'Vue+less',
-              link: 'https://zhoubichuan.github.io/vue-weixin/#/'
+              link: 'https://zhoubichuan.github.io/Project-Vue-weChat/'
             },
             {
               title: 'eleApp',
               skill: 'Vue+less',
-              link: 'wwww.123.com'
+              link: 'https://zhoubichuan.github.io/Project-Vue-eleSell'
             },
             {
               title: 'vue点餐系统',
@@ -83,7 +78,7 @@ export default {
             {
               title: 'weChatApp',
               skill: 'React+less',
-              link: 'https://zhoubichuan.github.io/react-weixin/#/'
+              link: 'http://zhoubichuan.github.io/Project-React-weChat'
             }
           ]
         },
