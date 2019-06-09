@@ -1,11 +1,20 @@
 <template>
-<common :op="op">
-<el-row :gutter="24">
-  <el-col :span="6" :xs="24" :sm="12" :md="6" :lg="6" :xl="3" v-for="(item,index) in cardOp" :key="index">
-    <card :op="item"/>
-  </el-col>
-</el-row>
-</common>
+  <common :op="op">
+    <el-row :gutter="24">
+      <el-col
+        :span="6"
+        :xs="24"
+        :sm="12"
+        :md="6"
+        :lg="6"
+        :xl="3"
+        v-for="(item,index) in cardOp"
+        :key="index"
+      >
+        <card :op="item"/>
+      </el-col>
+    </el-row>
+  </common>
 </template>
 
 <script>

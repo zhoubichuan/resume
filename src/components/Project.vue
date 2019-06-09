@@ -1,7 +1,7 @@
 <template>
-<common :op="op">
-    <Work class="work" :op='workOp'/>
-</common>
+  <common :op="op">
+    <Work class="work" :op="workOp"/>
+  </common>
 </template>
 
 <script>
@@ -32,6 +32,7 @@ export default {
             {
               title: '后台管理系统',
               skill: 'jQuery+BootStrapt',
+              img: 'bootStrapt',
               link:
                 'https://github.com/zhoubichuan/Project-Bootstrapt-BackManagmentSystem'
             },
@@ -53,10 +54,12 @@ export default {
             {
               title: 'weChateApp',
               skill: 'Vue+less',
+              img: 'vue-weChat',
               link: 'https://zhoubichuan.github.io/Project-Vue-weChat/'
             },
             {
               title: 'eleApp',
+              img: 'vue-eleApp',
               skill: 'Vue+less',
               link: 'https://zhoubichuan.github.io/Project-Vue-eleSell'
             },

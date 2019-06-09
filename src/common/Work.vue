@@ -1,19 +1,27 @@
 <template>
-<el-tabs  v-model="activeName" @tab-click="handleClick">
-  <el-tab-pane :label="item.name+'相关'" :name="'_'+index" v-for="(item,index) in op" :key="index">
-    <el-row :gutter="24" style="margin:0">
-      <el-col :xs="24" :sm="12" :md="12" :lg="8" :xl="3"  v-for="(item2,index2) in item.items" :key="index2" >
-        <a class="box" :href="item2.link">
-          <img src="../assets/net.png" alt="">
-          <div class="mask">
-            <p>{{item2.title}}</p>
-            <p>技术要点：{{item2.skill}}</p>
-          </div>
-        </a>
-      </el-col>
-    </el-row>
-  </el-tab-pane>
-</el-tabs>
+  <el-tabs v-model="activeName" @tab-click="handleClick">
+    <el-tab-pane :label="item.name+'相关'" :name="'_'+index" v-for="(item,index) in op" :key="index">
+      <el-row :gutter="24" style="margin:0">
+        <el-col
+          :xs="24"
+          :sm="12"
+          :md="12"
+          :lg="8"
+          :xl="3"
+          v-for="(item2,index2) in item.items"
+          :key="index2"
+        >
+          <a class="box" :href="item2.link">
+            <img :src="require(`../assets/${item2.img || 'net'}.png`)" alt>
+            <div class="mask">
+              <p>{{item2.title}}</p>
+              <p>技术要点：{{item2.skill}}</p>
+            </div>
+          </a>
+        </el-col>
+      </el-row>
+    </el-tab-pane>
+  </el-tabs>
 </template>
 <script>
 export default {
@@ -23,7 +31,9 @@ export default {
     }
   },
   data () {
-    return { activeName: '_0' }
+    return {
+      activeName: '_0'
+    }
   },
   methods: {
     handleClick (tab, event) {

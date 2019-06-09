@@ -1,29 +1,35 @@
 <template>
-<common :op="op">
-  <el-carousel :interval="15000" arrow="always" style="padding:0 40px">
-    <el-carousel-item v-for="item in knowledgeOp" :key="JSON.stringify(item)">
-      <el-row :gutter="24">
-        <el-col :span="4">
-          <el-card class="box-card">
-            <div slot="header" class="clearfix">
-              <span>{{ item.title }}</span>
-            </div>
-            <div class="text item">
-              {{item.introduce}}
-            </div>
-          </el-card>
-        </el-col>
-        <el-col :span="20">
-          <el-row :gutter="24">
-          <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="6" v-for="(item2,index2) in item.content" :key="index2">
-            <Knowledge :op="item2"/>
+  <common :op="op">
+    <el-carousel :interval="15000" arrow="always" style="padding:0 40px">
+      <el-carousel-item v-for="item in knowledgeOp" :key="JSON.stringify(item)">
+        <el-row :gutter="24">
+          <el-col :span="4">
+            <el-card class="box-card">
+              <div slot="header" class="clearfix">
+                <span>{{ item.title }}</span>
+              </div>
+              <div class="text item">{{item.introduce}}</div>
+            </el-card>
           </el-col>
-          </el-row>
-        </el-col>
-      </el-row>
-    </el-carousel-item>
-  </el-carousel>
-</common>
+          <el-col :span="20">
+            <el-row :gutter="24">
+              <el-col
+                :xs="24"
+                :sm="24"
+                :md="8"
+                :lg="8"
+                :xl="6"
+                v-for="(item2,index2) in item.content"
+                :key="index2"
+              >
+                <Knowledge :op="item2"/>
+              </el-col>
+            </el-row>
+          </el-col>
+        </el-row>
+      </el-carousel-item>
+    </el-carousel>
+  </common>
 </template>
 
 <script>
@@ -62,14 +68,29 @@ export default {
           introduce:
             '对原生js有深刻的认识，对设计模式、性能优化、监控、安全、可视化有一定的理解和项目实践',
           content: [
-            { skill: '原生js', ico: 'javascript', score: 90 },
+            {
+              skill: '原生js',
+              ico: 'javascript',
+              score: 90,
+              link: 'https://github.com/zhoubichuan/Web-JavaScript'
+            },
             { skill: 'ES6', ico: 'es6', score: 90 },
             { skill: 'jQuery', ico: 'jquery', score: 90 },
-            { skill: 'ajax', ico: 'ajax', score: 90 },
+            {
+              skill: 'ajax',
+              ico: 'ajax',
+              score: 90,
+              link: 'https://github.com/zhoubichuan/Web-Ajax'
+            },
             { skill: '正则', ico: 'regexp', score: 80 },
             { skill: '设计模式', ico: 'design-mode', score: 70 },
             { skill: 'TypeScript', ico: 'typescript', score: 70 },
-            { skill: '算法', ico: 'calculate', score: 60 },
+            {
+              skill: '算法',
+              ico: 'calculate',
+              score: 60,
+              link: 'https://github.com/zhoubichuan/Web-Arithmetic'
+            },
             { skill: '单元测试', ico: 'test', score: 70 }
           ]
         },
@@ -109,18 +130,48 @@ export default {
           title: 'node框架',
           introduce: '能够熟练使用node框架，擅长使用常见的功能如：ssr',
           content: [
-            { skill: 'Express', ico: 'express', score: 70 },
-            { skill: 'Koa', ico: 'koa', score: 70 },
-            { skill: 'Egg', ico: 'egg', score: 70 }
+            {
+              skill: 'Express',
+              ico: 'express',
+              score: 70,
+              link: 'https://github.com/zhoubichuan/Web-Express'
+            },
+            {
+              skill: 'Koa',
+              ico: 'koa',
+              score: 70,
+              link: 'https://github.com/zhoubichuan/Web-Koa'
+            },
+            {
+              skill: 'Egg',
+              ico: 'egg',
+              score: 70,
+              link: 'https://github.com/zhoubichuan/Web-Egg'
+            }
           ]
         },
         {
           title: '数据库',
           introduce: '能够熟练使用常见的数据库，',
           content: [
-            { skill: 'mySql', ico: 'mysql', score: 60 },
-            { skill: 'mongoDB', ico: 'mongo-db', score: 70 },
-            { skill: 'Redis', ico: 'redis', score: 80 }
+            {
+              skill: 'mySql',
+              ico: 'mysql',
+              score: 60,
+              link: 'https://github.com/zhoubichuan/Web-MySql'
+            },
+            {
+              skill: 'mongoDB',
+              ico: 'mongo-db',
+              score: 70,
+              link: 'https://github.com/zhoubichuan/Web-MongoDB'
+            },
+            {
+              skill: 'Redis',
+              ico: 'redis',
+              score: 80,
+              link: 'https://github.com/zhoubichuan/Web-Redis'
+            }
           ]
         }
       ]

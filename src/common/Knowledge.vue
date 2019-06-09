@@ -1,7 +1,10 @@
 <template>
   <div class="circle">
-    <i :class="['ico',op.ico]"></i>
-    {{op.skill}}<el-progress :percentage="op.score" :color="colorSelect" ></el-progress>
+    <a :href="op.link || '#'">
+      <i :class="['ico',op.ico]"></i>
+      {{op.skill}}
+    </a>
+    <el-progress :percentage="op.score" :color="colorSelect"></el-progress>
   </div>
 </template>
 <script>
