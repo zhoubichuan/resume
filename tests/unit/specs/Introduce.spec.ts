@@ -1,21 +1,13 @@
-import Vue from "vue";
+import { expect } from "chai";
+import { shallowMount } from "@vue/test-utils";
 import Introduce from "@/components/Introduce.vue";
 
 describe("Introduce.vue", () => {
-  it("should render correct contents", () => {
-    const Constructor = Vue.extend(Introduce);
-    const vm = new Constructor().$mount();
-    expect(vm.$el.querySelector(".bg-purple .center")[0].textContent).toEqual(
-      "我叫周必川"
-    );
-    expect(vm.$el.querySelector(".bg-purple .center")[2].textContent).toEqual(
-      "一名全栈工程师"
-    );
-    expect(vm.$el.querySelector(".bg-purple .center")[3].textContent).toEqual(
-      "zhoubichuan@icloud.com"
-    );
-    expect(vm.$el.querySelector(".bg-purple .center")[4].textContent).toEqual(
-      "深圳"
-    );
+  it("首页组件", () => {
+    const msg = "";
+    const wrapper = shallowMount(Introduce, {
+      propsData: { msg }
+    });
+    expect(wrapper.text()).to.include(msg);
   });
 });

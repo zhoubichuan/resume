@@ -1,10 +1,13 @@
-import Vue from 'vue';
-import Index from '@/components/Index';
+import { expect } from "chai";
+import { shallowMount } from "@vue/test-utils";
+import Index from "@/components/index.vue";
 
-describe('Index.vue', () => {
-  it('should render correct contents', () => {
-    const Constructor = Vue.extend(Index)
-    const vm = new Constructor().$mount()
-    expect(vm.$el.querySelector('.title').textContent).toEqual('我的博客')
-  })
-})
+describe("index.vue", () => {
+  it("首页组件", () => {
+    const msg = "";
+    const wrapper = shallowMount(Index, {
+      propsData: { msg }
+    });
+    expect(wrapper.text()).to.include(msg);
+  });
+});
