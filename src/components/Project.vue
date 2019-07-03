@@ -26,8 +26,9 @@ export default {
           items: [
             {
               title: '企业网站',
-              skill: '原生javaScript+css',
-              link: 'wwww.123.com'
+              skill: 'javaScript+css',
+              img: 'component-website',
+              link: 'https://zhoubichuan.github.io/Project-JavaScript-CompanyWebsite/'
             },
             {
               title: '后台管理系统',
@@ -35,6 +36,12 @@ export default {
               img: 'bootStrapt',
               link:
                 'https://github.com/zhoubichuan/Project-Bootstrapt-BackManagmentSystem'
+            },
+            {
+              title: 'flybird游戏',
+              skill: 'javaScript+canvas+css',
+              link:
+                '#'
             },
             {
               title: '微信小程序',

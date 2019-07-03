@@ -10,7 +10,7 @@
       <link-me/>
       <message/>
     </el-main>
-    <el-footer class="center">{{}}</el-footer>
+    <el-footer class="center">{{msg}}</el-footer>
 </el-container>
 </template>
 
@@ -64,9 +64,6 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-}
-.show {
-  background-color: #0f8d82;
 }
 .center {
   padding-top: 20px;
