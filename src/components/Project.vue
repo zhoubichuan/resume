@@ -161,16 +161,6 @@ export default {
               title: "珠峰课堂",
               skill: "React+Redux",
               link: "wwww.123.com"
-            },
-            {
-              title: "flappy bird",
-              skill: "canvas",
-              link: "wwww.123.com"
-            },
-            {
-              title: "微信跳一跳",
-              skill: "thress.js",
-              link: "wwww.123.com"
             }
           ]
         }
