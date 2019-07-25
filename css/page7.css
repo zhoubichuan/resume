@@ -1,0 +1,63 @@
+/*page7*/
+#page7{
+	background: #F0F0F0;
+	}
+
+#page7 header.local{
+	opacity: 1;
+	}
+#page7 header.apped{
+	margin-top: 0px;
+	transition: 1s 1s;
+	}
+#page7 h4{
+	    text-align: right;
+}
+#container {height: auto;margin-top: 200px;}
+
+#sidebar {width: 150px;height: 30px;margin-left:20px ;float: left;}
+#sidebar span{width: 80px;height: 30px;float: left;}
+#logout{color: lightskyblue;text-decoration: none;width: 50px;height: 30px;float: left;}
+
+#sendBox textarea {width: 100%;margin-bottom: 5px; height: 60px;outline: none;border: 0;color: #b3b3b3;font-size: 14px;font-family: "Microsoft Yahei";resize: none;border-radius:10px ;text-indent: 2em;line-height: 60px;}
+#btnPost{width: 50px;height: 20px;background: #FFA30F;border:none ;border-radius: 3px;float: right;}
+
+#list {width:100%;height:100%;overflow: hidden;}
+#list dl {border-radius: ;float: left;clear: both;width: 100%;border-bottom: 1px dashed #d8d8d8;padding: 10px 0;background: #fff;overflow: hidden;color: #333;font: 12px/1.5 \5b8b\4f53;}
+#list img{margin-top:-5px ;float: left;}   
+#list dt {height: 20px; line-height: 12px;float: left;margin-left:10px ;color: cornflowerblue;}
+#list div.t {height: 20px; text-align: right; margin-bottom: 5px;position: relative;top: 30px;right: 20px;}
+#list div.t a {margin: 0 5px;text-decoration: none;}
+
+#reg_box{width: 356px;height: 300px; position: absolute;display: none; background: white;}
+#reg_box strong{width: 80px;height: 27px;font-size: 20px;font-weight: bold;color: #e31256;font-family: "Microsoft YaHei","微软雅黑","黑体";}
+#reg_box input{box-shadow: none; border: 1px solid #CFCFCF;background-color: #fff;vertical-align: middle;padding: 10px 8px;line-height: 1.5;font-size: 14px;outline: 0;height: auto;width: 284px;}
+#reg_box p{margin-left: 30px;margin-top:20px ;}
+#btnReg{border-color: #c81f52;background: #e5406f;white-space: nowrap;font-weight: 400;text-align: center;line-height: 40px;font-weight: 700;font-size: 14px;cursor: pointer;padding: 0 30px;height: 40px;color: #fff;border: 0;}
+
+#log_box{width: 356px;height: 300px; position: absolute;display: none; background: white;}
+#log_box strong{width: 80px;height: 27px;font-size: 20px;font-weight: bold;color: #e31256;font-family: "Microsoft YaHei","微软雅黑","黑体";}
+#log_box input{box-shadow: none; border: 1px solid #CFCFCF;background-color: #fff;vertical-align: middle;padding: 10px 8px;line-height: 1.5;font-size: 14px;outline: 0;height: auto;width: 284px;}
+#log_box p{margin-left: 30px;margin-top:20px ;}
+#btnLogin{border-color: #c81f52;background: #e5406f;white-space: nowrap;font-weight: 400;text-align: center;line-height: 40px;font-weight: 700;font-size: 14px;cursor: pointer;padding: 0 30px;height: 40px;color: #fff;border: 0;}
+
+#showMore {
+	width: 100%; 
+	cursor: pointer;
+	bottom: 50px;
+	text-align: center;
+	position: fixed;
+	}
+footer{
+	position: fixed;
+	bottom: 5px; 
+	height: 20px;
+	width:100%;
+	text-align: center;
+}
+@media (min-width: 800px){
+  .timeline::before{
+    left: 50%;
+    margin-left: -2px;
+  }
+}

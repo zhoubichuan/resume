@@ -1,0 +1,40 @@
+/*page2*/
+#page2{
+	background: #649ECE;
+}
+
+#page2_header.local{
+	opacity: 1;
+	}
+	
+#page2_header.apped{
+	margin-top: 0px;
+	transition: 1s 1s;
+	}
+
+.page2_photo_box{
+	padding: 10px 0;
+}
+
+.page2_photo{
+	width: 100px;
+	height: 100px;
+	background:url(../img/ico.jpg) no-repeat 0 0;
+	border-radius: 50%;
+	background-size: 100%;
+	margin: 0 auto;
+	}
+	
+.page2_text{
+	padding-top:5% ;
+}
+
+.page2_text p{
+	text-indent:2em ;
+	line-height: 30px;
+	}
+@media (min-width:600px) {
+	.page2_text{
+	padding-top:10% ;
+}
+}

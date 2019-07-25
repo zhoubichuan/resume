@@ -1,0 +1,58 @@
+/*page1*/
+#page1{ 
+	background:#CFDDE8;
+	}
+#page1-contant{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#page1 header{
+	height: 40px;
+	width: 100%;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 40px;
+	color: #2c3e50;
+	letter-spacing: 2px;
+	font-family: inherit;
+	text-align: center;
+	margin-top: -100px;
+	opacity: 0;
+	}
+
+#page1 header.local{
+	opacity: 1;
+	}
+#page1 header.apped{
+	margin-top: 0px;
+	transition: 1s 1s;
+}
+#page1 input{
+	width: 10em;
+	height: 3em;
+}
+#page1-line{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top:5px ;
+}
+#page1-line span{
+	width: 40px;
+	height: 2px;
+	background: orange;
+}
+#page1-body{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top:20px ;
+	position: relative;
+}
+	

@@ -1,0 +1,45 @@
+/*page5*/
+#page5{
+	background: #E9FAE7;
+}
+
+#page5 header.local{
+	opacity: 1;
+	}
+#page5 header.apped{
+	margin-top: 0px;
+	transition: 1s 1s;
+	}
+#page5 #circle{
+	padding: 50px;
+}
+#page5 #circle div{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+#page5 .circle{
+	height: 100px;
+	width: 100px;
+	border: 10px solid lightgray;
+	border-radius: 50%;
+	list-style: none;
+	margin-bottom:50px ;
+	line-height: 80px;
+	text-align: center;
+	position: relative;
+	}
+#page5 .circle p{
+	position: absolute;
+	top: 70px;
+}
+#page5 #tex{
+	position: absolute;
+	}
+#page5 #circle span{width: 10px;
+height: 10px;
+position: absolute;
+background-color: lightseagreen;
+border-radius: 10px;
+}
+
