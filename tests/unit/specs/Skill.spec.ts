@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { shallowMount } from "@vue/test-utils";
-import Skill from "@/components/Skill.vue";
+import Skill from "@/components/skill.vue";
 
 describe("Skill.vue", () => {
   it("技能组件", () => {
@@ -10,5 +10,4 @@ describe("Skill.vue", () => {
     });
     expect(wrapper.text()).to.include(msg);
   });
-
 });

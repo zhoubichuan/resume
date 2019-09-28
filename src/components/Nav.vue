@@ -3,13 +3,13 @@
     <div class="left">
       <img src alt />
       <div @click="handleToTop">
-        <p>Resume</p>
-        <p>个人简历</p>
+        <p>{{navData.name1}}</p>
+        <p>{{navData.name2}}</p>
       </div>
     </div>
     <ul class="rigth" @click="handleClick">
       <li
-        v-for="(item,index) in title"
+        v-for="(item,index) in navData.title"
         :key="index"
         :class="item.active ? 'active':''"
         :data-index="index"
@@ -18,20 +18,19 @@
   </el-header>
 </template>
 <script>
+import { mapState } from "vuex";
+
 export default {
   data() {
     return {
-      title: [
-        { name: "关于我", link: "about", active: true },
-        { name: "前端技能", link: "skill", active: false },
-        { name: "作品展示", link: "project", active: false },
-        { name: "我的经历", link: "experience", active: false },
-        { name: "联系我", link: "link", active: false },
-        { name: "留言板", link: "message", active: false }
-      ]
+      nav: {}
     };
   },
+  computed: {
+    ...mapState(["title", "navData"])
+  },
   mounted() {
+    console.log(this.title, this.navData);
     window.addEventListener("scroll", this.handleScroll, true);
   },
   methods: {
@@ -42,7 +41,7 @@ export default {
       let scrollHeight = scrollObj.scrollHeight;
       let height = window.pageYOffset;
       if (clientHeight < height + scrollHeight) {
-        this.title.forEach((item, index) => {
+        this.navData.title.forEach((item, index) => {
           if (Math.ceil(height / clientHeight) - 2 == index) {
             item.active = true;
           } else {
