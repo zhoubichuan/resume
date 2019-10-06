@@ -27,7 +27,7 @@ export default {
     };
   },
   computed: {
-    ...mapState(["title", "navData"])
+    ...mapState([ "navData"])
   },
   mounted() {
     console.log(this.title, this.navData);
