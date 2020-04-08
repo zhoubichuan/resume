@@ -1,78 +1,93 @@
 <template>
   <el-header ref="nav" id="head">
-    <div class="left">
-      <img src alt />
-      <div @click="handleToTop">
-        <p>{{navData.name1}}</p>
-        <p>{{navData.name2}}</p>
-      </div>
-    </div>
-    <ul class="rigth" @click="handleClick">
-      <li
-        v-for="(item,index) in navData.title"
-        :key="index"
-        :class="item.active ? 'active':''"
-        :data-index="index"
-      >{{item.name}}</li>
-    </ul>
+    <el-row
+      type="flex"
+      class="row-bg"
+      style="width:100%"
+      justify="space-between"
+    >
+      <el-col :span="6">
+        <div class="left">
+          <img src alt />
+          <div @click="handleToTop">
+            <p>{{ navData.name1 }}</p>
+            <p>{{ $t(navData.name2) }}</p>
+          </div>
+        </div>
+      </el-col>
+      <el-col :span="14">
+        <ul class="rigth" @click="handleClick">
+          <li
+            v-for="(item, index) in navData.title"
+            :key="index"
+            :class="item.active ? 'active' : ''"
+            :data-index="index"
+          >
+            {{ $t(item.name) }}
+          </li>
+        </ul>
+      </el-col>
+    </el-row>
   </el-header>
 </template>
 <script>
-import { mapState } from "vuex";
+import { mapState } from 'vuex'
 
 export default {
   data() {
     return {
-      nav: {}
-    };
+      nav: {},
+    }
   },
   computed: {
-    ...mapState([ "navData"])
+    ...mapState(['navData']),
   },
   mounted() {
-    console.log(this.title, this.navData);
-    window.addEventListener("scroll", this.handleScroll, true);
+    console.log(this.title, this.navData)
+    window.addEventListener('scroll', this.handleScroll, true)
   },
   methods: {
     handleScroll: function() {
       let clientHeight =
-        document.documentElement.clientHeight || document.body.clientHeight;
-      let scrollObj = document.querySelector("#head");
-      let scrollHeight = scrollObj.scrollHeight;
-      let height = window.pageYOffset;
+        document.documentElement.clientHeight || document.body.clientHeight
+      let scrollObj = document.querySelector('#head')
+      let scrollHeight = scrollObj.scrollHeight
+      let height = window.pageYOffset
       if (clientHeight < height + scrollHeight) {
         this.navData.title.forEach((item, index) => {
           if (Math.ceil(height / clientHeight) - 2 == index) {
-            item.active = true;
+            item.active = true
           } else {
-            item.active = false;
+            item.active = false
           }
-        });
-        this.$emit("stopScoll", true);
+        })
+        this.$emit('stopScoll', true)
       } else {
-        this.$emit("stopScoll", false);
+        this.$emit('stopScoll', false)
       }
     },
     destory() {
-      window.removeEventListener("scroll", this.handleScroll);
+      window.removeEventListener('scroll', this.handleScroll)
     },
     handleClick(e) {
-      if (e.target.nodeName.toLowerCase() === "li") {
-        let index = +e.target.dataset.index + 1;
+      if (e.target.nodeName.toLowerCase() === 'li') {
+        let index = +e.target.dataset.index + 1
         this.title.forEach((item, index) => {
-          item.active = false;
-        });
-        this.title[index - 1].active = true;
+          item.active = false
+        })
+        this.title[index - 1].active = true
         let clientHeight =
-          document.documentElement.clientHeight || document.body.clientHeight;
-        document.documentElement.scrollTop = index * clientHeight - 30;
+          document.documentElement.clientHeight || document.body.clientHeight
+        document.documentElement.scrollTop = index * clientHeight - 30
       }
     },
     handleToTop() {
-      document.documentElement.scrollTop = 0;
-    }
-  }
-};
+      this.$i18n.locale = this.$i18n.locale === 'cn_ZH' ? 'en_US' : 'cn_ZH'
+      localStorage.lang = this.$i18n.locale
+      // document.documentElement.scrollTop = 0;
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -111,10 +126,10 @@ export default {
   }
   .rigth {
     display: flex;
+    height: 100%;
     align-items: center;
     li {
       flex: 1;
-      width: 78px;
       display: inline-block;
       line-height: 50px;
       text-align: center;
