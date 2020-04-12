@@ -1,15 +1,19 @@
 <template>
-<div class="show" :id="op.id" >
-    <h1 v-if="op.title" class="title">{{op.title}}</h1>
-    <slot></slot>
-</div>
+  <div class="show" :id="op.id">
+    <el-row type="flex" class="row-bg" justify="center">
+      <el-col :span="18">
+        <h1 v-if="op.title" class="title">{{ op.title }}</h1>
+        <slot></slot>
+      </el-col>
+    </el-row>
+  </div>
 </template>
 <script>
 export default {
   props: {
-    op: { type: Object }
-  }
-}  
+    op: { type: Object },
+  },
+}
 </script>
 <style lang="scss" scoped>
 .show {
