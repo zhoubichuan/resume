@@ -17,7 +17,7 @@
           :key="index2"
         >
           <a class="box" :href="item2.link">
-            <img :src="`./assets/${item2.img || 'net'}.png`" alt="图片" />
+            <img :src="`../assets/${item2.img || 'net'}.png`" alt="图片" />
             <div class="mask">
               <p>{{ item2.title }}</p>
               <p>技术要点：{{ item2.skill }}</p>

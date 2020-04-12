@@ -8,15 +8,15 @@
         :md="12"
         :lg="12"
         :xl="3"
-        v-for="(item,index) in linkOp"
+        v-for="(item, index) in linkOp"
         :key="index"
       >
         <div class="box-card">
           <el-card>
-            <img :src="item.ico" alt />
-            <h3>{{item.name}}</h3>
-            <a v-if="item.link" :href="item.link">{{item.link}}</a>
-            <span v-if="item.text">{{item.text}}</span>
+            <img :src="`../assets/${item.ico || 'net'}.jpg`" alt="图片" />
+            <h3>{{ item.name }}</h3>
+            <a v-if="item.link" :href="item.link">{{ item.link }}</a>
+            <span v-if="item.text">{{ item.text }}</span>
           </el-card>
         </div>
       </el-col>
@@ -24,17 +24,17 @@
   </common>
 </template>
 <script>
-import Common from "../common/Common";
-import { mapState } from "vuex";
+import Common from '../common/Common'
+import { mapState } from 'vuex'
 
 export default {
   components: {
     Common
   },
   computed: {
-    ...mapState("link", ["op", "linkOp"])
+    ...mapState('link', ['op', 'linkOp'])
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .box-card {

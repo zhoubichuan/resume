@@ -47,6 +47,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "html-withimg-loader": "^0.1.16",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "node-sass": "^4.12.0",
