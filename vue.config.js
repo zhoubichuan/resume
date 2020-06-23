@@ -5,6 +5,21 @@ module.exports = {
   productionSourceMap: false,
   chainWebpack: config => {
     config.module
+      .rule('vue')
+      .use('vue-loader')
+      .loader('vue-loader')
+      .tap(options => {
+        return options
+      })
+    // config.module
+    //   .rule('scss')
+    //   .use('sass-loader')
+    //   .tap(options =>
+    //     merge(options, {
+    //       includePaths: [path.resolve(dirname, 'node_modules')],
+    //     })
+    //   )
+    config.module
       .rule('html')
       .test(/\.html$/)
       .use('html-withimg-loader')
@@ -14,23 +29,23 @@ module.exports = {
   devServer: {
     open: true,
     hot: true,
-    contentBase: path.resolve(__dirname, 'dist'), //配置开发服务运行时的文件根目录
+    // contentBase: path.resolve(__dirname, 'dist'), //配置开发服务运行时的文件根目录
     host: 'localhost', //开发服务器监听的主机地址
     compress: true, //开发服务器是否启动gzip等压缩
     port: 8090, //开发服务器监听的端口
-    proxy: { //配置不同的后台API地址
-      // '/api': {
-      //   target: '<url>',
-      //   ws: true,
-      //   changeOrigin: true,
-      //   pathRewrite: {
-      //     "^/api": "/"
-      //   }
-      // },
-      // '/foo': {
-      //   target: '<other_url>'
-      // }
-    }
+    // proxy: { //配置不同的后台API地址
+    //   '/api': {
+    //     target: '',
+    //     ws: true,
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       "^/api": "/"
+    //     }
+    //   },
+    //   '/foo': {
+    //     target: ''
+    //   }
+    // }
   },
 }
 
