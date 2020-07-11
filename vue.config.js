@@ -81,6 +81,21 @@ module.exports = {
       .use('html-withimg-loader')
       .loader('html-withimg-loader')
       .end()
+    // config.module.rule('compile')
+    //   .test(/\.js$/)
+    //   .include
+    //   .add('src')
+    //   .add('/node_modules/')
+    //   .end()
+    //   .use('babel')
+    //   .loader('babel-loader')
+    //   .options({
+    //     presets: [
+    //       ['@babel/preset-env', {
+    //         modules: false
+    //       }]
+    //     ]
+    //   });
     // 压缩图片
     config.module
       .rule("images")
@@ -141,7 +156,7 @@ module.exports = {
           // 开启Gzip压缩
           new CompressionWebpackPlugin({
             // 目标文件名称。[path] 被替换为原始文件的路径和 [query] 查询
-            asset: '[path].gz[query]',
+            filename: '[path].gz[query]',
             // 使用 gzip 压缩
             algorithm: 'gzip',
             // 处理与此正则相匹配的所有文件

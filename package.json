@@ -38,6 +38,8 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-syntax-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@types/chai": "^4.1.0",
     "@types/mocha": "^5.2.4",
@@ -50,8 +52,11 @@
     "@vue/cli-service": "^3.8.0",
     "@vue/eslint-config-typescript": "^4.0.0",
     "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "^6.26.3",
     "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.1.0",
     "babel-plugin-component": "^1.1.1",
+    "babel-preset-env": "^1.7.0",
     "compression-webpack-plugin": "^4.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",

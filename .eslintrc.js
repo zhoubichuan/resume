@@ -3,7 +3,9 @@ module.exports = {
   env: {
     node: true
   },
-  'extends': [
+  presets: ["env"],
+  plugins: ["@babel/plugin-proposal-class-properties", "@babel/plugin-syntax-class-properties"],
+  extends: [
     'plugin:vue/essential',
     'eslint:recommended',
     '@vue/typescript'
