@@ -1,5 +1,18 @@
 const path = require('path')
 const merge = require('webpack-merge')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const webpack = require('webpack')
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const CompressionWebpackPlugin = require("compression-webpack-plugin"); // 开启gzip压缩， 按需引用
+
+const isDev = process.env.NODE_ENV === 'dev'
+console.error(process.env.NODE_ENV, 'process.env.NODE_ENV ')
+
+
+function resolve(dir) {
+  return path.join(__dirname, dir);
+}
+
 module.exports = {
   /**
    * 项目地址二级目录
@@ -27,11 +40,18 @@ module.exports = {
    * 设置是否为生产环境构建生成source map
    */
   productionSourceMap: true,
-
   /**
    * 使用链式操作来修改配置
    */
   chainWebpack: config => {
+    // 修复热更新失效
+    config.resolve.symlinks(true);
+    // 配置别名
+    config.resolve.alias
+      .set("@", resolve("src"))
+      .set("assets", resolve("src/assets"))
+      .set("components", resolve("src/components"))
+      .set("public", resolve("public"))
     config.module
       .rule('vue')
       .use('vue-loader')
@@ -61,13 +81,80 @@ module.exports = {
       .use('html-withimg-loader')
       .loader('html-withimg-loader')
       .end()
+    // 压缩图片
+    config.module
+      .rule("images")
+      .use("image-webpack-loader")
+      .loader("image-webpack-loader")
+      .options({
+        mozjpeg: {
+          progressive: true,
+          quality: 65
+        },
+        optipng: {
+          enabled: false
+        },
+        pngquant: {
+          quality: [0.65, 0.9],
+          speed: 4
+        },
+        gifsicle: {
+          interlaced: false
+        },
+        webp: {
+          quality: 75
+        }
+      });
   },
   /**
    * 使用整体替换来修改配置
    */
   configureWebpack: config => {
-    return {
-      plugins: []
+    if (isDev) {
+      return {
+        plugins: [
+          // 分析各种包的大小
+          new webpack.DefinePlugin({
+            'process.env': {
+              NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+            }
+          })
+        ]
+      }
+    } else {
+      return {
+        plugins: [
+          // 使用包分析工具
+          new BundleAnalyzerPlugin(),
+          // 去掉调试代码
+          new UglifyJsPlugin({
+            uglifyOptions: {
+              compress: {
+                drop_debugger: true,
+                drop_console: true, //生产环境自动删除console
+              },
+              warnings: false,
+            },
+            sourceMap: false,
+            parallel: true, //使用多进程并行运行来提高构建速度。默认并发运行数：os.cpus().length - 1。
+          }),
+          // 开启Gzip压缩
+          new CompressionWebpackPlugin({
+            // 目标文件名称。[path] 被替换为原始文件的路径和 [query] 查询
+            asset: '[path].gz[query]',
+            // 使用 gzip 压缩
+            algorithm: 'gzip',
+            // 处理与此正则相匹配的所有文件
+            test: new RegExp(
+              '\\.(js|css)$'
+            ),
+            // 只处理大于此大小的文件
+            threshold: 10240,
+            // 最小压缩比npm达到 0.8 时才会被压缩
+            minRatio: 0.8
+          })
+        ]
+      }
     }
   },
   css: {
@@ -98,7 +185,12 @@ module.exports = {
     }
   },
   devServer: {
+    overlay: { // 让浏览器 overlay 同时显示警告和错误
+      warnings: true,
+      errors: true
+    },
     open: true,
+    hotOnly: true, // 热更新
     hot: true,
     // contentBase: path.resolve(__dirname, 'dist'), //配置开发服务运行时的文件根目录
     host: 'localhost', //开发服务器监听的主机地址
