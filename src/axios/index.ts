@@ -45,7 +45,7 @@ service.interceptors.response.use(
       Cookies.set("jwt-token", headers["jwt-token"], {
         expires: 1 / 24,
       })
-      Cookies.set("token-expires", Date.now(), {
+      Cookies.set("token-expires", new Date(), {
         expires: 1 / 24,
       })
     }

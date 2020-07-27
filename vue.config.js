@@ -35,7 +35,9 @@ module.exports = {
    * @param 'default' 同 'error'
    */
   lintOnSave: false,
-  // transpileDependencies:,
+  transpileDependencies: [
+    'vue-particles'
+  ],
   /**
    * 设置是否为生产环境构建生成source map
    */
@@ -81,21 +83,21 @@ module.exports = {
       .use('html-withimg-loader')
       .loader('html-withimg-loader')
       .end()
-    // config.module.rule('compile')
-    //   .test(/\.js$/)
-    //   .include
-    //   .add('src')
-    //   .add('/node_modules/')
-    //   .end()
-    //   .use('babel')
-    //   .loader('babel-loader')
-    //   .options({
-    //     presets: [
-    //       ['@babel/preset-env', {
-    //         modules: false
-    //       }]
-    //     ]
-    //   });
+    config.module.rule('compile')
+      .test(/\.[js|ts]$/)
+      .include
+      .add(resolve('src'))
+      .add('/node_modules/')
+      .end()
+      .use('babel')
+      .loader('babel-loader')
+      .options({
+        presets: [
+          ['@babel/preset-env', {
+            modules: false
+          }]
+        ]
+      });
     // 压缩图片
     config.module
       .rule("images")
@@ -140,19 +142,19 @@ module.exports = {
       return {
         plugins: [
           // 使用包分析工具
-          new BundleAnalyzerPlugin(),
+          // new BundleAnalyzerPlugin(),
           // 去掉调试代码
-          new UglifyJsPlugin({
-            uglifyOptions: {
-              compress: {
-                drop_debugger: true,
-                drop_console: true, //生产环境自动删除console
-              },
-              warnings: false,
-            },
-            sourceMap: false,
-            parallel: true, //使用多进程并行运行来提高构建速度。默认并发运行数：os.cpus().length - 1。
-          }),
+          // new UglifyJsPlugin({
+          //   uglifyOptions: {
+          //     compress: {
+          //       drop_debugger: true,
+          //       drop_console: true, //生产环境自动删除console
+          //     },
+          //     warnings: false,
+          //   },
+          //   sourceMap: false,
+          //   parallel: true, //使用多进程并行运行来提高构建速度。默认并发运行数：os.cpus().length - 1。
+          // }),
           // 开启Gzip压缩
           new CompressionWebpackPlugin({
             // 目标文件名称。[path] 被替换为原始文件的路径和 [query] 查询

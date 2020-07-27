@@ -149,23 +149,23 @@ let coms = [
   Backtop,
   PageHeader,
   Loading,
-  MessageBox,
-  Message,
+  // MessageBox,
+  // Message,
   Notification,
 ]
 
 export default {
   install(Vue) {
-    Vue.use(Loading.directive)
+    // Vue.use(Loading.directive)
     coms.forEach((com) => {
       Vue.use(com)
     })
-    Vue.prototype.$loading = Loading.service
-    Vue.prototype.$msgbox = MessageBox
-    Vue.prototype.$alert = MessageBox.alert
-    Vue.prototype.$confirm = MessageBox.confirm
-    Vue.prototype.$prompt = MessageBox.prompt
-    Vue.prototype.$notify = Notification
-    Vue.prototype.$message = Message
+    // Vue.prototype.$loading = Loading.service
+    // Vue.prototype.$msgbox = MessageBox
+    // Vue.prototype.$alert = MessageBox.alert
+    // Vue.prototype.$confirm = MessageBox.confirm
+    // Vue.prototype.$prompt = MessageBox.prompt
+    // Vue.prototype.$notify = Notification
+    // Vue.prototype.$message = Message
   },
 }
