@@ -55,7 +55,7 @@ export default {
           {
             title: "weChateApp",
             skill: "Vue+less",
-            img: "vue-weChat",
+            img: "Project-Vue-weChat",
             link: "https://zhoubichuan.github.io/Project-Vue-weChat/",
           },
           {
@@ -66,6 +66,7 @@ export default {
           },
           {
             title: "vue点餐系统",
+            img: "Project-Vue-Ordering",
             skill: "Vue+less",
             link: "https://zhoubichuan.github.io/Project-Vue-Ordering/",
           },
@@ -76,11 +77,13 @@ export default {
         items: [
           {
             title: "zhufengCourseApp",
+            img: "Project-React.TS-app",
             skill: "React+TS+less",
             link: "https://zhoubichuan.github.io/Project-React.TS-app/",
           },
           {
             title: "weChatApp",
+            img: "Project-React-weChat",
             skill: "React+less",
             link: "http://zhoubichuan.github.io/Project-React-weChat",
           },

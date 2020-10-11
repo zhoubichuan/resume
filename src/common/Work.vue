@@ -16,8 +16,7 @@
                 :key="index2">
           <a class="box"
              :href="item2.link">
-            <img :src="`../assets/${item2.img || 'net'}.png`"
-                 alt="图片" />
+            <iframe :src="`https://zhoubichuan.github.io/${item2.img}/`"></iframe>
             <div class="mask">
               <p>{{ item2.title }}</p>
               <p>技术要点：{{ item2.skill }}</p>
@@ -57,7 +56,7 @@ export default {
   margin: 10px 0;
   position: relative;
   cursor: pointer;
-  img {
+  iframe {
     width: 100%;
     transition: all 0.7s;
   }
