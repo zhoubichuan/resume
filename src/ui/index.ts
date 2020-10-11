@@ -155,7 +155,7 @@ let coms = [
 ]
 
 export default {
-  install(Vue) {
+  install(Vue: any) {
     // Vue.use(Loading.directive)
     coms.forEach((com) => {
       Vue.use(com)

@@ -17,7 +17,7 @@ module.exports = {
   /**
    * 项目地址二级目录
    */
-  publicPath: 'resume',
+  publicPath: './',
   /**
    * 文件打包目录，默认为dist文件夹
    */

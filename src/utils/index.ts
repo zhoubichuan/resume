@@ -4,7 +4,7 @@ const utils = {
   },
 }
 export default {
-  install(Vue) {
+  install(Vue: any) {
     Object.keys(utils).forEach((item) => {
       Vue.prototype["$" + item] = utils[item]
     })

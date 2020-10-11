@@ -1,5 +1,5 @@
 const filters = {
-  status(val) {
+  status(val: any) {
     return val
   },
 }

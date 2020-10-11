@@ -3,7 +3,7 @@ export default {
   state: {
     op: {
       id: "project",
-      title: "作品展示"
+      title: "作品展示",
     },
     currentDate: new Date(),
     workOp: [
@@ -15,39 +15,39 @@ export default {
             skill: "javaScript+css",
             img: "component-website",
             link:
-              "https://zhoubichuan.github.io/Project-JavaScript-CompanyWebsite/"
+              "https://zhoubichuan.github.io/Project-JavaScript-CompanyWebsite/",
           },
           {
             title: "后台管理系统",
             skill: "jQuery+BootStrapt",
             img: "bootStrapt",
             link:
-              "https://github.com/zhoubichuan/Project-Bootstrapt-BackManagmentSystem"
+              "https://github.com/zhoubichuan/Project-Bootstrapt-BackManagmentSystem",
           },
           {
             title: "flybird游戏",
             skill: "canvas+css",
             img: "fly-bird",
             link:
-              "https://zhoubichuan.github.io/Project-JavaScript.Canvas-Flybird/"
+              "https://zhoubichuan.github.io/Project-JavaScript.Canvas-Flybird/",
           },
           {
             title: "微信跳一跳游戏",
             skill: "webGL(three.js)+css",
             img: "tiao-yi-tiao",
-            link: "https://zhoubichuan.github.io/Project-Three.js-TiaoYiTiao/"
+            link: "https://zhoubichuan.github.io/Project-Three.js-TiaoYiTiao/",
           },
           {
             title: "微信小程序",
             skill: "---",
-            link: "wwww.123.com"
+            link: "wwww.123.com",
           },
           {
             title: "微信公众号",
             skill: "---",
-            link: "wwww.123.com"
-          }
-        ]
+            link: "wwww.123.com",
+          },
+        ],
       },
       {
         name: "Vue",
@@ -56,20 +56,20 @@ export default {
             title: "weChateApp",
             skill: "Vue+less",
             img: "vue-weChat",
-            link: "https://zhoubichuan.github.io/Project-Vue-weChat/"
+            link: "https://zhoubichuan.github.io/Project-Vue-weChat/",
           },
           {
             title: "eleApp",
             img: "vue-eleApp",
             skill: "Vue+less",
-            link: "https://zhoubichuan.github.io/Project-Vue-eleSell"
+            link: "https://zhoubichuan.github.io/Project-Vue-eleSell",
           },
           {
             title: "vue点餐系统",
             skill: "Vue+less",
-            link: "https://zhoubichuan.github.io/Project-Vue-Ordering/"
-          }
-        ]
+            link: "https://zhoubichuan.github.io/Project-Vue-Ordering/",
+          },
+        ],
       },
       {
         name: "React",
@@ -77,23 +77,23 @@ export default {
           {
             title: "zhufengCourseApp",
             skill: "React+TS+less",
-            link: "https://zhoubichuan.github.io/Project-React.TS-app/"
+            link: "https://zhoubichuan.github.io/Project-React.TS-app/",
           },
           {
             title: "weChatApp",
             skill: "React+less",
-            link: "http://zhoubichuan.github.io/Project-React-weChat"
-          }
-        ]
+            link: "http://zhoubichuan.github.io/Project-React-weChat",
+          },
+        ],
       },
       {
         name: "Angular",
         items: [
           {
             title: "珠峰课堂",
-            link: "https://zhoubichuan.github.io/Project-React.TS-app/"
-          }
-        ]
+            link: "https://zhoubichuan.github.io/Project-React.TS-app/",
+          },
+        ],
       },
       {
         name: "node.js",
@@ -101,9 +101,9 @@ export default {
           {
             title: "CMS系统",
             skill: "Egg.js+AntDesignPro+MySQL",
-            link: "wwww.123.com"
-          }
-        ]
+            link: "wwww.123.com",
+          },
+        ],
       },
       {
         name: "express",
@@ -111,9 +111,9 @@ export default {
           {
             title: "CMS系统",
             skill: "Egg.js+AntDesignPro+MySQL",
-            link: "wwww.123.com"
-          }
-        ]
+            link: "wwww.123.com",
+          },
+        ],
       },
       {
         name: "koa",
@@ -121,9 +121,9 @@ export default {
           {
             title: "CMS系统",
             skill: "Egg.js+AntDesignPro+MySQL",
-            link: "wwww.123.com"
-          }
-        ]
+            link: "wwww.123.com",
+          },
+        ],
       },
       {
         name: "全栈项目",
@@ -131,25 +131,25 @@ export default {
           {
             title: "CMS系统",
             skill: "Egg.js+AntDesignPro+MySQL",
-            link: "wwww.123.com"
+            link: "wwww.123.com",
           },
           {
             title: "多人聊天室",
             skill: "React+Mongodb+websocket",
-            link: "wwww.123.com"
+            link: "wwww.123.com",
           },
           {
             title: "新闻爬虫",
             skill: "cheerio+mysql+nodemailer",
-            link: "wwww.123.com"
+            link: "wwww.123.com",
           },
           {
             title: "珠峰课堂",
             skill: "React+Redux",
-            link: "wwww.123.com"
-          }
-        ]
-      }
-    ]
-  }
-};
+            link: "wwww.123.com",
+          },
+        ],
+      },
+    ],
+  },
+}
