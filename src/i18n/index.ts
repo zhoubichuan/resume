@@ -1,7 +1,7 @@
 import Vue from "vue"
 import VueI18n from "vue-i18n"
-import cn_ZH from "./cn"
-import en_US from "./en"
+import cn_ZH from "./cn_ZH"
+import en_US from "./en_US"
 Vue.use(VueI18n)
 
 const i18n = new VueI18n({
