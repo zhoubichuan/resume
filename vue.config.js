@@ -54,6 +54,7 @@ module.exports = {
       .set("assets", resolve("src/assets"))
       .set("components", resolve("src/components"))
       .set("public", resolve("public"))
+
     config.module
       .rule('vue')
       .use('vue-loader')
@@ -101,24 +102,25 @@ module.exports = {
     // 压缩图片
     config.module
       .rule("images")
+      .test(/.*\.(gif|png|jpe?g|svg|webp)$/i)
       .use("image-webpack-loader")
       .loader("image-webpack-loader")
       .options({
-        mozjpeg: {
+        mozjpeg: { //压缩jpeg的配置
           progressive: true,
           quality: 65
         },
-        optipng: {
+        optipng: { //使用imagemin-optiong压缩png,enable:false为关闭
           enabled: false
         },
-        pngquant: {
+        pngquant: { //使用imagemin-pngquant压缩png
           quality: [0.65, 0.9],
           speed: 4
         },
-        gifsicle: {
+        gifsicle: { //压缩gif的配置
           interlaced: false
         },
-        webp: {
+        webp: { //开启webp,会把jpg和png图片压缩为webp格式
           quality: 75
         }
       });

@@ -17,7 +17,7 @@
     "test:unit": "vue-cli-service test:unit",
     "predeploy": "npm run build",
     "deploy": "bash deploy.sh",
-    "gh-pages": "bash deploy_gh-pages.sh"
+    "deploy_gh-pages": "bash deploy_gh-pages.sh"
   },
   "dependencies": {
     "@types/js-cookie": "^2.2.6",
