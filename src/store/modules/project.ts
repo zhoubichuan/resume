@@ -11,18 +11,32 @@ export default {
         name: "javaScript",
         items: [
           {
+            title: "我的博客",
+            skill: "javaScript+css",
+            img: "zhoubichuan.github.io",
+            link:
+              "https://github.com/zhoubichuan/zhoubichuan.github.io",
+          },
+          {
+            title: "javascript笔记",
+            skill: "javaScript+css",
+            img: "Web-JavaScript",
+            link:
+              "https://zhoubichuan.github.io/Web-JavaScript/",
+          },
+          {
             title: "企业网站",
             skill: "javaScript+css",
-            img: "component-website",
+            img: "Project-JavaScript-CompanyWebsite",
             link:
               "https://zhoubichuan.github.io/Project-JavaScript-CompanyWebsite/",
           },
           {
             title: "后台管理系统",
             skill: "jQuery+BootStrapt",
-            img: "bootStrapt",
+            img: "Project-Bootstrapt-BackManagmentSystem",
             link:
-              "https://github.com/zhoubichuan/Project-Bootstrapt-BackManagmentSystem",
+              "https://zhoubichuan.github.io/Project-Bootstrapt-BackManagmentSystem/",
           },
           {
             title: "flybird游戏",
@@ -34,7 +48,7 @@ export default {
           {
             title: "微信跳一跳游戏",
             skill: "webGL(three.js)+css",
-            img: "tiao-yi-tiao",
+            img: "Project-Three.js-TiaoYiTiao",
             link: "https://zhoubichuan.github.io/Project-Three.js-TiaoYiTiao/",
           },
           {
@@ -53,19 +67,25 @@ export default {
         name: "Vue",
         items: [
           {
-            title: "weChateApp",
+            title: "vue笔记",
+            skill: "Vuepress",
+            img: "Web-Vue",
+            link: "https://zhoubichuan.github.io/Web-Vue/",
+          },
+          {
+            title: "微信",
             skill: "Vue+less",
             img: "Project-Vue-weChat",
             link: "https://zhoubichuan.github.io/Project-Vue-weChat/",
           },
           {
-            title: "eleApp",
-            img: "vue-eleApp",
+            title: "饿了么",
+            img: "Project-Vue-eleSell",
             skill: "Vue+less",
             link: "https://zhoubichuan.github.io/Project-Vue-eleSell",
           },
           {
-            title: "vue点餐系统",
+            title: "点餐系统",
             img: "Project-Vue-Ordering",
             skill: "Vue+less",
             link: "https://zhoubichuan.github.io/Project-Vue-Ordering/",

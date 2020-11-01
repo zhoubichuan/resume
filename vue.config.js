@@ -1,9 +1,12 @@
 const path = require('path')
 const merge = require('webpack-merge')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-const webpack = require('webpack')
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+
 const CompressionWebpackPlugin = require("compression-webpack-plugin"); // 开启gzip压缩， 按需引用
+const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i; // 开启gzip压缩， 按需写入
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+
+const webpack = require('webpack')
+const TerserPlugin = require('terser-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'dev'
 console.error(process.env.NODE_ENV, 'process.env.NODE_ENV ')
@@ -18,6 +21,7 @@ module.exports = {
    * 项目地址二级目录
    */
   publicPath: './',
+  indexPath: 'index.html', // 相对于打包路径index.html的路径
   /**
    * 文件打包目录，默认为dist文件夹
    */
@@ -34,6 +38,7 @@ module.exports = {
    * @param 'error' 开启每次保存都进行检测，lint错误将显示到浏览器页面上，且编译失败
    * @param 'default' 同 'error'
    */
+  runtimeCompiler: true, // 是否使用包含运行时编译器的 Vue 构建版本
   lintOnSave: false,
   transpileDependencies: [
     'vue-particles'
@@ -42,18 +47,76 @@ module.exports = {
    * 设置是否为生产环境构建生成source map
    */
   productionSourceMap: true,
+  // 是否为 Babel 或 TypeScript 使用 thread-loader
+  parallel: require('os').cpus().length > 1,
+  // 向 PWA 插件传递选项
+  pwa: {},
+  // 可以用来传递任何第三方插件选项
+  pluginOptions: {},
   /**
    * 使用链式操作来修改配置
    */
   chainWebpack: config => {
     // 修复热更新失效
     config.resolve.symlinks(true);
+
+    // 如果使用多页面打包，使用vue inspect --plugins查看html是否在结果数组中
+    config.plugin("html").tap(args => {
+      // 修复 Lazy loading routes Error
+      args[0].chunksSortMode = "none";
+      return args;
+    });
+    config.optimization.minimizer([new TerserPlugin({
+      terserOptions: {
+        mangle: true, // 混淆，默认也是开的，mangle也是可以配置很多选项的，具体看后面的链接
+        compress: {
+          drop_console: true, //传true就是干掉所有的console.*这些函数的调用.
+          drop_debugger: true, //干掉那些debugger;
+          pure_funcs: ['console.log'] // 如果你要干掉特定的函数比如console.info ，又想删掉后保留其参数中的副作用，那用pure_funcs来处理
+        }
+      }
+    })])
     // 配置别名
     config.resolve.alias
       .set("@", resolve("src"))
-      .set("assets", resolve("src/assets"))
-      .set("components", resolve("src/components"))
-      .set("public", resolve("public"))
+      .set("@assets", resolve("src/assets"))
+      .set("@components", resolve("src/components"))
+      .set("@public", resolve("public"))
+
+    // 压缩图片
+    // 需要 npm i -D image-webpack-loader
+    config.module
+      .rule("images")
+      .use("image-webpack-loader")
+      .loader("image-webpack-loader")
+      .options({
+        mozjpeg: {
+          progressive: true,
+          quality: 65
+        },
+        optipng: {
+          enabled: false
+        },
+        pngquant: {
+          quality: [0.65, 0.9],
+          speed: 4
+        },
+        gifsicle: {
+          interlaced: false
+        },
+        webp: {
+          quality: 75
+        }
+      })
+      .end()
+
+    // 打包分析
+    // 打包之后自动生成一个名叫report.html文件(可忽视)
+    if (!isDev) {
+      config.plugin("webpack-report").use(BundleAnalyzerPlugin, [{
+        analyzerMode: "static"
+      }]);
+    }
 
     config.module
       .rule('vue')
@@ -62,6 +125,7 @@ module.exports = {
       .tap(options => {
         return options
       })
+
     config.module
       .rule('image')
       .test(/\.(png|jpg|gif)$/i)
@@ -72,18 +136,21 @@ module.exports = {
           limit: 5120
         })
       )
+
     config.module
       .rule('image')
       .test(/\.(png|jpg|gif)$/i)
       .use('file-loader')
       .loader('file-loader')
       .end()
+
     config.module
       .rule('html')
       .test(/\.html$/)
       .use('html-withimg-loader')
       .loader('html-withimg-loader')
       .end()
+
     config.module.rule('compile')
       .test(/\.[js|ts]$/)
       .include
@@ -98,32 +165,7 @@ module.exports = {
             modules: false
           }]
         ]
-      });
-    // 压缩图片
-    config.module
-      .rule("images")
-      .test(/.*\.(gif|png|jpe?g|svg|webp)$/i)
-      .use("image-webpack-loader")
-      .loader("image-webpack-loader")
-      .options({
-        mozjpeg: { //压缩jpeg的配置
-          progressive: true,
-          quality: 65
-        },
-        optipng: { //使用imagemin-optiong压缩png,enable:false为关闭
-          enabled: false
-        },
-        pngquant: { //使用imagemin-pngquant压缩png
-          quality: [0.65, 0.9],
-          speed: 4
-        },
-        gifsicle: { //压缩gif的配置
-          interlaced: false
-        },
-        webp: { //开启webp,会把jpg和png图片压缩为webp格式
-          quality: 75
-        }
-      });
+      })
   },
   /**
    * 使用整体替换来修改配置
@@ -143,21 +185,9 @@ module.exports = {
     } else {
       return {
         plugins: [
-          // 使用包分析工具
-          // new BundleAnalyzerPlugin(),
-          // 去掉调试代码
-          // new UglifyJsPlugin({
-          //   uglifyOptions: {
-          //     compress: {
-          //       drop_debugger: true,
-          //       drop_console: true, //生产环境自动删除console
-          //     },
-          //     warnings: false,
-          //   },
-          //   sourceMap: false,
-          //   parallel: true, //使用多进程并行运行来提高构建速度。默认并发运行数：os.cpus().length - 1。
-          // }),
+
           // 开启Gzip压缩
+          // 需要 npm i -D compression-webpack-plugin
           new CompressionWebpackPlugin({
             // 目标文件名称。[path] 被替换为原始文件的路径和 [query] 查询
             filename: '[path].gz[query]',
@@ -177,6 +207,13 @@ module.exports = {
     }
   },
   css: {
+    // 将组件内的CSS提取到一个单独的CSS文件（只用在生产环境中）
+    extract: true,
+
+    // 是否开启CSS source map
+    sourceMap: false,
+
+    // 为预处理器的loader传递自定义选项
     loaderOptions: {
       // 给 sass-loader 传递选项
       sass: {
@@ -201,7 +238,11 @@ module.exports = {
           primary: '#fff'
         }
       }
-    }
+    },
+
+    // 为所有的CSS及其预处理文件开启CSS Modules
+    // 这个选项不会影响 *.vue文件
+    modules: false
   },
   devServer: {
     overlay: { // 让浏览器 overlay 同时显示警告和错误
@@ -209,6 +250,7 @@ module.exports = {
       errors: true
     },
     open: true,
+    https: false, // https:{type:Boolean}
     hotOnly: true, // 热更新
     hot: true,
     // contentBase: path.resolve(__dirname, 'dist'), //配置开发服务运行时的文件根目录
@@ -228,11 +270,5 @@ module.exports = {
     //     target: ''
     //   }
     // }
-  },
-  // 是否为 Babel 或 TypeScript 使用 thread-loader
-  parallel: require('os').cpus().length > 1,
-  // 向 PWA 插件传递选项
-  pwa: {},
-  // 可以用来传递任何第三方插件选项
-  pluginOptions: {}
+  }
 }

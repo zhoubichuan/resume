@@ -12,7 +12,7 @@ git push -u origin master
 git push origin master
 
 # 2.打包
-npm run build
+npm run build:prod
 
 # 3.进入打包目录
 cd dist

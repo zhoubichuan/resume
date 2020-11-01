@@ -24,7 +24,7 @@
                   show-word-limit></el-input>
         <el-button class="btn"
                    @click="handleClick"
-                   type="primary">留言</el-button>
+                   type="primary">请留言</el-button>
       </div>
       <div class="message-box">
         大家的评论：
@@ -70,6 +70,8 @@ export default {
   },
   methods: {
     handleClick () {
+      console.log(1221212)
+      debugger
       var message = {
         img: this.imgUrl[0],
         name: this.mame,

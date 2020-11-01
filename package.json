@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vue-cli-service serve --mode dev",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build --mode prod",
     "build:dev": "vue-cli-service build --mode dev",
     "build:sit": "vue-cli-service build --mode sit",
     "build:prod": "vue-cli-service build --mode prod",
@@ -30,7 +30,6 @@
     "gh-pages": "^2.1.1",
     "moment": "^2.24.0",
     "register-service-worker": "^1.6.2",
-    "uglifyjs-webpack-plugin": "^2.2.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-i18n": "^8.17.0",
@@ -68,6 +67,7 @@
     "less-loader": "^4.1.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
+    "terser-webpack-plugin": "^5.0.3",
     "typescript": "^3.4.3",
     "url-loader": "^4.1.0",
     "vue-template-compiler": "^2.6.10"

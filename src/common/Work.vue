@@ -10,10 +10,11 @@
         <el-col :xs="24"
                 :sm="12"
                 :md="12"
-                :lg="8"
-                :xl="3"
+                :lg="12"
+                :xl="12"
                 v-for="(item2, index2) in item.items"
                 :key="index2">
+          <p>{{ item2.title }}</p>
           <a class="box"
              :href="item2.link">
             <iframe :src="`https://zhoubichuan.github.io/${item2.img}/`"></iframe>
