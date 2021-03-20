@@ -4,7 +4,7 @@ import router from "./router/index"
 import "./registerServiceWorker"
 import UI from "./ui"
 import store from "./store"
-import _ from "lodash"
+// import _ from "lodash"
 import moment from "moment"
 import i18n from "./i18n"
 import "moment/locale/zh-cn"
@@ -15,7 +15,7 @@ Vue.use(directive)
 Vue.use(filter)
 Vue.use(utils)
 Vue.prototype.$log = console.log
-Vue.prototype.$_ = _
+// Vue.prototype.$_ = _
 Vue.prototype.$mment = moment
 
 moment.locale("zh-cn")

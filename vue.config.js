@@ -66,16 +66,16 @@ module.exports = {
       args[0].chunksSortMode = "none";
       return args;
     });
-    config.optimization.minimizer([new TerserPlugin({
-      terserOptions: {
-        mangle: true, // 混淆，默认也是开的，mangle也是可以配置很多选项的，具体看后面的链接
-        compress: {
-          drop_console: true, //传true就是干掉所有的console.*这些函数的调用.
-          drop_debugger: true, //干掉那些debugger;
-          pure_funcs: ['console.log'] // 如果你要干掉特定的函数比如console.info ，又想删掉后保留其参数中的副作用，那用pure_funcs来处理
-        }
-      }
-    })])
+    // config.optimization.minimizer([new TerserPlugin({
+    //   terserOptions: {
+    //     mangle: true, // 混淆，默认也是开的，mangle也是可以配置很多选项的，具体看后面的链接
+    //     compress: {
+    //       drop_console: true, //传true就是干掉所有的console.*这些函数的调用.
+    //       drop_debugger: true, //干掉那些debugger;
+    //       pure_funcs: ['console.log'] // 如果你要干掉特定的函数比如console.info ，又想删掉后保留其参数中的副作用，那用pure_funcs来处理
+    //     }
+    //   }
+    // })])
     // 配置别名
     config.resolve.alias
       .set("@", resolve("src"))
@@ -242,7 +242,7 @@ module.exports = {
 
     // 为所有的CSS及其预处理文件开启CSS Modules
     // 这个选项不会影响 *.vue文件
-    modules: false
+    requireModuleExtension: false
   },
   devServer: {
     overlay: { // 让浏览器 overlay 同时显示警告和错误
