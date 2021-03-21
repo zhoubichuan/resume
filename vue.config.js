@@ -123,7 +123,14 @@ module.exports = {
       .use("vue-loader")
       .loader("vue-loader")
       .tap((options) => {
-        return options;
+        let op = {
+          ...options,
+          loaders: {
+            scss: "style-loader!css-loader!sass-loader",
+            sass: "style-loader!css-loader!sass-loader?indentedSyntax",
+          },
+        };
+        return op;
       });
 
     config.module
