@@ -9,6 +9,7 @@
 <script>
 export default {
   name: "App",
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   created() {
     console.log(process.env, "process.env");
   },

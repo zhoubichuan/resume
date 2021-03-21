@@ -3,7 +3,7 @@ export default {
   aboutMe: "about me",
   frontEndSkill: "front end skill",
   worksShow: "works show",
-  note:'my note',
+  note: "my note",
   myExperience: "my experiece",
   linkMe: "link me",
   leaveMessage: "leave message",

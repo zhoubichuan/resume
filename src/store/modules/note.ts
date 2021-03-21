@@ -21,7 +21,7 @@ export default {
             skill: "javaScript+css",
             img: "Web-JavaScript",
             link: "https://zhoubichuan.github.io/Web-JavaScript/",
-          }
+          },
         ],
       },
       {
@@ -32,44 +32,32 @@ export default {
             skill: "Vuepress",
             img: "Web-Vue",
             link: "https://zhoubichuan.github.io/Web-Vue/",
-          }
+          },
         ],
       },
       {
         name: "React",
-        items: [
-        
-        ],
+        items: [],
       },
       {
         name: "Angular",
-        items: [
-   
-        ],
+        items: [],
       },
       {
         name: "node.js",
-        items: [
-      
-        ],
+        items: [],
       },
       {
         name: "express",
-        items: [
-     
-        ],
+        items: [],
       },
       {
         name: "koa",
-        items: [
-    
-        ],
+        items: [],
       },
       {
         name: "全栈项目",
-        items: [
-       
-        ],
+        items: [],
       },
     ],
   },

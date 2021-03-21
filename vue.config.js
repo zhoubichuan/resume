@@ -1,11 +1,9 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
 const merge = require("webpack-merge");
-
 const CompressionWebpackPlugin = require("compression-webpack-plugin"); // 开启gzip压缩， 按需引用
-const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i; // 开启gzip压缩， 按需写入
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
-
 const webpack = require("webpack");
 const TerserPlugin = require("terser-webpack-plugin");
 
@@ -46,6 +44,7 @@ module.exports = {
    */
   productionSourceMap: true,
   // 是否为 Babel 或 TypeScript 使用 thread-loader
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
   parallel: require("os").cpus().length > 1,
   // 向 PWA 插件传递选项
   pwa: {},
@@ -64,16 +63,18 @@ module.exports = {
       args[0].chunksSortMode = "none";
       return args;
     });
-    // config.optimization.minimizer([new TerserPlugin({
-    //   terserOptions: {
-    //     mangle: true, // 混淆，默认也是开的，mangle也是可以配置很多选项的，具体看后面的链接
-    //     compress: {
-    //       drop_console: true, //传true就是干掉所有的console.*这些函数的调用.
-    //       drop_debugger: true, //干掉那些debugger;
-    //       pure_funcs: ['console.log'] // 如果你要干掉特定的函数比如console.info ，又想删掉后保留其参数中的副作用，那用pure_funcs来处理
-    //     }
-    //   }
-    // })])
+    config.optimization.minimizer([
+      new TerserPlugin({
+        terserOptions: {
+          mangle: true, // 混淆，默认也是开的，mangle也是可以配置很多选项的，具体看后面的链接
+          compress: {
+            drop_console: true, //传true就是干掉所有的console.*这些函数的调用.
+            drop_debugger: true, //干掉那些debugger;
+            pure_funcs: ["console.log"], // 如果你要干掉特定的函数比如console.info ，又想删掉后保留其参数中的副作用，那用pure_funcs来处理
+          },
+        },
+      }),
+    ]);
     // 配置别名
     config.resolve.alias
       .set("@", resolve("src"))
@@ -110,13 +111,13 @@ module.exports = {
 
     // 打包分析
     // 打包之后自动生成一个名叫report.html文件(可忽视)
-    // if (!isDev) {
-    //   config.plugin("webpack-report").use(BundleAnalyzerPlugin, [
-    //     {
-    //       analyzerMode: "static",
-    //     },
-    //   ]);
-    // }
+    if (!isDev) {
+      config.plugin("webpack-report").use(BundleAnalyzerPlugin, [
+        {
+          analyzerMode: "static",
+        },
+      ]);
+    }
 
     config.module
       .rule("vue")
@@ -180,7 +181,7 @@ module.exports = {
   /**
    * 使用整体替换来修改配置
    */
-  configureWebpack: (config) => {
+  configureWebpack: () => {
     if (isDev) {
       return {
         plugins: [
