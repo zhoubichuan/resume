@@ -6,7 +6,8 @@
       <about-me />
       <skill />
       <project />
-      <Experience />
+      <note />
+      <!-- <Experience /> -->
       <link-me />
       <message />
     </el-main>
@@ -20,7 +21,8 @@ import Introduce from "@/components/introduce";
 import AboutMe from "@/components/aboutMe";
 import Skill from "@/components/skill";
 import Project from "@/components/project";
-import Experience from "@/components/experience";
+import Note from "@/components/Note";
+// import Experience from "@/components/experience";
 import LinkMe from "@/components/link";
 import Message from "@/components/Message";
 export default {
@@ -50,7 +52,8 @@ export default {
     NavItem,
     LinkMe,
     Message,
-    Experience,
+    Note,
+    // Experience,
   },
 };
 </script>
