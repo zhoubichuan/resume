@@ -3,7 +3,7 @@
     <el-row
       type="flex"
       class="row-bg"
-      style="width:100%"
+      style="width: 100%"
       justify="space-between"
     >
       <el-col :span="6">
@@ -31,63 +31,63 @@
   </el-header>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
 
 export default {
   data() {
     return {
       nav: {},
-    }
+    };
   },
   computed: {
-    ...mapState(['navData']),
+    ...mapState(["navData"]),
   },
   mounted() {
-    console.log(this.title, this.navData)
-    window.addEventListener('scroll', this.handleScroll, true)
+    console.log(this.title, this.navData);
+    window.addEventListener("scroll", this.handleScroll, true);
   },
   methods: {
-    handleScroll: function() {
+    handleScroll: function () {
       let clientHeight =
-        document.documentElement.clientHeight || document.body.clientHeight
-      let scrollObj = document.querySelector('#head')
-      let scrollHeight = scrollObj.scrollHeight
-      let height = window.pageYOffset
+        document.documentElement.clientHeight || document.body.clientHeight;
+      let scrollObj = document.querySelector("#head");
+      let scrollHeight = scrollObj.scrollHeight;
+      let height = window.pageYOffset;
       if (clientHeight < height + scrollHeight) {
         this.navData.title.forEach((item, index) => {
           if (Math.ceil(height / clientHeight) - 2 == index) {
-            item.active = true
+            item.active = true;
           } else {
-            item.active = false
+            item.active = false;
           }
-        })
-        this.$emit('stopScoll', true)
+        });
+        this.$emit("stopScoll", true);
       } else {
-        this.$emit('stopScoll', false)
+        this.$emit("stopScoll", false);
       }
     },
     destory() {
-      window.removeEventListener('scroll', this.handleScroll)
+      window.removeEventListener("scroll", this.handleScroll);
     },
     handleClick(e) {
-      if (e.target.nodeName.toLowerCase() === 'li') {
-        let index = +e.target.dataset.index + 1
+      if (e.target.nodeName.toLowerCase() === "li") {
+        let index = +e.target.dataset.index + 1;
         this.title.forEach((item, index) => {
-          item.active = false
-        })
-        this.title[index - 1].active = true
+          item.active = false;
+        });
+        this.title[index - 1].active = true;
         let clientHeight =
-          document.documentElement.clientHeight || document.body.clientHeight
-        document.documentElement.scrollTop = index * clientHeight - 30
+          document.documentElement.clientHeight || document.body.clientHeight;
+        document.documentElement.scrollTop = index * clientHeight - 30;
       }
     },
     handleToTop() {
-      this.$i18n.locale = this.$i18n.locale === 'cn_ZH' ? 'en_US' : 'cn_ZH'
-      localStorage.lang = this.$i18n.locale
+      this.$i18n.locale = this.$i18n.locale === "cn_ZH" ? "en_US" : "cn_ZH";
+      localStorage.lang = this.$i18n.locale;
       // document.documentElement.scrollTop = 0;
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>

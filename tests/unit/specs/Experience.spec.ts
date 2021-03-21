@@ -6,7 +6,7 @@ describe("Experience.vue", () => {
   it("经验组件", () => {
     const msg = "";
     const wrapper = shallowMount(Experience, {
-      propsData: { msg }
+      propsData: { msg },
     });
     expect(wrapper.text()).to.include(msg);
   });

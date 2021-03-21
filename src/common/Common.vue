@@ -13,7 +13,7 @@ export default {
   props: {
     op: { type: Object },
   },
-}
+};
 </script>
 <style lang="scss" scoped>
 .show {

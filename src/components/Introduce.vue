@@ -1,30 +1,32 @@
 <template>
-<Common  :op="op">
-  <div >
-    <el-row :gutter="20">
-      <el-col :span="12" :offset="6">
-        <div class="grid-content bg-purple">
-          <p class="center" v-for="(item,index) in content" :key="index">{{item}}</p>
-        </div>
-      </el-col>
-    </el-row>
-  </div>
-</Common>
+  <Common :op="op">
+    <div>
+      <el-row :gutter="20">
+        <el-col :span="12" :offset="6">
+          <div class="grid-content bg-purple">
+            <p class="center" v-for="(item, index) in content" :key="index">
+              {{ item }}
+            </p>
+          </div>
+        </el-col>
+      </el-row>
+    </div>
+  </Common>
 </template>
 
 <script>
-import Common from '../common/Common';
-import {mapState}from 'vuex'
+import Common from "../common/Common";
+import { mapState } from "vuex";
 
 export default {
-  name: 'Introduce',
+  name: "Introduce",
   components: {
-    Common
+    Common,
   },
-  computed:{
-    ...mapState( "introduce",[ 'op','content'])
-  }
-}
+  computed: {
+    ...mapState("introduce", ["op", "content"]),
+  },
+};
 </script>
 
 <style lang="scss" scoped>

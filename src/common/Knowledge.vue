@@ -1,8 +1,8 @@
 <template>
   <div class="circle">
     <a :href="op.link || '#'">
-      <i :class="['ico',op.ico]"></i>
-      {{op.skill}}
+      <i :class="['ico', op.ico]"></i>
+      {{ op.skill }}
     </a>
     <el-progress :percentage="op.score" :color="colorSelect"></el-progress>
   </div>
@@ -11,51 +11,51 @@
 export default {
   props: {
     op: {
-      type: Object
-    }
+      type: Object,
+    },
   },
-  data () {
-    return {}
+  data() {
+    return {};
   },
   computed: {
     colorSelect: function () {
-      var _color = null
+      var _color = null;
       switch (Math.floor(this.op.score / 10)) {
         case 0:
-          _color = '#f56c6c';
-          break
+          _color = "#f56c6c";
+          break;
         case 1:
-          _color = '#f56c6c';
-          break
+          _color = "#f56c6c";
+          break;
         case 2:
-          _color = '#f56c6c';
-          break
+          _color = "#f56c6c";
+          break;
         case 3:
-          _color = '#f56c6c';
-          break
+          _color = "#f56c6c";
+          break;
         case 4:
-          _color = '#f56c6c';
-          break
+          _color = "#f56c6c";
+          break;
         case 5:
-          _color = '#f56c6c';
-          break
+          _color = "#f56c6c";
+          break;
         case 6:
-          _color = '#e6a23c';
-          break
+          _color = "#e6a23c";
+          break;
         case 7:
-          _color = '#909399';
-          break
+          _color = "#909399";
+          break;
         case 8:
-          _color = '#409eff';
-          break
+          _color = "#409eff";
+          break;
         case 9:
-          _color = '#67c23a';
-          break
+          _color = "#67c23a";
+          break;
       }
-      return _color
-    }
-  }
-}
+      return _color;
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .circle {

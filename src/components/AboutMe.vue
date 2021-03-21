@@ -8,7 +8,7 @@
         :md="6"
         :lg="6"
         :xl="3"
-        v-for="(item,index) in cardOp"
+        v-for="(item, index) in cardOp"
         :key="index"
       >
         <card :op="item" />
@@ -25,11 +25,11 @@ export default {
   name: "AboutMe",
   components: {
     Common,
-    Card
+    Card,
   },
   computed: {
-    ...mapState("aboutMe", ["op", "cardOp", "content"])
-  }
+    ...mapState("aboutMe", ["op", "cardOp", "content"]),
+  },
 };
 </script>
 

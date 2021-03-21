@@ -6,4 +6,4 @@ export default {
   myExperience: "my experiece",
   linkMe: "link me",
   leaveMessage: "leave message",
-}
+};

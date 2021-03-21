@@ -74,9 +74,9 @@ import {
   MessageBox,
   Message,
   Notification,
-} from "element-ui"
+} from "element-ui";
 
-let coms = [
+const coms = [
   Pagination,
   Dialog,
   Autocomplete,
@@ -152,14 +152,14 @@ let coms = [
   // MessageBox,
   // Message,
   Notification,
-]
+];
 
 export default {
   install(Vue: any) {
     // Vue.use(Loading.directive)
     coms.forEach((com) => {
-      Vue.use(com)
-    })
+      Vue.use(com);
+    });
     // Vue.prototype.$loading = Loading.service
     // Vue.prototype.$msgbox = MessageBox
     // Vue.prototype.$alert = MessageBox.alert
@@ -168,4 +168,4 @@ export default {
     // Vue.prototype.$notify = Notification
     // Vue.prototype.$message = Message
   },
-}
+};

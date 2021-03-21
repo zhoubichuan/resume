@@ -1,23 +1,26 @@
 <template>
-  <el-tabs v-model="activeName"
-           @tab-click="handleClick">
-    <el-tab-pane :label="item.name + '相关'"
-                 :name="'_' + index"
-                 v-for="(item, index) in op"
-                 :key="index">
-      <el-row :gutter="24"
-              style="margin:0">
-        <el-col :xs="24"
-                :sm="12"
-                :md="12"
-                :lg="12"
-                :xl="12"
-                v-for="(item2, index2) in item.items"
-                :key="index2">
+  <el-tabs v-model="activeName" @tab-click="handleClick">
+    <el-tab-pane
+      :label="item.name + '相关'"
+      :name="'_' + index"
+      v-for="(item, index) in op"
+      :key="index"
+    >
+      <el-row :gutter="24" style="margin: 0">
+        <el-col
+          :xs="24"
+          :sm="12"
+          :md="12"
+          :lg="12"
+          :xl="12"
+          v-for="(item2, index2) in item.items"
+          :key="index2"
+        >
           <p>{{ item2.title }}</p>
-          <a class="box"
-             :href="item2.link">
-            <iframe :src="`https://zhoubichuan.github.io/${item2.img}/`"></iframe>
+          <a class="box" :href="item2.link">
+            <iframe
+              :src="`https://zhoubichuan.github.io/${item2.img}/`"
+            ></iframe>
             <div class="mask">
               <p>{{ item2.title }}</p>
               <p>技术要点：{{ item2.skill }}</p>
@@ -32,20 +35,20 @@
 export default {
   props: {
     op: {
-      type: Array
-    }
+      type: Array,
+    },
   },
-  data () {
+  data() {
     return {
-      activeName: '_0'
-    }
+      activeName: "_0",
+    };
   },
   methods: {
-    handleClick (tab, event) {
-      console.log(tab, event)
-    }
-  }
-}
+    handleClick(tab, event) {
+      console.log(tab, event);
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .box {

@@ -1,23 +1,22 @@
 <template>
   <common :op="op">
-    <Work class="work"
-          :op="workOp" />
+    <Work class="work" :op="workOp" />
   </common>
 </template>
 
 <script>
 import Common from "../common/Common";
 import Work from "../common/Work";
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
 export default {
   name: "Project",
   components: {
     Common,
-    Work
+    Work,
   },
   computed: {
-    ...mapState('project', ['op', 'currentDate', 'workOp'])
-  }
+    ...mapState("project", ["op", "currentDate", "workOp"]),
+  },
 };
 </script>
 

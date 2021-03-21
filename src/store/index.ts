@@ -12,5 +12,5 @@ export default new vuex.Store({
   getters,
   mutations,
   actions,
-  modules
+  modules,
 });

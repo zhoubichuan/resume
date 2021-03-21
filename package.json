@@ -17,13 +17,9 @@
     "gh-pages": "bash deploy_gh-pages.sh"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "compression-webpack-plugin": "^5.0.1",
-    "core-js": "^3.6.5",
+    "axios": "^0.21.1",
     "element-ui": "^2.15.1",
-    "less-loader": "5.0.0",
-    "lodash": "^4.17.21",
-    "moment": "^2.29.1",
+    "js-cookie": "^2.2.1",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
@@ -33,10 +29,9 @@
     "vuex": "^3.4.0"
   },
   "devDependencies": {
-    "@types/chai": "^4.2.15",
-    "@types/jest": "^24.9.1",
+    "@types/chai": "^4.2.11",
     "@types/js-cookie": "^2.2.6",
-    "@types/mocha": "^8.2.2",
+    "@types/mocha": "^5.2.4",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "^4.5.0",
@@ -45,21 +40,33 @@
     "@vue/cli-plugin-pwa": "^4.5.0",
     "@vue/cli-plugin-router": "^4.5.0",
     "@vue/cli-plugin-typescript": "^4.5.0",
-    "@vue/cli-plugin-unit-jest": "^4.5.0",
+    "@vue/cli-plugin-unit-mocha": "^4.5.0",
     "@vue/cli-plugin-vuex": "^4.5.0",
     "@vue/cli-service": "^4.5.0",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/test-utils": "^1.0.3",
-    "babel-eslint": "^10.1.0",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "eslint": "^6.8.0",
+    "chai": "^4.1.2",
+    "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
-    "less": "^3.0.4",
+    "lint-staged": "^9.5.0",
     "prettier": "^2.2.1",
-    "sass-loader": "^11.0.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
     "typescript": "~4.1.5",
     "vue-template-compiler": "^2.6.11"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "rules": {
+    "@typescript-eslint/no-explicit-any": ["off"]
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   }
 }

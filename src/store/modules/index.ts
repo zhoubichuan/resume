@@ -13,5 +13,5 @@ export default {
   project,
   experience,
   link,
-  message
+  message,
 };

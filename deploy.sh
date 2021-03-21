@@ -6,7 +6,7 @@ set -e
 # 1.发布到master分支
 git init
 git add -A
-git commit -m 'master'
+git commit --no-verify -m $(date +%F)
 git pull origin master
 git push -u origin master
 git push origin master

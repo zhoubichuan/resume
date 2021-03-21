@@ -24,17 +24,17 @@
   </common>
 </template>
 <script>
-import Common from '../common/Common'
-import { mapState } from 'vuex'
+import Common from "../common/Common";
+import { mapState } from "vuex";
 
 export default {
   components: {
-    Common
+    Common,
   },
   computed: {
-    ...mapState('link', ['op', 'linkOp'])
-  }
-}
+    ...mapState("link", ["op", "linkOp"]),
+  },
+};
 </script>
 <style lang="scss" scoped>
 .box-card {

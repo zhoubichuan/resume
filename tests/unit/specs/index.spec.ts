@@ -6,7 +6,7 @@ describe("index.vue", () => {
   it("首页组件", () => {
     const msg = "";
     const wrapper = shallowMount(Index, {
-      propsData: { msg }
+      propsData: { msg },
     });
     expect(wrapper.text()).to.include(msg);
   });

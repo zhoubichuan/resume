@@ -14,15 +14,13 @@ export default {
             title: "我的博客",
             skill: "javaScript+css",
             img: "zhoubichuan.github.io",
-            link:
-              "https://github.com/zhoubichuan/zhoubichuan.github.io",
+            link: "https://github.com/zhoubichuan/zhoubichuan.github.io",
           },
           {
             title: "javascript笔记",
             skill: "javaScript+css",
             img: "Web-JavaScript",
-            link:
-              "https://zhoubichuan.github.io/Web-JavaScript/",
+            link: "https://zhoubichuan.github.io/Web-JavaScript/",
           },
           {
             title: "企业网站",
@@ -175,4 +173,4 @@ export default {
       },
     ],
   },
-}
+};

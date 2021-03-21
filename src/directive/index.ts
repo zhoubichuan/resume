@@ -1,4 +1,4 @@
-let dires = {
+const dires: any = {
   perm: {
     // bind : function(el,binding){
     //    	el.focus()； 	// 改代码执行没效果；
@@ -12,12 +12,12 @@ let dires = {
     //      // 当VNode(DOM 更新时) 更新的时候,会执行updated 函数，可能会执行多次 }
     //  }
   },
-}
+};
 
 export default {
   install(Vue: any) {
     Object.keys(dires).forEach((key) => {
-      Vue.directive(key, dires[key])
-    })
+      Vue.directive(key, dires[key]);
+    });
   },
-}
+};

@@ -1,9 +1,14 @@
 <template>
-  <el-timeline >
-    <el-timeline-item v-for="(item,index) in op" :timestamp="item.time" :key="index" placement="top">
-      <el-card style="background:#cccccc;">
-        <h4>{{item.title}}</h4>
-        <p>{{item.content}}</p>
+  <el-timeline>
+    <el-timeline-item
+      v-for="(item, index) in op"
+      :timestamp="item.time"
+      :key="index"
+      placement="top"
+    >
+      <el-card style="background: #cccccc">
+        <h4>{{ item.title }}</h4>
+        <p>{{ item.content }}</p>
       </el-card>
     </el-timeline-item>
   </el-timeline>
@@ -11,12 +16,12 @@
 <script>
 export default {
   props: {
-    op: { type: Array }
-  }
-}
+    op: { type: Array },
+  },
+};
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 ul.el-timeline.content {
   margin-top: 50px;
   li.el-timeline-item {

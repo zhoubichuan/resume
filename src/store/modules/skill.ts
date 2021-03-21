@@ -16,8 +16,8 @@ export default {
           { skill: "html5", ico: "html5", score: 95 },
           { skill: "bootStrap", ico: "bootstrap", score: 80 },
           { skill: "elementUI", ico: "element-ui", score: 80 },
-          { skill: "antDesign", ico: "antdesign", score: 80 }
-        ]
+          { skill: "antDesign", ico: "antdesign", score: 80 },
+        ],
       },
       {
         title: "jascript",
@@ -28,7 +28,7 @@ export default {
             skill: "原生js",
             ico: "javascript",
             score: 90,
-            link: "https://github.com/zhoubichuan/Web-JavaScript"
+            link: "https://github.com/zhoubichuan/Web-JavaScript",
           },
           { skill: "ES6", ico: "es6", score: 90 },
           { skill: "jQuery", ico: "jquery", score: 90 },
@@ -36,7 +36,7 @@ export default {
             skill: "ajax",
             ico: "ajax",
             score: 90,
-            link: "https://github.com/zhoubichuan/Web-Ajax"
+            link: "https://github.com/zhoubichuan/Web-Ajax",
           },
           { skill: "正则", ico: "regexp", score: 80 },
           { skill: "设计模式", ico: "design-mode", score: 70 },
@@ -45,10 +45,10 @@ export default {
             skill: "算法",
             ico: "calculate",
             score: 60,
-            link: "https://github.com/zhoubichuan/Web-Arithmetic"
+            link: "https://github.com/zhoubichuan/Web-Arithmetic",
           },
-          { skill: "单元测试", ico: "test", score: 70 }
-        ]
+          { skill: "单元测试", ico: "test", score: 70 },
+        ],
       },
       {
         title: "框架",
@@ -60,8 +60,8 @@ export default {
           { skill: "Angular", ico: "angular", score: 60 },
           { skill: "Ionic", ico: "ionic", score: 60 },
           { skill: "微信小程序", ico: "css", score: 70 },
-          { skill: "微信公众号", ico: "css", score: 70 }
-        ]
+          { skill: "微信公众号", ico: "css", score: 70 },
+        ],
       },
       {
         title: "构建工具：",
@@ -69,8 +69,8 @@ export default {
           "能够熟练使用webpack搭建项目，提高开发效率，对应特殊的功能能够编写简单的插件",
         content: [
           { skill: "Rollup", ico: "rollup", score: 50 },
-          { skill: "Webpack", ico: "webpack", score: 70 }
-        ]
+          { skill: "Webpack", ico: "webpack", score: 70 },
+        ],
       },
       {
         title: "node",
@@ -79,8 +79,8 @@ export default {
         content: [
           { skill: "tcp/ip协议", ico: "tcp-ip", score: 70 },
           { skill: "安全防范", ico: "safe", score: 80 },
-          { skill: "服务端渲染", ico: "ssr", score: 80 }
-        ]
+          { skill: "服务端渲染", ico: "ssr", score: 80 },
+        ],
       },
       {
         title: "node框架",
@@ -90,21 +90,21 @@ export default {
             skill: "Express",
             ico: "express",
             score: 70,
-            link: "https://github.com/zhoubichuan/Web-Express"
+            link: "https://github.com/zhoubichuan/Web-Express",
           },
           {
             skill: "Koa",
             ico: "koa",
             score: 70,
-            link: "https://github.com/zhoubichuan/Web-Koa"
+            link: "https://github.com/zhoubichuan/Web-Koa",
           },
           {
             skill: "Egg",
             ico: "egg",
             score: 70,
-            link: "https://github.com/zhoubichuan/Web-Egg"
-          }
-        ]
+            link: "https://github.com/zhoubichuan/Web-Egg",
+          },
+        ],
       },
       {
         title: "数据库",
@@ -114,22 +114,22 @@ export default {
             skill: "mySql",
             ico: "mysql",
             score: 60,
-            link: "https://github.com/zhoubichuan/Web-MySql"
+            link: "https://github.com/zhoubichuan/Web-MySql",
           },
           {
             skill: "mongoDB",
             ico: "mongo-db",
             score: 70,
-            link: "https://github.com/zhoubichuan/Web-MongoDB"
+            link: "https://github.com/zhoubichuan/Web-MongoDB",
           },
           {
             skill: "Redis",
             ico: "redis",
             score: 80,
-            link: "https://github.com/zhoubichuan/Web-Redis"
-          }
-        ]
-      }
-    ]
-  }
+            link: "https://github.com/zhoubichuan/Web-Redis",
+          },
+        ],
+      },
+    ],
+  },
 };

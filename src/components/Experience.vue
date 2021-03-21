@@ -16,12 +16,11 @@ export default {
   name: "AboutMe",
   components: {
     Common,
-    Tree
+    Tree,
   },
   computed: {
-    ...mapState("experience", ["op", "treeOp"])
-  }
+    ...mapState("experience", ["op", "treeOp"]),
+  },
 };
 </script>
-<style lang="scss" scoped >
-</style>
+<style lang="scss" scoped></style>

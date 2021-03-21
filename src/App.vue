@@ -6,11 +6,11 @@
 
 <script>
 export default {
-  name: 'App',
-  created () {
-    console.log(process.env, 'process.env')
-  }
-}
+  name: "App",
+  created() {
+    console.log(process.env, "process.env");
+  },
+};
 </script>
 
 <style lang="scss">

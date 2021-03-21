@@ -6,7 +6,7 @@ describe("Skill.vue", () => {
   it("技能组件", () => {
     const msg = "";
     const wrapper = shallowMount(Skill, {
-      propsData: { msg }
+      propsData: { msg },
     });
     expect(wrapper.text()).to.include(msg);
   });

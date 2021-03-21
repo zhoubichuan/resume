@@ -6,4 +6,4 @@ export default {
   myExperience: "我的经历",
   linkMe: "联系我",
   leaveMessage: "留言板",
-}
+};

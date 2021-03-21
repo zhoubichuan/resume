@@ -2,8 +2,7 @@
   <el-container>
     <el-main>
       <introduce />
-      <nav-item @stopScoll="isStopScoll"
-                :class="navStop ? 'navStop' : ''" />
+      <nav-item @stopScoll="isStopScoll" :class="navStop ? 'navStop' : ''" />
       <about-me />
       <skill />
       <project />
@@ -16,32 +15,32 @@
 </template>
 
 <script>
-import NavItem from './Nav'
-import Introduce from '@/components/introduce'
-import AboutMe from '@/components/aboutMe'
-import Skill from '@/components/skill'
-import Project from '@/components/project'
-import Experience from '@/components/experience'
-import LinkMe from '@/components/link'
-import Message from '@/components/Message'
+import NavItem from "./Nav";
+import Introduce from "@/components/introduce";
+import AboutMe from "@/components/aboutMe";
+import Skill from "@/components/skill";
+import Project from "@/components/project";
+import Experience from "@/components/experience";
+import LinkMe from "@/components/link";
+import Message from "@/components/Message";
 export default {
-  name: 'Index',
-  data () {
+  name: "Index",
+  data() {
     return {
-      msg: 'Design by：周必川 备案号： 鄂ICP备14014598号',
+      msg: "Design by：周必川 备案号： 鄂ICP备14014598号",
       navStop: false,
-      activeIndex: '1',
-      activeIndex2: '1',
-      title: '我的博客'
-    }
+      activeIndex: "1",
+      activeIndex2: "1",
+      title: "我的博客",
+    };
   },
   methods: {
-    isStopScoll (e) {
-      this.navStop = e
+    isStopScoll(e) {
+      this.navStop = e;
     },
-    handleSelect (key, keyPath) {
-      console.log(key, keyPath)
-    }
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath);
+    },
   },
   components: {
     Introduce,
@@ -51,9 +50,9 @@ export default {
     NavItem,
     LinkMe,
     Message,
-    Experience
-  }
-}
+    Experience,
+  },
+};
 </script>
 
 <style lang="scss" scoped>

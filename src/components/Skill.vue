@@ -1,6 +1,6 @@
 <template>
   <common :op="op">
-    <el-carousel :interval="15000" arrow="always" style="padding:0 40px">
+    <el-carousel :interval="15000" arrow="always" style="padding: 0 40px">
       <el-carousel-item v-for="item in knowledgeOp" :key="JSON.stringify(item)">
         <el-row :gutter="24">
           <el-col :span="4">
@@ -8,7 +8,7 @@
               <div slot="header" class="clearfix">
                 <span>{{ item.title }}</span>
               </div>
-              <div class="text item">{{item.introduce}}</div>
+              <div class="text item">{{ item.introduce }}</div>
             </el-card>
           </el-col>
           <el-col :span="20">
@@ -19,7 +19,7 @@
                 :md="8"
                 :lg="8"
                 :xl="6"
-                v-for="(item2,index2) in item.content"
+                v-for="(item2, index2) in item.content"
                 :key="index2"
               >
                 <Knowledge :op="item2" />
@@ -41,11 +41,11 @@ export default {
   name: "Skill",
   components: {
     Common,
-    Knowledge
+    Knowledge,
   },
   computed: {
-    ...mapState("skill", ["op", "knowledgeOp"])
-  }
+    ...mapState("skill", ["op", "knowledgeOp"]),
+  },
 };
 </script>
 

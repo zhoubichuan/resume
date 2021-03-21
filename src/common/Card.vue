@@ -1,21 +1,21 @@
 <template>
-<div class="grid-content bg-purple">
-    <h4>{{op.title}}</h4>
+  <div class="grid-content bg-purple">
+    <h4>{{ op.title }}</h4>
     <el-card class="box-card">
-      <div v-for="(item,index) in op.content" :key="index" class="text item">
-        {{item}}
+      <div v-for="(item, index) in op.content" :key="index" class="text item">
+        {{ item }}
       </div>
     </el-card>
-</div>
+  </div>
 </template>
 <script>
 export default {
   props: {
     op: {
-      type: Object
-    }
-  }
-}
+      type: Object,
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .service {

@@ -6,7 +6,7 @@ describe("Project.vue", () => {
   it("项目组件", () => {
     const msg = "";
     const wrapper = shallowMount(Project, {
-      propsData: { msg }
+      propsData: { msg },
     });
     expect(wrapper.text()).to.include(msg);
   });

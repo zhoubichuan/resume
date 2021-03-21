@@ -1,9 +1,34 @@
-Vue-Resume 项目技术要点：
+# resume
 
-- Vue + TypeScript
-  - vue-i18n 处理国际化
-  - moment 处理时间
-- Element
-- Sass
+## Project setup
+```
+npm install
+```
 
-  项目描述：一个 vue 写的个人简历。
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your unit tests
+```
+npm run test:unit
+```
+
+### Run your end-to-end tests
+```
+npm run test:e2e
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
