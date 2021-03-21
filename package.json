@@ -60,9 +60,6 @@
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
-  "rules": {
-    "@typescript-eslint/no-explicit-any": ["off"]
-  },
   "lint-staged": {
     "*.{js,jsx,vue,ts,tsx}": [
       "vue-cli-service lint",
