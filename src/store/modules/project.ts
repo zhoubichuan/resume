@@ -3,7 +3,7 @@ export default {
   state: {
     op: {
       id: "project",
-      title: "作品展示",
+      title: "开源项目",
     },
     currentDate: new Date(),
     workOp: [
