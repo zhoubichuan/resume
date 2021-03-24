@@ -5,7 +5,6 @@ const CompressionWebpackPlugin = require("compression-webpack-plugin"); // ÂºÄÂê
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
 const webpack = require("webpack");
-const TerserPlugin = require("terser-webpack-plugin");
 
 const isDev = process.env.NODE_ENV === "dev";
 console.error(process.env.NODE_ENV, "process.env.NODE_ENV ");
