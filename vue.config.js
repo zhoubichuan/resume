@@ -63,18 +63,19 @@ module.exports = {
       args[0].chunksSortMode = "none";
       return args;
     });
-    config.optimization.minimizer([
-      new TerserPlugin({
-        terserOptions: {
-          mangle: true, // 混淆，默认也是开的，mangle也是可以配置很多选项的，具体看后面的链接
-          compress: {
-            drop_console: true, //传true就是干掉所有的console.*这些函数的调用.
-            drop_debugger: true, //干掉那些debugger;
-            pure_funcs: ["console.log"], // 如果你要干掉特定的函数比如console.info ，又想删掉后保留其参数中的副作用，那用pure_funcs来处理
-          },
-        },
-      }),
-    ]);
+    config.optimization.minimizer("terser").tap((args) => {
+      // 注释console.*
+      args[0].terserOptions.compress.drop_console = true;
+      // remove debugger
+      args[0].terserOptions.compress.drop_debugger = true;
+      // 移除 console.log
+      args[0].terserOptions.compress.pure_funcs = ["console.log"];
+      // 去掉注释 如果需要看chunk-vendors公共部分插件，可以注释掉就可以看到注释了
+      args[0].terserOptions.output = {
+        comments: false,
+      };
+      return args;
+    });
     // 配置别名
     config.resolve.alias
       .set("@", resolve("src"))
