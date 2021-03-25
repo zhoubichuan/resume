@@ -1,4 +1,4 @@
-# resume
+# 个人简历
 ## Project setup
 ```
 npm install
