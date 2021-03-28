@@ -78,9 +78,7 @@ module.exports = {
     // 配置别名
     config.resolve.alias
       .set("@", resolve("src"))
-      .set("@assets", resolve("src/assets"))
-      .set("@components", resolve("src/components"))
-      .set("@public", resolve("public"));
+      .set("static", resolve("static"));
 
     // 压缩图片
     // 需要 npm i -D image-webpack-loader
