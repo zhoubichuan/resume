@@ -11,16 +11,18 @@ import "moment/locale/zh-cn";
 import directive from "./directive";
 import filter from "./filter";
 import utils from "./utils";
+import config from '@/config'
+
 Vue.use(directive);
 Vue.use(filter);
 Vue.use(utils);
 Vue.prototype.$log = console.log;
 // Vue.prototype.$_ = _
 Vue.prototype.$mment = moment;
-
 moment.locale("zh-cn");
 
 Vue.use(UI);
+Vue.use(config)
 Vue.config.productionTip = false;
 
 new Vue({

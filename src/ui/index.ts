@@ -38,7 +38,7 @@ import {
   TabPane,
   Tag,
   Tree,
-  Alert,
+  // Alert,
   Slider,
   Icon,
   Row,
@@ -72,7 +72,7 @@ import {
   PageHeader,
   Loading,
   // MessageBox,
-  Message,
+  // Message,
   Notification,
 } from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
@@ -116,7 +116,7 @@ const coms = [
   TabPane,
   Tag,
   Tree,
-  Alert,
+  // Alert,
   Slider,
   Icon,
   Row,
@@ -151,7 +151,7 @@ const coms = [
   Loading,
   // MessageBox,
   // Message,
-  Notification,
+  // Notification,
 ];
 
 export default {

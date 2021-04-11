@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+const lodash = require("lodash");
 const path = require("path");
 const merge = require("webpack-merge");
 const CompressionWebpackPlugin = require("compression-webpack-plugin"); // 开启gzip压缩， 按需引用
@@ -180,6 +181,10 @@ module.exports = {
    * 使用整体替换来修改配置
    */
   configureWebpack: () => {
+    //提供全局的变量，在模块中使用无需用require引入
+    new webpack.ProvidePlugin({
+      _: lodash,
+    });
     if (isDev) {
       return {
         plugins: [
@@ -227,9 +232,9 @@ module.exports = {
       // 但是在配置 `data` 选项的时候
       // `scss` 语法会要求语句结尾必须有分号，`sass` 则要求必须没有分号
       // 在这种情况下，我们可以使用 `scss` 选项，对 `scss` 语法进行单独配置
-      scss: {
-        prependData: `@import "@/assets/scss/index.scss";`,
-      },
+      // scss: {
+      //   prependData: `@import "@/assets/scss/index.scss";`,
+      // },
       // 给 less-loader 传递 Less.js 相关选项
       less: {
         // http://lesscss.org/usage/#less-options-strict-units `Global Variables`
