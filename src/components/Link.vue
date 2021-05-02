@@ -13,7 +13,7 @@
       >
         <div class="box-card">
           <el-card>
-            <img :src="`../assets/${item.ico || 'net'}.jpg`" alt="图片" />
+            <img :src="`./assets/${item.ico || 'net'}.jpg`" alt="图片" />
             <h3>{{ item.name }}</h3>
             <a v-if="item.link" :href="item.link">{{ item.link }}</a>
             <span v-if="item.text">{{ item.text }}</span>
