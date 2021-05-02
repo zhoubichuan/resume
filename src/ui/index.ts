@@ -75,7 +75,6 @@ import {
   // Message,
   Notification,
 } from "element-ui";
-import "element-ui/lib/theme-chalk/index.css";
 const coms = [
   Pagination,
   Dialog,

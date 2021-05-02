@@ -54,6 +54,10 @@ module.exports = {
    * 使用链式操作来修改配置
    */
   chainWebpack: (config) => {
+    config.plugin("html").tap((args) => {
+      args[0].title = "我的简历";
+      return args;
+    });
     // 修复热更新失效
     config.resolve.symlinks(true);
 
@@ -111,11 +115,11 @@ module.exports = {
     // 打包分析
     // 打包之后自动生成一个名叫report.html文件(可忽视)
     if (!isDev) {
-      config.plugin("webpack-report").use(BundleAnalyzerPlugin, [
-        {
-          analyzerMode: "static",
-        },
-      ]);
+      // config.plugin("webpack-report").use(BundleAnalyzerPlugin, [
+      //   {
+      //     analyzerMode: "static",
+      //   },
+      // ]);
     }
 
     config.module
