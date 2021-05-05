@@ -1,14 +1,14 @@
 <template>
   <el-tabs v-model="activeName" @tab-click="handleClick">
     <el-tab-pane
-      :label="item.name + '相关'"
+      :label="item.name"
       :name="'_' + index"
       v-for="(item, index) in op"
       :key="index"
     >
       <el-row :gutter="24" style="margin: 0">
         <el-col
-          :xs="24"
+          :xs="12"
           :sm="12"
           :md="12"
           :lg="12"
@@ -52,28 +52,30 @@ export default {
 </script>
 <style lang="scss" scoped>
 .box {
-  width: 100%;
-  background: white;
   display: block;
   color: #333333;
   text-decoration: none;
-  margin: 10px 0;
   position: relative;
   cursor: pointer;
   iframe {
-    width: 100%;
+    background: white;
     transition: all 0.7s;
+    zoom: 90%;
+    width: 50vw;
+    height: 50vh;
   }
   .mask {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    zoom: 90%;
+    width: 50vw;
+    height: 50vh;
     background: #000;
     opacity: (0);
     top: 0;
-    left: 0;
+    left: 2vw;
     color: coral;
     transition: all 0.7s;
+    z-index: 1000;
     p {
       &:nth-child(1) {
         margin-top: 40px;

@@ -8,7 +8,7 @@ export default {
     currentDate: new Date(),
     workOp: [
       {
-        name: "javaScript",
+        name: "javaScript相关",
         items: [
           {
             title: "我的博客",
@@ -25,10 +25,10 @@ export default {
         ],
       },
       {
-        name: "Vue",
+        name: "Vue相关",
         items: [
           {
-            title: "vue笔记",
+            title: "Web-Vue",
             skill: "Vuepress",
             img: "Web-Vue",
             link: "https://zhoubichuan.github.io/Web-Vue/",
@@ -36,28 +36,74 @@ export default {
         ],
       },
       {
-        name: "React",
-        items: [],
+        name: "React相关",
+        items: [
+          {
+            title: "Web-Vue",
+            skill: "Vuepress",
+            img: "Web-React",
+            link: "https://zhoubichuan.github.io/Web-React/",
+          },
+        ],
       },
       {
         name: "Angular",
         items: [],
       },
       {
-        name: "node.js",
-        items: [],
+        name: "Node相关",
+        items: [
+          {
+            title: "Web-Node",
+            skill: "Vuepress",
+            img: "Web-Node",
+            link: "https://zhoubichuan.github.io/Web-Node/",
+          },
+        ],
       },
       {
-        name: "express",
-        items: [],
+        name: "Express相关",
+        items: [
+          {
+            title: "Web-Express",
+            skill: "Vuepress",
+            img: "Web-Express",
+            link: "https://zhoubichuan.github.io/Web-Express/",
+          },
+        ],
       },
       {
-        name: "koa",
-        items: [],
+        name: "Koa相关",
+        items: [
+          {
+            title: "Web-Koa",
+            skill: "Vuepress",
+            img: "Web-Koa",
+            link: "https://zhoubichuan.github.io/Web-Koa/",
+          },
+        ],
       },
       {
-        name: "全栈项目",
-        items: [],
+        name: "Egg相关",
+        items: [
+          {
+            title: "Web-Egg",
+            skill: "Vuepress",
+            img: "Web-Egg",
+            link: "https://zhoubichuan.github.io/Web-Egg/",
+          },
+        ],
+      },
+      {
+        name: "Webpack相关",
+        items: [
+          {
+            title: "Web-Webpack",
+            skill: "Vuepress",
+            img: "Web-Webpack",
+            link: "https://zhoubichuan.github.io/Web-Webpack/",
+          },
+        ],
       },
     ],
   },

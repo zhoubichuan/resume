@@ -11,18 +11,6 @@ export default {
         name: "javaScript",
         items: [
           {
-            title: "我的博客",
-            skill: "javaScript+css",
-            img: "zhoubichuan.github.io",
-            link: "https://github.com/zhoubichuan/zhoubichuan.github.io",
-          },
-          {
-            title: "javascript笔记",
-            skill: "javaScript+css",
-            img: "Web-JavaScript",
-            link: "https://zhoubichuan.github.io/Web-JavaScript/",
-          },
-          {
             title: "企业网站",
             skill: "javaScript+css",
             img: "Project-JavaScript-CompanyWebsite",
@@ -64,12 +52,6 @@ export default {
       {
         name: "Vue",
         items: [
-          {
-            title: "vue笔记",
-            skill: "Vuepress",
-            img: "Web-Vue",
-            link: "https://zhoubichuan.github.io/Web-Vue/",
-          },
           {
             title: "微信",
             skill: "Vue+less",

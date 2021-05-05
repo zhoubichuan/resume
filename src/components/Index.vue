@@ -53,7 +53,6 @@ export default {
     LinkMe,
     Message,
     Note,
-    // Experience,
   },
 };
 </script>

@@ -236,9 +236,9 @@ module.exports = {
       // 但是在配置 `data` 选项的时候
       // `scss` 语法会要求语句结尾必须有分号，`sass` 则要求必须没有分号
       // 在这种情况下，我们可以使用 `scss` 选项，对 `scss` 语法进行单独配置
-      // scss: {
-      //   prependData: `@import "@/assets/scss/index.scss";`,
-      // },
+      scss: {
+        prependData: `@import "@/assets/scss/index.scss";`,
+      },
       // 给 less-loader 传递 Less.js 相关选项
       less: {
         // http://lesscss.org/usage/#less-options-strict-units `Global Variables`

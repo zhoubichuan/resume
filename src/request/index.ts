@@ -4,7 +4,7 @@ import Cookies from "js-cookie";
 
 //基于axios基本配置创建实例
 const service = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "",
   timeout: 10000,
   headers: {
     source: "YTO-STEWARD",

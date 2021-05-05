@@ -17,13 +17,18 @@ export default {
   computed: {
     ...mapState("project", ["op", "currentDate", "workOp"]),
   },
+  // created() {
+  //   this.$api.getProject().then((res) => {
+  //     console.log(res);
+  //   });
+  // },
 };
 </script>
 
 <style lang="scss" scoped>
 .work {
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
 }
 
 .el-carousel__item h3 {
