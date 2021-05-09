@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { shallowMount } from "@vue/test-utils";
-import Nav from "@/components/nav.vue";
+import Nav from "@/components/Nav.vue";
 
 describe("Nav.vue", () => {
   it("导航组件", () => {

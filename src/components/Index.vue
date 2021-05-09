@@ -17,13 +17,13 @@
 
 <script>
 import NavItem from "./Nav";
-import Introduce from "@/components/introduce";
-import AboutMe from "@/components/aboutMe";
-import Skill from "@/components/skill";
-import Project from "@/components/project";
+import Introduce from "@/components/Introduce";
+import AboutMe from "@/components/AboutMe";
+import Skill from "@/components/Skill";
+import Project from "@/components/Project";
 import Note from "@/components/Note";
 // import Experience from "@/components/experience";
-import LinkMe from "@/components/link";
+import LinkMe from "@/components/Link";
 import Message from "@/components/Message";
 export default {
   name: "Index",

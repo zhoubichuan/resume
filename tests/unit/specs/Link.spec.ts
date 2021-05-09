@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { shallowMount } from "@vue/test-utils";
-import Link from "@/components/link.vue";
+import Link from "@/components/Link.vue";
 
 describe("Link.vue", () => {
   it("链接组件", () => {

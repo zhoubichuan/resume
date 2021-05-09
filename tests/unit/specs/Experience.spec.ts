@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { shallowMount } from "@vue/test-utils";
-import Experience from "@/components/experience.vue";
+import Experience from "@/components/Experience.vue";
 
 describe("Experience.vue", () => {
   it("经验组件", () => {

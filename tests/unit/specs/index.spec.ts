@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { shallowMount } from "@vue/test-utils";
-import Index from "@/components/index.vue";
+import Index from "@/components/Index.vue";
 
 describe("index.vue", () => {
   it("首页组件", () => {

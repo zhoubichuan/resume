@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { shallowMount } from "@vue/test-utils";
-import Introduce from "@/components/aboutMe.vue";
+import Introduce from "@/components/AboutMe.vue";
 
 describe("Introduce.vue", () => {
   it("关于我组件", () => {
