@@ -2,7 +2,7 @@ import { expect } from "chai";
 import { shallowMount } from "@vue/test-utils";
 import Index from "@/components/Index.vue";
 
-describe("index.vue", () => {
+describe("Index.vue", () => {
   it("首页组件", () => {
     const msg = "";
     const wrapper = shallowMount(Index, {
