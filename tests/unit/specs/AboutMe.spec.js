@@ -10,4 +10,7 @@ describe("AboutMe.vue", () => {
     });
     expect(wrapper.text()).to.include(msg);
   });
+  it('has a mounted hook', () => {
+    expect(typeof AboutMe.mounted).to.eql('function')
+  })
 });
