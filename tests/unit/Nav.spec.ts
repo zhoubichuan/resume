@@ -1,4 +1,3 @@
-import { expect } from "chai";
 import { shallowMount } from "@vue/test-utils";
 import Nav from "@/components/Nav.vue";
 
@@ -8,6 +7,6 @@ describe("Nav.vue", () => {
     const wrapper = shallowMount(Nav, {
       propsData: { msg },
     });
-    expect(wrapper.text()).to.include(msg);
+    expect(wrapper.text()).toMatch(msg);
   });
 });

@@ -19,9 +19,6 @@ export default {
   computed: {
     ...mapState("aboutMe", ["op", "cardOp", "content"]),
   },
-  mounted() {
-    console.log(1)
-  },
 };
 </script>
 

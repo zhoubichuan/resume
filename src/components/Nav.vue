@@ -34,11 +34,6 @@
 import { mapState } from "vuex";
 
 export default {
-  data() {
-    return {
-      nav: {},
-    };
-  },
   computed: {
     ...mapState(["navData"]),
   },

@@ -9,6 +9,7 @@
           <span v-if="item.text">{{ item.text }}</span>
         </el-card>
       </div>
+    <div>{{ msg }}</div>
     </div>
   </common>
 </template>
@@ -17,6 +18,11 @@ import Common from "../common/Common";
 import { mapState } from "vuex";
 
 export default {
+  data() {
+    return {
+      msg: "123",
+    };
+  },
   components: {
     Common,
   },
