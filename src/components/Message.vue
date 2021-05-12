@@ -9,13 +9,17 @@
             v-model="message.name"
             maxlength="10"
             show-word-limit
-          ></el-input>
+          />
           <div class="image">
-            <div class="block" v-for="(item, index) in imgUrl" :key="index">
+            <div
+              class="block"
+              v-for="(item, index) in imgUrl"
+              :key="index"
+            >
               <el-image
                 style="width: 40px; height: 40px"
                 :src="item"
-              ></el-image>
+              />
             </div>
           </div>
         </div>
@@ -25,19 +29,26 @@
           v-model="message.content"
           maxlength="30"
           show-word-limit
-        ></el-input>
-        <el-button class="btn" @click="handleClick" type="primary"
-          >请留言</el-button
+        />
+        <el-button
+          class="btn"
+          @click="handleClick"
+          type="primary"
         >
+          请留言
+        </el-button>
       </div>
       <div class="message-box">
         大家的评论：
         <ul>
-          <li v-for="(item, index) in messageList" :key="index">
+          <li
+            v-for="(item, index) in messageList"
+            :key="index"
+          >
             <el-image
               style="width: 40px; height: 40px"
               :src="item.img"
-            ></el-image>
+            />
             <div class="right">
               <span class="name">{{ item.name }}:</span>
               <span>{{ item.content }}</span>

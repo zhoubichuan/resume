@@ -23,7 +23,7 @@ export default {
     }
     // 由一个组件，向上找到所有的指定组件
     Vue.prototype.$findComponentsUpward = function findComponentsUpward (context:any, componentName:string):any {
-      let parents = []
+      const parents = []
       const parent = context.$parent
 
       if (parent) {
@@ -63,10 +63,10 @@ export default {
     }
     // 由一个组件，找到指定组件的兄弟组件
     Vue.prototype.$findBrothersComponents = function findBrothersComponents (context:any, componentName:string, exceptMe = true):any {
-      let res = context.$parent.$children.filter((item:any) => {
+      const res = context.$parent.$children.filter((item:any) => {
         return item.$options.name === componentName
       })
-      let index = res.findIndex((item:any) => item._uid === context._uid)
+      const index = res.findIndex((item:any) => item._uid === context._uid)
       if (exceptMe) res.splice(index, 1)
       return res
     }

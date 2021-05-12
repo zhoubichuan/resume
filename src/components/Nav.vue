@@ -1,5 +1,8 @@
 <template>
-  <el-header ref="nav" id="head">
+  <el-header
+    ref="nav"
+    id="head"
+  >
     <el-row
       type="flex"
       class="row-bg"
@@ -8,7 +11,10 @@
     >
       <el-col :span="6">
         <div class="left">
-          <img src alt />
+          <img
+            src
+            alt
+          >
           <div @click="handleToTop">
             <p>{{ navData.name1 }}</p>
             <p>{{ $t(navData.name2) }}</p>
@@ -16,7 +22,10 @@
         </div>
       </el-col>
       <el-col :span="14">
-        <ul class="rigth" @click="handleClick">
+        <ul
+          class="rigth"
+          @click="handleClick"
+        >
           <li
             v-for="(item, index) in navData.title"
             :key="index"

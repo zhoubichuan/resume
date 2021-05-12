@@ -1,6 +1,6 @@
 import request from '@/request'
 // 获取开源项目
-export function getProject (data:object):object {
+export function getProject(data: any): any {
   return request({
     url: 'src/assets/mockData/project.json',
     method: 'get',
@@ -8,7 +8,7 @@ export function getProject (data:object):object {
   })
 }
 // 获取数据实体详情
-export function getDataEntityDetail (data:object):object  {
+export function getDataEntityDetail(data: any): any {
   return request({
     url: '/resume/getDataEntityDetail',
     method: 'post',
@@ -16,7 +16,7 @@ export function getDataEntityDetail (data:object):object  {
   })
 }
 // 创建数据实体
-export function createDataEntity (data:object):object  {
+export function createDataEntity(data: any): any {
   return request({
     url: '/resume/createDataEntity',
     method: 'post',
@@ -24,7 +24,7 @@ export function createDataEntity (data:object):object  {
   })
 }
 // 更新数据实体
-export function updateDataEntity (data:object):object  {
+export function updateDataEntity(data: any): any {
   return request({
     url: '/resume/updateDataEntity',
     method: 'put',
@@ -32,7 +32,7 @@ export function updateDataEntity (data:object):object  {
   })
 }
 // 删除数据实体
-export function deleteDataEntity (data:object):object  {
+export function deleteDataEntity(data: any): any {
   return request({
     url: '/resume/deleteDataEntity',
     method: 'delete',
@@ -40,7 +40,7 @@ export function deleteDataEntity (data:object):object  {
   })
 }
 // 数据实体基本属性列表查询
-export function getDataEntityBaseAttrList (data:object):object  {
+export function getDataEntityBaseAttrList(data: any): any {
   return request({
     url: '/resume/getDataEntityBaseAttrList',
     method: 'get',
@@ -49,7 +49,7 @@ export function getDataEntityBaseAttrList (data:object):object  {
 }
 
 // 数据实体基本属性详情查询
-export function getDataEntityBaseAttrDetail (data:object):object  {
+export function getDataEntityBaseAttrDetail(data: any): any {
   return request({
     url: '/resume/getDataEntityBaseAttrDetail',
     method: 'get',
@@ -58,7 +58,7 @@ export function getDataEntityBaseAttrDetail (data:object):object  {
 }
 
 // 数据实体基本属性创建
-export function createDataEntityBaseAttr (data:object):object  {
+export function createDataEntityBaseAttr(data: any): any {
   return request({
     url: '/resume/createDataEntityBaseAttr',
     method: 'post',
@@ -66,7 +66,7 @@ export function createDataEntityBaseAttr (data:object):object  {
   })
 }
 // 数据实体基本属性更新
-export function updateDataEntityBaseAttr (data:object):object  {
+export function updateDataEntityBaseAttr(data: any): any {
   return request({
     url: '/resume/updateDataEntityBaseAttr',
     method: 'put',
@@ -75,7 +75,7 @@ export function updateDataEntityBaseAttr (data:object):object  {
 }
 
 // 数据实体基本属性删除
-export function updateDataEntityBaseAttrDelete (data:object):object  {
+export function updateDataEntityBaseAttrDelete(data: any): any {
   return request({
     url: '/resume/updateDataEntityBaseAttrDelete',
     method: 'delete',
@@ -83,7 +83,7 @@ export function updateDataEntityBaseAttrDelete (data:object):object  {
   })
 }
 // 数据实体扩展属性列表查询
-export function getDataEntityExtendAttrList (data:object):object  {
+export function getDataEntityExtendAttrList(data: any): any {
   return request({
     url: '/resume/getDataEntityExtendAttrList',
     method: 'get',
@@ -92,7 +92,7 @@ export function getDataEntityExtendAttrList (data:object):object  {
 }
 
 // 数据实体扩展属性详情查询
-export function getDataEntityExtendAttrDetail (data:object):object  {
+export function getDataEntityExtendAttrDetail(data: any): any {
   return request({
     url: '/resume/getDataEntityExtendAttrDetail',
     method: 'get',
@@ -101,7 +101,7 @@ export function getDataEntityExtendAttrDetail (data:object):object  {
 }
 
 // 数据实体扩展属性创建
-export function createDataEntityExtendAttr (data:object):object  {
+export function createDataEntityExtendAttr(data: any): any {
   return request({
     url: '/resume/createDataEntityExtendAttr',
     method: 'post',
@@ -109,16 +109,16 @@ export function createDataEntityExtendAttr (data:object):object  {
   })
 }
 // 数据实体扩展属性更新
-export function updateDataEntityExtendAttr (data:object):object  {
+export function updateDataEntityExtendAttr(data: any): any {
   return request({
     url: '/resume/updateDataEntityExtendAttr',
     method: 'delete',
-    params:data
+    params: data
   })
 }
 
 // 数据实体基本属性删除
-export function updateDataEntityExtendAttrDelete (data:object):object  {
+export function updateDataEntityExtendAttrDelete(data: any): any {
   return request({
     url: '/resume/updateDataEntityExtendAttrDelete',
     method: 'delete',
@@ -127,7 +127,7 @@ export function updateDataEntityExtendAttrDelete (data:object):object  {
 }
 
 // 数据实体父模型属性列表查询
-export function getDataEntityParentAttrList (data:object):object  {
+export function getDataEntityParentAttrList(data: any): any {
   return request({
     url: '/resume/getDataEntityParentAttrList',
     method: 'get',
@@ -136,7 +136,7 @@ export function getDataEntityParentAttrList (data:object):object  {
 }
 
 // 数据实体父模型属性列表查询
-export function getDataEntityParentAttrDetail (data:object):object  {
+export function getDataEntityParentAttrDetail(data: any): any {
   return request({
     url: '/resume/getDataEntityParentAttrDetail',
     method: 'get',

@@ -1,6 +1,9 @@
 <template>
   <common :op="op">
-    <div v-for="(item, index) in cardOp" :key="index">
+    <div
+      v-for="(item, index) in cardOp"
+      :key="index"
+    >
       <card :op="item" />
     </div>
   </common>

@@ -1,14 +1,26 @@
 <template>
   <common :op="op">
-    <el-carousel :interval="15000" arrow="always" style="padding: 0 40px">
-      <el-carousel-item v-for="item in knowledgeOp" :key="JSON.stringify(item)">
+    <el-carousel
+      :interval="15000"
+      arrow="always"
+      style="padding: 0 40px"
+    >
+      <el-carousel-item
+        v-for="item in knowledgeOp"
+        :key="JSON.stringify(item)"
+      >
         <el-row :gutter="24">
           <el-col :span="4">
             <el-card class="box-card">
-              <div slot="header" class="clearfix">
+              <div
+                slot="header"
+                class="clearfix"
+              >
                 <span>{{ item.title }}</span>
               </div>
-              <div class="text item">{{ item.introduce }}</div>
+              <div class="text item">
+                {{ item.introduce }}
+              </div>
             </el-card>
           </el-col>
           <el-col :span="20">

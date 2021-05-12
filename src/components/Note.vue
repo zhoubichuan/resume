@@ -1,7 +1,10 @@
 <template>
   <common :op="op">
     {{ $log(workOp) }}
-    <Work class="work" :op="workOp" />
+    <Work
+      class="work"
+      :op="workOp"
+    />
   </common>
 </template>
 

@@ -1,10 +1,13 @@
 <template>
   <div class="circle">
     <a :href="op.link || '#'">
-      <i :class="['ico', op.ico]"></i>
+      <i :class="['ico', op.ico]" />
       {{ op.skill }}
     </a>
-    <el-progress :percentage="op.score" :color="colorSelect"></el-progress>
+    <el-progress
+      :percentage="op.score"
+      :color="colorSelect"
+    />
   </div>
 </template>
 <script>

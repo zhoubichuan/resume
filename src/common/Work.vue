@@ -1,12 +1,18 @@
 <template>
-  <el-tabs v-model="activeName" @tab-click="handleClick">
+  <el-tabs
+    v-model="activeName"
+    @tab-click="handleClick"
+  >
     <el-tab-pane
       :label="item.name"
       :name="'_' + index"
       v-for="(item, index) in op"
       :key="index"
     >
-      <el-row :gutter="24" style="margin: 0">
+      <el-row
+        :gutter="24"
+        style="margin: 0"
+      >
         <el-col
           :xs="12"
           :sm="12"
@@ -17,10 +23,13 @@
           :key="index2"
         >
           <p>{{ item2.title }}</p>
-          <a class="box" :href="item2.link">
+          <a
+            class="box"
+            :href="item2.link"
+          >
             <iframe
               :src="`https://zhoubichuan.github.io/${item2.img}/`"
-            ></iframe>
+            />
             <div class="mask">
               <p>{{ item2.title }}</p>
               <p>技术要点：{{ item2.skill }}</p>

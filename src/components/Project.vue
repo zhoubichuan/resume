@@ -1,6 +1,9 @@
 <template>
   <common :op="op">
-    <Work class="work" :op="workOp" />
+    <Work
+      class="work"
+      :op="workOp"
+    />
   </common>
 </template>
 

@@ -2,7 +2,10 @@
   <el-container>
     <el-main>
       <introduce />
-      <nav-item @stopScoll="isStopScoll" :class="navStop ? 'navStop' : ''" />
+      <nav-item
+        @stopScoll="isStopScoll"
+        :class="navStop ? 'navStop' : ''"
+      />
       <about-me />
       <skill />
       <project />
@@ -11,7 +14,9 @@
       <link-me />
       <message />
     </el-main>
-    <el-footer class="center">{{ msg }}</el-footer>
+    <el-footer class="center">
+      {{ msg }}
+    </el-footer>
   </el-container>
 </template>
 

@@ -1,8 +1,14 @@
 <template>
   <common :op="op">
     <el-row :gutter="20">
-      <el-col :span="12" :offset="6">
-        <tree class="content" :op="treeOp"></tree>
+      <el-col
+        :span="12"
+        :offset="6"
+      >
+        <tree
+          class="content"
+          :op="treeOp"
+        />
       </el-col>
     </el-row>
   </common>

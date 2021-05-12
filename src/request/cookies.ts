@@ -1,13 +1,13 @@
 export function setCookie (key:string, value:string) {
-    let expireTime = new Date()
+    const expireTime = new Date()
     expireTime.setTime(expireTime.getTime() + 24 * 3600 * 1000 * 7)
     document.cookie = key + '=' + value + ';expires=' + expireTime
 }
 
 export function getCookie (key:string):string {
-    var sessionId = ''
+    let sessionId = ''
     if (document.cookie.length > 0) {
-        var str = document.cookie
+        const str = document.cookie
         if (str.indexOf(key + '=') > -1) {
             // let reg = new RegExp(/(?:sessionId=).+(;*?)/)
             sessionId = str.split('=')[1]

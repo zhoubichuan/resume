@@ -1,9 +1,21 @@
 <template>
-  <div class="show" :id="op.id">
-    <el-row type="flex" class="row-bg" justify="center">
+  <div
+    class="show"
+    :id="op.id"
+  >
+    <el-row
+      type="flex"
+      class="row-bg"
+      justify="center"
+    >
       <el-col :span="24">
-        <h1 v-if="op.title" class="title">{{ op.title }}</h1>
-        <slot></slot>
+        <h1
+          v-if="op.title"
+          class="title"
+        >
+          {{ op.title }}
+        </h1>
+        <slot />
       </el-col>
     </el-row>
   </div>
