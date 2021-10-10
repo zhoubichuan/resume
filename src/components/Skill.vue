@@ -1,21 +1,11 @@
 <template>
   <common :op="op">
-    <el-carousel
-      :interval="15000"
-      arrow="always"
-      style="padding: 0 40px"
-    >
-      <el-carousel-item
-        v-for="item in knowledgeOp"
-        :key="JSON.stringify(item)"
-      >
+    <el-carousel class="skill" :interval="15000" arrow="always">
+      <el-carousel-item v-for="item in knowledgeOp" :key="JSON.stringify(item)">
         <el-row :gutter="24">
           <el-col :span="4">
             <el-card class="box-card">
-              <div
-                slot="header"
-                class="clearfix"
-              >
+              <div slot="header" class="clearfix">
                 <span>{{ item.title }}</span>
               </div>
               <div class="text item">
@@ -62,6 +52,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.skill {
+  width: 80%;
+}
 .box-card {
   background: #cccccc;
   height: 80vh;

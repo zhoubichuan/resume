@@ -70,18 +70,17 @@ export default {
     background: white;
     transition: all 0.7s;
     zoom: 90%;
-    width: 50vw;
-    height: 50vh;
+    width: 38vw;
+    height: 38vh;
   }
   .mask {
     position: absolute;
     zoom: 90%;
-    width: 50vw;
-    height: 50vh;
+    width: 38vw;
+    height: 38vh;
     background: #000;
     opacity: (0);
     top: 0;
-    left: 2vw;
     color: coral;
     transition: all 0.7s;
     z-index: 1000;

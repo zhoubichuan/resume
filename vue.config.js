@@ -15,19 +15,13 @@ function resolve(dir) {
 }
 
 module.exports = {
+  outputDir: 'dist',
+  assetsDir: 'assets',
   /**
    * 项目地址二级目录
    */
   publicPath: "./",
   indexPath: "index.html", // 相对于打包路径index.html的路径
-  /**
-   * 文件打包目录，默认为dist文件夹
-   */
-  outputDir: "dist",
-  /**
-   * 放置生成的静态资源（js、css、img、fonts）的（相对于outputDir的）目录
-   */
-  assetsDir: "",
   /**
    * 设置是否在开发环境下每次保存代码都启用eslint验证
    * @param false 关闭每次保存进行检测
@@ -47,9 +41,19 @@ module.exports = {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   parallel: require("os").cpus().length > 1,
   // 向 PWA 插件传递选项
-  pwa: {},
+  pwa: {
+    iconPaths: {
+      favicon32: 'favicon.ico',
+      favicon16: 'favicon.ico',
+      appleTouchIcon: 'favicon.ico',
+      maskIcon: 'favicon.ico',
+      msTileImage: 'favicon.ico'
+    }
+  },
   // 可以用来传递任何第三方插件选项
-  pluginOptions: {},
+  pluginOptions: {
+
+  },
   /**
    * 使用链式操作来修改配置
    */

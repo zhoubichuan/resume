@@ -107,6 +107,7 @@ export default {
 <style lang="scss" scoped>
 .message {
   margin: 0 auto;
+  width: 80%;
   .message-box {
     .top {
       margin: 20px 0;

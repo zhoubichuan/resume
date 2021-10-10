@@ -20,18 +20,22 @@ export default {
   computed: {
     ...mapState("project", ["op", "currentDate", "workOp"]),
   },
-  // created() {
-  //   this.$api.getProject().then((res) => {
-  //     console.log(res);
-  //   });
-  // },
+  created() {
+    debugger
+    this.$api.getProject({}).then((res) => {
+      debugger
+      console.log(res);
+    },rej =>{
+      debugger
+    });
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .work {
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
 }
 
 .el-carousel__item h3 {

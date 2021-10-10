@@ -27,7 +27,7 @@ export default {
 <style lang="scss" scoped>
 .work {
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
 }
 
 .el-carousel__item h3 {
