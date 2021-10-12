@@ -20,15 +20,6 @@ export default {
   computed: {
     ...mapState("project", ["op", "currentDate", "workOp"]),
   },
-  created() {
-    debugger
-    this.$api.getProject({}).then((res) => {
-      debugger
-      console.log(res);
-    },rej =>{
-      debugger
-    });
-  }
 };
 </script>
 
