@@ -15,32 +15,15 @@ function resolve(dir) {
 }
 
 module.exports = {
-  outputDir: 'dist',
+  outputDir: 'resume',
   assetsDir: 'assets',
-  /**
-   * 项目地址二级目录
-   */
-  publicPath: "./",
-  indexPath: "index.html", // 相对于打包路径index.html的路径
-  /**
-   * 设置是否在开发环境下每次保存代码都启用eslint验证
-   * @param false 关闭每次保存进行检测
-   * @param true 开启每次保存都进行检测，效果与warning一样
-   * @param 'warning' 开启每次保存都进行检测，lint错误将显示到控制台命令行，而且编译并不会失败。
-   * @param 'error' 开启每次保存都进行检测，lint错误将显示到浏览器页面上，且编译失败
-   * @param 'default' 同 'error'
-   */
-  runtimeCompiler: true, // 是否使用包含运行时编译器的 Vue 构建版本
+  publicPath: "/resume",
+  indexPath: "index.html",
+  runtimeCompiler: true,
   lintOnSave: false,
   transpileDependencies: ["vue-particles"],
-  /**
-   * 设置是否为生产环境构建生成source map
-   */
   productionSourceMap: true,
-  // 是否为 Babel 或 TypeScript 使用 thread-loader
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
   parallel: require("os").cpus().length > 1,
-  // 向 PWA 插件传递选项
   pwa: {
     iconPaths: {
       favicon32: 'favicon.ico',
@@ -50,13 +33,9 @@ module.exports = {
       msTileImage: 'favicon.ico'
     }
   },
-  // 可以用来传递任何第三方插件选项
   pluginOptions: {
 
   },
-  /**
-   * 使用链式操作来修改配置
-   */
   chainWebpack: (config) => {
     config.plugin("html").tap((args) => {
       args[0].title = "我的简历";
@@ -207,18 +186,12 @@ module.exports = {
     } else {
       return {
         plugins: [
-          // 开启Gzip压缩
           // 需要 npm i -D compression-webpack-plugin
           new CompressionWebpackPlugin({
-            // 目标文件名称。[path] 被替换为原始文件的路径和 [query] 查询
             filename: "[path].gz[query]",
-            // 使用 gzip 压缩
             algorithm: "gzip",
-            // 处理与此正则相匹配的所有文件
             test: new RegExp("\\.(js|css)$"),
-            // 只处理大于此大小的文件
             threshold: 10240,
-            // 最小压缩比npm达到 0.8 时才会被压缩
             minRatio: 0.8,
           }),
         ],
@@ -226,13 +199,8 @@ module.exports = {
     }
   },
   css: {
-    // 将组件内的CSS提取到一个单独的CSS文件（只用在生产环境中）
     extract: true,
-
-    // 是否开启CSS source map
     sourceMap: false,
-
-    // 为预处理器的loader传递自定义选项
     loaderOptions: {
       // 给 sass-loader 传递选项
       // 默认情况下 `sass` 选项会同时对 `sass` 和 `scss` 语法同时生效

@@ -54,6 +54,7 @@ export default {
 <style lang="scss" scoped>
 .skill {
   width: 80%;
+  margin: 0 auto;
 }
 .box-card {
   background: #cccccc;

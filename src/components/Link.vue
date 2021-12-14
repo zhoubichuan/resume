@@ -7,7 +7,7 @@
       <div class="box-card">
         <el-card>
           <img
-            :src="`~@/assets/${item.ico || 'net'}.jpg`"
+            :src="`/resume/assets/${item.ico || 'net'}.jpg`"
             alt="图片"
           >
           <h3>{{ item.name }}</h3>
