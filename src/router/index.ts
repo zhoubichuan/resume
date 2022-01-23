@@ -15,7 +15,7 @@ export default new Router({
     },
     {
       path: "/about3",
-      name: "about2",
+      name: "about3",
       component: Index,
     },
   ],
