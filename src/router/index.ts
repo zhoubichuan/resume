@@ -5,10 +5,21 @@ import Index from "@/components/Index.vue";
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
+  base: '/resume',
   routes: [
     {
-      path: "/",
-      name: "index",
+      path: '/',
+      redirect: '/resume/about3'
+    },
+    {
+      path: "/resume",
+      name: "Home",
+      component: Index,
+    },
+    {
+      path: "/resume/about3",
+      name: "about2",
       component: Index,
     },
   ],

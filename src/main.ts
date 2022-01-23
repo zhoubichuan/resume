@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router/index";
-import "./registerServiceWorker";
+// import "./registerServiceWorker";
 import UI from "./ui";
 import store from "./store";
 // import _ from "lodash"
@@ -24,10 +24,34 @@ moment.locale("zh-cn");
 Vue.use(UI);
 Vue.use(config)
 Vue.config.productionTip = false;
+let instance: any = null
 
-new Vue({
-  router,
-  i18n,
-  store,
-  render: (h: any) => h(App),
-}).$mount("#app");
+function render(props = {}) {
+  instance = new Vue({
+    router,
+    i18n,
+    store,
+    render: h => h(App),
+  }).$mount("#vue");
+}
+if (window.__POWERED_BY_QIANKUN__) {
+  debugger
+  window.__webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__
+  console.log('1111111111', window.__webpack_public_path__)
+} else {
+  debugger
+  console.log('2222222222')
+  render()
+}
+
+export async function bootstrap(props: any) {
+  console.log(props, '11111111111111')
+}
+export async function mount(props: any) {
+  render(props)
+  console.log(props, '22222222222222222')
+}
+export async function unmount() {
+  instance.$destory()
+  console.log(instance, '333333333333333333')
+}

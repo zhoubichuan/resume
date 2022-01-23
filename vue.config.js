@@ -15,24 +15,21 @@ function resolve(dir) {
 }
 
 module.exports = {
-  outputDir: 'resume',
   assetsDir: 'assets',
-  publicPath: "/resume",
-  indexPath: "index.html",
   runtimeCompiler: true,
   lintOnSave: false,
   transpileDependencies: ["vue-particles"],
   productionSourceMap: true,
   parallel: require("os").cpus().length > 1,
-  pwa: {
-    iconPaths: {
-      favicon32: 'favicon.ico',
-      favicon16: 'favicon.ico',
-      appleTouchIcon: 'favicon.ico',
-      maskIcon: 'favicon.ico',
-      msTileImage: 'favicon.ico'
-    }
-  },
+  // pwa: {
+  //   iconPaths: {
+  //     favicon32: 'favicon.ico',
+  //     favicon16: 'favicon.ico',
+  //     appleTouchIcon: 'favicon.ico',
+  //     maskIcon: 'favicon.ico',
+  //     msTileImage: 'favicon.ico'
+  //   }
+  // },
   pluginOptions: {
 
   },
@@ -172,30 +169,35 @@ module.exports = {
     new webpack.ProvidePlugin({
       _: lodash,
     });
+    let targetobj = {
+      output: {
+        library: "resume",
+        libraryTarget: "window",
+        jsonpFunction: `webpackJsonp_resume`,
+      },
+    }
     if (isDev) {
-      return {
-        plugins: [
-          // 分析各种包的大小
-          new webpack.DefinePlugin({
-            "process.env": {
-              NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-            },
-          }),
-        ],
-      };
+      targetobj.plugins = [
+        // 分析各种包的大小
+        new webpack.DefinePlugin({
+          "process.env": {
+            NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+          },
+        }),
+      ]
+      return targetobj
     } else {
-      return {
-        plugins: [
-          // 需要 npm i -D compression-webpack-plugin
-          new CompressionWebpackPlugin({
-            filename: "[path].gz[query]",
-            algorithm: "gzip",
-            test: new RegExp("\\.(js|css)$"),
-            threshold: 10240,
-            minRatio: 0.8,
-          }),
-        ],
-      };
+      targetobj.plugins = [
+        // 需要 npm i -D compression-webpack-plugin
+        new CompressionWebpackPlugin({
+          filename: "[path].gz[query]",
+          algorithm: "gzip",
+          test: new RegExp("\\.(js|css)$"),
+          threshold: 10240,
+          minRatio: 0.8,
+        }),
+      ]
+      return targetobj
     }
   },
   css: {
@@ -226,6 +228,9 @@ module.exports = {
     // requireModuleExtension: false,
   },
   devServer: {
+    headers: {
+      'Access-Control-Allow-Origin': "*"
+    },
     overlay: {
       // 让浏览器 overlay 同时显示警告和错误
       warnings: true,
