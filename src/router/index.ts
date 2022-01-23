@@ -9,16 +9,12 @@ export default new Router({
   base: '/resume',
   routes: [
     {
-      path: '/',
-      redirect: '/resume/about3'
-    },
-    {
-      path: "/resume",
+      path: "/",
       name: "Home",
       component: Index,
     },
     {
-      path: "/resume/about3",
+      path: "/about3",
       name: "about2",
       component: Index,
     },
