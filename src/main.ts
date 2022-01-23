@@ -34,12 +34,8 @@ function render(props = {}) {
     render: h => h(App),
   }).$mount("#vue");
 }
-if (window.__POWERED_BY_QIANKUN__) {
-  window.__webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__
-  console.log('1111111111', window.__webpack_public_path__)
-} else {
-  console.log('2222222222')
-  render()
+if (!window.__POWERED_BY_QIANKUN__) {
+  render(props)
 }
 
 export async function bootstrap(props: any) {
