@@ -14,9 +14,6 @@
       <link-me />
       <message />
     </el-main>
-    <el-footer class="center">
-      {{ msg }}
-    </el-footer>
   </el-container>
 </template>
 
@@ -34,7 +31,6 @@ export default {
   name: "Index",
   data() {
     return {
-      msg: "Design by：周必川 备案号： 鄂ICP备14014598号",
       navStop: false,
       activeIndex: "1",
       activeIndex2: "1",

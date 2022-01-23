@@ -6,7 +6,7 @@ export default {
       title: "Hell Word",
     },
     content: [
-      "我叫周必川",
+      "我是zhoubichuan",
       "一名前端工程师",
       "zhoubichuan@icloud.com",
       "生活不止眼前的苟且",

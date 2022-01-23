@@ -8,22 +8,22 @@ export default {
     linkOp: [
       {
         name: "我的gitHub：",
-        img: "github",
+        img: "../../static/github.jpg",
         link: "https://github.com/zhoubichuan",
       },
       {
         name: "我的微博：",
-        img: "weibo",
+        img: "../../static/weibo.jpg",
         link: "https://github.com/zhoubichuan",
       },
       {
         name: "我的微信：",
-        img: "weixin",
+        img: "../../static/weixin.jpg",
         text: "zbc159x",
       },
       {
         name: "我的掘金:",
-        img: "juejin",
+        img: "../../static/juejin.jpg",
         link: "https://juejin.im/user/5aabd522f265da237a4cc764/posts",
       },
     ],

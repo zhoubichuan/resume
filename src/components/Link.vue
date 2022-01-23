@@ -1,24 +1,35 @@
 <template>
   <common :op="op">
-    <div
-      v-for="(item, index) in linkOp"
-      :key="index"
-    >
+    <div>
       <div class="box-card">
         <el-card>
-          <img
-            :src="`/resume/assets/${item.ico || 'net'}.jpg`"
-            alt="图片"
+          <img src="../assets/github.jpg" alt="图片" />
+          <h3>我的gitHub：</h3>
+          <a href="https://github.com/zhoubichuan"
+            >https://github.com/zhoubichuan</a
           >
-          <h3>{{ item.name }}</h3>
-          <a
-            v-if="item.link"
-            :href="item.link"
-          >{{ item.link }}</a>
-          <span v-if="item.text">{{ item.text }}</span>
         </el-card>
       </div>
-      <div>{{ msg }}</div>
+    </div>
+    <div>
+      <div class="box-card">
+        <el-card>
+          <img src="../assets/weixin.jpg" alt="图片" />
+          <h3>我的微信：</h3>
+          <span>zbc159x</span>
+        </el-card>
+      </div>
+    </div>
+    <div>
+      <div class="box-card">
+        <el-card>
+          <img src="../assets/juejin.jpg" alt="图片" />
+          <h3>我的掘金:</h3>
+          <a href="https://juejin.im/user/5aabd522f265da237a4cc764/posts"
+            >https://juejin.im/user/5aabd522f265da237a4cc764/posts</a
+          >
+        </el-card>
+      </div>
     </div>
   </common>
 </template>

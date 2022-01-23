@@ -27,9 +27,9 @@
             class="box"
             :href="item2.link"
           >
-            <!-- <iframe
+            <iframe
               :src="`https://zhoubichuan.github.io/${item2.img}/`"
-            /> -->
+            />
             <div class="mask">
               <p>{{ item2.title }}</p>
               <p>技术要点：{{ item2.skill }}</p>
