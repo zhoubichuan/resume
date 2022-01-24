@@ -26,7 +26,7 @@ Vue.use(config)
 Vue.config.productionTip = false;
 let instance: any = null
 
-function render(props = {}) {
+function render() {
   instance = new Vue({
     router,
     i18n,
@@ -35,7 +35,7 @@ function render(props = {}) {
   }).$mount("#vue");
 }
 if (!window.__POWERED_BY_QIANKUN__) {
-  render(props)
+  render()
 }
 
 export async function bootstrap(props: any) {
