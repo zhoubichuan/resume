@@ -173,8 +173,7 @@ module.exports = {
     let targetobj = {
       output: {
         library: "resume",
-        libraryTarget: "window",
-        jsonpFunction: `webpackJsonp_resume`,
+        libraryTarget: "umd",
       },
     }
     if (isDev) {

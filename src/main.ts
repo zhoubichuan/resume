@@ -24,28 +24,32 @@ moment.locale("zh-cn");
 Vue.use(UI);
 Vue.use(config)
 Vue.config.productionTip = false;
-let instance: any = null
+let app: any = null
 
-function render() {
-  instance = new Vue({
+function render(props = {}) {
+  app = new Vue({
     router,
     i18n,
     store,
     render: h => h(App),
   }).$mount("#vue");
 }
-if (!window.__POWERED_BY_QIANKUN__) {
+if (window.__POWERED_BY_QIANKUN__) {
+  window.__webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__
+  console.log('1111111111', window.__webpack_public_path__)
+} else {
+  console.log('2222222222')
   render()
 }
 
 export async function bootstrap(props: any) {
-  console.log(props, '11111111111111')
+  console.log(props)
 }
 export async function mount(props: any) {
   render(props)
-  console.log(props, '22222222222222222')
+  // props.fns.forEach(fn => fn('加载完成'))
 }
 export async function unmount() {
-  instance.$destory()
-  console.log(instance, '333333333333333333')
+  app.$destory()
+  console.log(app, 'app')
 }
