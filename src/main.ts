@@ -1,3 +1,4 @@
+import './public-path'
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router/index";
@@ -33,13 +34,6 @@ function render(props = {}) {
     store,
     render: h => h(App),
   }).$mount("#vue");
-}
-if (window.__POWERED_BY_QIANKUN__) {
-  window.__webpack_public_path__ = window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__ + '/resume/child-resume/'
-  console.log('1111111111', window.__webpack_public_path__)
-} else {
-  console.log('2222222222')
-  render()
 }
 
 export async function bootstrap(props: any) {
