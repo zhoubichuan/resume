@@ -6,7 +6,7 @@ Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  base: '/resume',
+  base: window.__INJECTED_PUBLIC_PATH_BY_QIANKUN__ ? '/resume' : '/resume/child-resume',
   routes: [
     {
       path: "/",
