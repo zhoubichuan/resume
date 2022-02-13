@@ -1,21 +1,21 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+const { name } = require("./package.json")
 const lodash = require("lodash");
-const path = require("path");
-const merge = require("webpack-merge");
-const CompressionWebpackPlugin = require("compression-webpack-plugin"); // 开启gzip压缩， 按需引用
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-  .BundleAnalyzerPlugin;
-const webpack = require("webpack");
+const path = require("path")
+const merge = require("webpack-merge")
+const CompressionWebpackPlugin = require("compression-webpack-plugin") // 开启gzip压缩， 按需引用
+const BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin
+const webpack = require("webpack")
 
-const isDev = process.env.NODE_ENV === "dev";
-console.error(process.env.NODE_ENV, "process.env.NODE_ENV ");
+const isDev = process.env.NODE_ENV === "dev"
+console.error(process.env.NODE_ENV, "process.env.NODE_ENV ")
 
 function resolve(dir) {
-  return path.join(__dirname, dir);
+  return path.join(__dirname, dir)
 }
 
 module.exports = {
-  assetsDir: 'assets',
+  assetsDir: "assets",
   publicPath: "/resume/child-resume/",
   runtimeCompiler: true,
   lintOnSave: false,
@@ -31,9 +31,7 @@ module.exports = {
   //     msTileImage: 'favicon.ico'
   //   }
   // },
-  pluginOptions: {
-
-  },
+  pluginOptions: {},
   chainWebpack: (config) => {
     config.plugin("html").tap((args) => {
       args[0].title = "我的简历";
@@ -42,12 +40,12 @@ module.exports = {
     // 修复热更新失效
     config.resolve.symlinks(true);
 
-    // 如果使用多页面打包，使用vue inspect --plugins查看html是否在结果数组中
-    config.plugin("html").tap((args) => {
-      // 修复 Lazy loading routes Error
-      args[0].chunksSortMode = "none";
-      return args;
-    });
+    // 如果使用多页面打包，使用vue inspect --plugins查看html是否在结果数组中,对微前端有问题
+    // config.plugin("html").tap((args) => {
+    //   // 修复 Lazy loading routes Error
+    //   args[0].chunksSortMode = "none";
+    //   return args;
+    // });
     config.optimization.minimizer("terser").tap((args) => {
       // 注释console.*
       args[0].terserOptions.compress.drop_console = true;
@@ -169,11 +167,12 @@ module.exports = {
     //提供全局的变量，在模块中使用无需用require引入
     new webpack.ProvidePlugin({
       _: lodash,
-    });
+    })
     let targetobj = {
       output: {
-        library: "resume",
+        library: `${name}-[name]`,
         libraryTarget: "umd",
+        jsonpFunction: `webpackJsonp_${name}`,
       },
     }
     if (isDev) {
@@ -229,7 +228,7 @@ module.exports = {
   },
   devServer: {
     headers: {
-      'Access-Control-Allow-Origin': "*"
+      "Access-Control-Allow-Origin": "*",
     },
     overlay: {
       // 让浏览器 overlay 同时显示警告和错误
@@ -258,4 +257,4 @@ module.exports = {
     //   }
     // }
   },
-};
+}
