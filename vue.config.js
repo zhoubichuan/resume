@@ -1,5 +1,5 @@
 const { name } = require("./package.json")
-const lodash = require("lodash");
+const lodash = require("lodash")
 const path = require("path")
 const merge = require("webpack-merge")
 const CompressionWebpackPlugin = require("compression-webpack-plugin") // 开启gzip压缩， 按需引用
@@ -34,11 +34,11 @@ module.exports = {
   pluginOptions: {},
   chainWebpack: (config) => {
     config.plugin("html").tap((args) => {
-      args[0].title = "我的简历";
-      return args;
-    });
+      args[0].title = "我的简历"
+      return args
+    })
     // 修复热更新失效
-    config.resolve.symlinks(true);
+    config.resolve.symlinks(true)
 
     // 如果使用多页面打包，使用vue inspect --plugins查看html是否在结果数组中,对微前端有问题
     // config.plugin("html").tap((args) => {
@@ -48,21 +48,21 @@ module.exports = {
     // });
     config.optimization.minimizer("terser").tap((args) => {
       // 注释console.*
-      args[0].terserOptions.compress.drop_console = true;
+      args[0].terserOptions.compress.drop_console = true
       // remove debugger
-      args[0].terserOptions.compress.drop_debugger = true;
+      args[0].terserOptions.compress.drop_debugger = true
       // 移除 console.log
-      args[0].terserOptions.compress.pure_funcs = ["console.log"];
+      args[0].terserOptions.compress.pure_funcs = ["console.log"]
       // 去掉注释 如果需要看chunk-vendors公共部分插件，可以注释掉就可以看到注释了
       args[0].terserOptions.output = {
         comments: false,
-      };
-      return args;
-    });
+      }
+      return args
+    })
     // 配置别名
     config.resolve.alias
       .set("@", resolve("src"))
-      .set("static", resolve("static"));
+      .set("static", resolve("static"))
 
     // 压缩图片
     // 需要 npm i -D image-webpack-loader
@@ -89,7 +89,7 @@ module.exports = {
           quality: 75,
         },
       })
-      .end();
+      .end()
 
     // 打包分析
     // 打包之后自动生成一个名叫report.html文件(可忽视)
@@ -112,9 +112,9 @@ module.exports = {
             scss: "style-loader!css-loader!sass-loader",
             sass: "style-loader!css-loader!sass-loader?indentedSyntax",
           },
-        };
-        return op;
-      });
+        }
+        return op
+      })
 
     config.module
       .rule("image")
@@ -125,21 +125,21 @@ module.exports = {
         merge(options, {
           limit: 5120,
         })
-      );
+      )
 
     config.module
       .rule("image")
       .test(/\.(png|jpg|gif)$/i)
       .use("file-loader")
       .loader("file-loader")
-      .end();
+      .end()
 
     config.module
       .rule("html")
       .test(/\.html$/)
       .use("html-withimg-loader")
       .loader("html-withimg-loader")
-      .end();
+      .end()
 
     config.module
       .rule("compile")
@@ -158,7 +158,7 @@ module.exports = {
             },
           ],
         ],
-      });
+      })
   },
   /**
    * 使用整体替换来修改配置
