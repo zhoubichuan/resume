@@ -14,7 +14,7 @@ git init
 git checkout --orphan gh-pages
 git add .
 git commit -m 'gh-pages'
-git remote add gitee https://gitee.com/zhoubichuan/zhoubichuan.git
+git remote add gitee https://gitee.com/zhoubichuan/resume.git
 git push -f gitee gh-pages
 
 # 4.返回初始目录
