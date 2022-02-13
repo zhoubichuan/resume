@@ -31,10 +31,10 @@ interface Props{
   routerBase: string
 }
 function render() {
-  // const routerBase = '/resume'
+  const routerBase = '/resume'
   const router = new VueRouter({
-    // base: window.__POWERED_BY_QIANKUN__ ? routerBase : process.env.BASE_URL,
-    // mode: 'history',
+    base: window.__POWERED_BY_QIANKUN__ ? routerBase : process.env.BASE_URL,
+    mode: 'history',
     routes
   })
   app = new Vue({
