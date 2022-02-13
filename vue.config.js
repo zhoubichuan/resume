@@ -16,7 +16,7 @@ function resolve(dir) {
 
 module.exports = {
   assetsDir: "assets",
-  publicPath: "/resume/child-resume/",
+  publicPath: "/resume/",
   runtimeCompiler: true,
   lintOnSave: false,
   transpileDependencies: ["vue-particles"],

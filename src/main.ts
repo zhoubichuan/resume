@@ -31,7 +31,7 @@ interface Props{
   routerBase: string
 }
 function render() {
-  const routerBase = '/child-resume'
+  const routerBase = '/resume'
   const router = new VueRouter({
     base: window.__POWERED_BY_QIANKUN__ ? routerBase : process.env.BASE_URL,
     mode: 'history',
