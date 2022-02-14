@@ -9,10 +9,5 @@ export default [
     path: "/",
     name: "Home",
     component: Index,
-  },
-  {
-    path: "/about3",
-    name: "about3",
-    component: Index,
-  },
+  }
 ]

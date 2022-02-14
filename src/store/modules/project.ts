@@ -15,27 +15,27 @@ export default {
             skill: "javaScript+css",
             img: "Project-JavaScript-CompanyWebsite",
             link:
-              "https://zhoubichuan.github.io/Project-JavaScript-CompanyWebsite/",
+              "https://zhoubichuan.github.io/website/",
           },
           {
             title: "后台管理系统",
             skill: "jQuery+BootStrapt",
             img: "Project-Bootstrapt-BackManagmentSystem",
             link:
-              "https://zhoubichuan.github.io/Project-Bootstrapt-BackManagmentSystem/",
+              "https://zhoubichuan.github.io/managment/",
           },
           {
             title: "flybird游戏",
             skill: "canvas+css",
             img: "fly-bird",
             link:
-              "https://zhoubichuan.github.io/Project-JavaScript.Canvas-Flybird/",
+              "https://zhoubichuan.gitee.io/flybird/",
           },
           {
             title: "微信跳一跳游戏",
             skill: "webGL(three.js)+css",
             img: "Project-Three.js-TiaoYiTiao",
-            link: "https://zhoubichuan.github.io/Project-Three.js-TiaoYiTiao/",
+            link: "https://zhoubichuan.gitee.io/jump/",
           },
           {
             title: "微信小程序",
@@ -62,13 +62,13 @@ export default {
             title: "饿了么",
             img: "Project-Vue-eleSell",
             skill: "Vue+less",
-            link: "https://zhoubichuan.github.io/Project-Vue-eleSell",
+            link: "https://zhoubichuan.github.io/elesell",
           },
           {
             title: "点餐系统",
             img: "Project-Vue-Ordering",
             skill: "Vue+less",
-            link: "https://zhoubichuan.github.io/Project-Vue-Ordering/",
+            link: "https://zhoubichuan.github.io/order/",
           },
         ],
       },
