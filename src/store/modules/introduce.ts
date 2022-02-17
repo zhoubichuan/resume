@@ -3,14 +3,14 @@ export default {
   state: {
     op: {
       id: "introduce",
-      title: "Hell Word",
+      title: "Hello Word",
     },
     content: [
       "我是zhoubichuan",
-      "一名前端工程师",
+      "一名IT工程师",
       "zhoubichuan@icloud.com",
       "生活不止眼前的苟且",
-      "坐标：佛山",
+      "坐标：广东/佛山",
     ],
   },
 };

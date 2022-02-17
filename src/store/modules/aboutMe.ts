@@ -17,7 +17,7 @@ export default {
       },
       {
         title: "工作意向",
-        content: ["高级前端开发"],
+        content: ["高级前端开发、node开发工程师"],
       },
     ],
   },

@@ -5,7 +5,7 @@
         <el-col
           :span="12"
           :offset="6"
-          style="width:100%"
+          style="width: 100%"
         >
           <div class="grid-content bg-purple">
             <p
