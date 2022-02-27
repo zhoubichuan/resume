@@ -13,6 +13,7 @@
 import Common from "../common/Common";
 import Card from "../common/Card";
 import { mapState } from "vuex";
+// let img = require('@/assets/main.jpg')
 export default {
   name: "AboutMe",
   components: {

@@ -1,6 +1,6 @@
 <template>
   <Common :op="op">
-    <div>
+    <div class="main">
       <el-row :gutter="20">
         <el-col
           :span="12"
@@ -25,6 +25,7 @@
 <script>
 import Common from "../common/Common";
 import { mapState } from "vuex";
+import { getProject } from "../api";
 
 export default {
   name: "Introduce",
@@ -34,10 +35,18 @@ export default {
   computed: {
     ...mapState("introduce", ["op", "content"]),
   },
+  mounted() {
+    getProject().then((res) => {
+      debugger;
+    });
+  },
 };
 </script>
 
 <style lang="scss" scoped>
+.main {
+  background: url("../assets/main.jpg");
+}
 .center {
   margin-top: 20px;
   text-align: center;

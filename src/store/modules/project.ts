@@ -13,14 +13,14 @@ export default {
           {
             title: "企业网站",
             skill: "javaScript+css",
-            img: "Project-JavaScript-CompanyWebsite",
+            img: "website",
             link:
               "https://zhoubichuan.github.io/website/",
           },
           {
             title: "后台管理系统",
             skill: "jQuery+BootStrapt",
-            img: "Project-Bootstrapt-BackManagmentSystem",
+            img: "managment",
             link:
               "https://zhoubichuan.github.io/managment/",
           },
@@ -29,13 +29,13 @@ export default {
             skill: "canvas+css",
             img: "fly-bird",
             link:
-              "https://zhoubichuan.gitee.io/flybird/",
+              "https://zhoubichuan.github.io/flybird/",
           },
           {
             title: "微信跳一跳游戏",
             skill: "webGL(three.js)+css",
-            img: "Project-Three.js-TiaoYiTiao",
-            link: "https://zhoubichuan.gitee.io/jump/",
+            img: "jump",
+            link: "https://zhoubichuan.github.io/jump/",
           },
           {
             title: "微信小程序",
@@ -60,13 +60,13 @@ export default {
           },
           {
             title: "饿了么",
-            img: "Project-Vue-eleSell",
+            img: "elesell",
             skill: "Vue+less",
             link: "https://zhoubichuan.github.io/elesell",
           },
           {
             title: "点餐系统",
-            img: "Project-Vue-Ordering",
+            img: "order",
             skill: "Vue+less",
             link: "https://zhoubichuan.github.io/order/",
           },
@@ -77,9 +77,9 @@ export default {
         items: [
           {
             title: "zhufengCourseApp",
-            img: "Project-React.TS-app",
+            img: "classroom",
             skill: "React+TS+less",
-            link: "https://zhoubichuan.github.io/Project-React.TS-app/",
+            link: "https://zhoubichuan.github.io/classroom/",
           },
           {
             title: "weChatApp",

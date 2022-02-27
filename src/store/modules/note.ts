@@ -19,7 +19,7 @@ export default {
           {
             title: "javascript笔记",
             skill: "javaScript+css",
-            img: "Web-JavaScript",
+            img: "web-javaScript",
             link: "https://zhoubichuan.github.io/web-javascript/",
           },
         ],
@@ -28,9 +28,9 @@ export default {
         name: "Vue相关",
         items: [
           {
-            title: "Web-Vue",
+            title: "web-vue",
             skill: "Vuepress",
-            img: "Web-Vue",
+            img: "web-vue",
             link: "https://zhoubichuan.github.io/web-vue/",
           },
         ],
@@ -39,10 +39,10 @@ export default {
         name: "React相关",
         items: [
           {
-            title: "Web-Vue",
+            title: "web-react",
             skill: "Vuepress",
-            img: "Web-React",
-            link: "https://zhoubichuan.github.io/Web-React/",
+            img: "web-react",
+            link: "https://zhoubichuan.github.io/web-react/",
           },
         ],
       },
@@ -54,10 +54,10 @@ export default {
         name: "Node相关",
         items: [
           {
-            title: "Web-Node",
+            title: "web-note",
             skill: "Vuepress",
-            img: "Web-Node",
-            link: "https://zhoubichuan.github.io/Web-Node/",
+            img: "web-note",
+            link: "https://zhoubichuan.github.io/web-node/",
           },
         ],
       },
@@ -65,10 +65,10 @@ export default {
         name: "Express相关",
         items: [
           {
-            title: "Web-Express",
+            title: "web-express",
             skill: "Vuepress",
-            img: "Web-Express",
-            link: "https://zhoubichuan.github.io/Web-Express/",
+            img: "web-express",
+            link: "https://zhoubichuan.github.io/web-express/",
           },
         ],
       },
@@ -76,10 +76,10 @@ export default {
         name: "Koa相关",
         items: [
           {
-            title: "Web-Koa",
+            title: "web-koa",
             skill: "Vuepress",
-            img: "Web-Koa",
-            link: "https://zhoubichuan.github.io/Web-Koa/",
+            img: "web-koa",
+            link: "https://zhoubichuan.github.io/web-koa/",
           },
         ],
       },
@@ -87,10 +87,10 @@ export default {
         name: "Egg相关",
         items: [
           {
-            title: "Web-Egg",
+            title: "web-egg",
             skill: "Vuepress",
-            img: "Web-Egg",
-            link: "https://zhoubichuan.github.io/Web-Egg/",
+            img: "web-egg",
+            link: "https://zhoubichuan.github.io/web-egg/",
           },
         ],
       },
@@ -98,10 +98,10 @@ export default {
         name: "Webpack相关",
         items: [
           {
-            title: "Web-Webpack",
+            title: "web-webpack",
             skill: "Vuepress",
-            img: "Web-Webpack",
-            link: "https://zhoubichuan.github.io/Web-Webpack/",
+            img: "web-webpack",
+            link: "https://zhoubichuan.github.io/web-webpack/",
           },
         ],
       },
