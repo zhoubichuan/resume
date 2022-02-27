@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="resume-app">
     <router-view />
   </div>
 </template>
@@ -15,10 +15,12 @@ export default {
 </script>
 
 <style lang="scss">
-li {
-  list-style: none;
-}
-.el-main {
-  padding: 0;
+.resume-app {
+  li {
+    list-style: none;
+  }
+  .el-main {
+    padding: 0;
+  }
 }
 </style>
