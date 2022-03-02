@@ -44,9 +44,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main {
-  background: url("../assets/main.jpg");
-}
 .center {
   margin-top: 20px;
   text-align: center;

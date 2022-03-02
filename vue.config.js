@@ -61,6 +61,7 @@ module.exports = {
     // 配置别名
     config.resolve.alias
       .set("@", resolve("src"))
+      .set('assets',resolve('src/assets'))
       .set("static", resolve("static"))
 
     // 压缩图片
@@ -116,15 +117,15 @@ module.exports = {
       })
 
     config.module
-      .rule("image")
+      .rule("img")
       .test(/\.(png|jpg|gif)$/i)
       .use("url-loader")
       .loader("url-loader")
-      .tap((options) =>
-        merge(options, {
-          limit: 5120,
-        })
-      )
+      // .tap((options) =>
+      //   merge(options, {
+      //     // limit: 5120,
+      //   })
+      // )
 
     config.module
       .rule("image")
