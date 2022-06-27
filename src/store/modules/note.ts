@@ -47,10 +47,6 @@ export default {
         ],
       },
       {
-        name: "Angular",
-        items: [],
-      },
-      {
         name: "Node相关",
         items: [
           {

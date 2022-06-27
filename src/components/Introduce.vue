@@ -36,9 +36,7 @@ export default {
     ...mapState("introduce", ["op", "content"]),
   },
   mounted() {
-    getProject().then((res) => {
-      debugger;
-    });
+    getProject().then((res) => {});
   },
 };
 </script>

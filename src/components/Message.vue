@@ -70,7 +70,7 @@ export default {
   },
   data() {
     return {
-      msg:'123',
+      msg: "123",
       message: {},
       messageList: [],
     };
@@ -87,8 +87,6 @@ export default {
   },
   methods: {
     handleClick() {
-      console.log(1221212);
-      debugger;
       var message = {
         img: this.imgUrl[0],
         name: this.mame,

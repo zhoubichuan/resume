@@ -1,5 +1,5 @@
 <template>
-  <common :op="op">
+  <common>
     <div>
       <div class="box-card">
         <el-card>

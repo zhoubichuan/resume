@@ -21,15 +21,6 @@ module.exports = {
   transpileDependencies: ["vue-particles"],
   productionSourceMap: true,
   parallel: require("os").cpus().length > 1,
-  // pwa: {
-  //   iconPaths: {
-  //     favicon32: 'favicon.ico',
-  //     favicon16: 'favicon.ico',
-  //     appleTouchIcon: 'favicon.ico',
-  //     maskIcon: 'favicon.ico',
-  //     msTileImage: 'favicon.ico'
-  //   }
-  // },
   pluginOptions: {},
   chainWebpack: (config) => {
     config.plugin("html").tap((args) => {
@@ -46,13 +37,9 @@ module.exports = {
     //   return args;
     // });
     config.optimization.minimizer("terser").tap((args) => {
-      // 注释console.*
       args[0].terserOptions.compress.drop_console = true
-      // remove debugger
       args[0].terserOptions.compress.drop_debugger = true
-      // 移除 console.log
       args[0].terserOptions.compress.pure_funcs = ["console.log"]
-      // 去掉注释 如果需要看chunk-vendors公共部分插件，可以注释掉就可以看到注释了
       args[0].terserOptions.output = {
         comments: false,
       }
@@ -90,16 +77,6 @@ module.exports = {
         },
       })
       .end()
-
-    // 打包分析
-    // 打包之后自动生成一个名叫report.html文件(可忽视)
-    if (!isDev) {
-      // config.plugin("webpack-report").use(BundleAnalyzerPlugin, [
-      //   {
-      //     analyzerMode: "static",
-      //   },
-      // ]);
-    }
 
     config.module
       .rule("vue")
@@ -203,35 +180,21 @@ module.exports = {
     extract: true,
     sourceMap: false,
     loaderOptions: {
-      // 给 sass-loader 传递选项
-      // 默认情况下 `sass` 选项会同时对 `sass` 和 `scss` 语法同时生效
-      // 因为 `scss` 语法在内部也是由 sass-loader 处理的
-      // 但是在配置 `data` 选项的时候
-      // `scss` 语法会要求语句结尾必须有分号，`sass` 则要求必须没有分号
-      // 在这种情况下，我们可以使用 `scss` 选项，对 `scss` 语法进行单独配置
       scss: {
         prependData: `@import "@/assets/scss/index.scss";`,
       },
-      // 给 less-loader 传递 Less.js 相关选项
       less: {
-        // http://lesscss.org/usage/#less-options-strict-units `Global Variables`
-        // `primary` is global variables fields name
         globalVars: {
           primary: "#fff",
         },
       },
     },
-
-    // 为所有的CSS及其预处理文件开启CSS Modules
-    // 这个选项不会影响 *.vue文件
-    // requireModuleExtension: false,
   },
   devServer: {
     headers: {
       "Access-Control-Allow-Origin": "*",
     },
     overlay: {
-      // 让浏览器 overlay 同时显示警告和错误
       warnings: true,
       errors: true,
     },
