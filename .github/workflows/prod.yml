@@ -21,7 +21,7 @@ jobs:
       env:
           SSH_PRIVATE_KEY: ${{ secrets.ID_RSA }}
           ARGS: '-rltgoDzvO --delete'
-          SOURCE: 'web-vue/'
+          SOURCE: 'resume/*'
           REMOTE_HOST: ${{ secrets.HOST }}
           REMOTE_USER: ${{ secrets.USER }}
           TARGET: '/usr/src/zhoubichuan/prod/'

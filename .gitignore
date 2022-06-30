@@ -9,7 +9,7 @@ node_modules
 # local env files
 .env.local
 .env.*.local
-
+/resume
 # Log files
 npm-debug.log*
 yarn-debug.log*
