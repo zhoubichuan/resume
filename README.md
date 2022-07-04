@@ -1,25 +1,27 @@
 # 个人简历
-## Project setup
+**技术栈：** vue2.x + elementui + typescript
+
+- 安装依赖
 ```
-npm install
+cnpm install
 ```
-### Compiles and hot-reloads for development
+- 运行
 ```
-npm run serve
+npm run dev
 ```
-### Compiles and minifies for production
+- 打包项目
 ```
 npm run build
 ```
-### Run your unit tests
+- 单元测试
 ```
 npm run test:unit
 ```
-### Run your end-to-end tests
+- 端到端测试
 ```
 npm run test:e2e
 ```
-### Lints and fixes files
+- 代码检查
 ```
 npm run lint
 ```
