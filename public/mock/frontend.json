@@ -1,0 +1,66 @@
+{
+  "data": [
+    {
+      "name": "javascript",
+      "items": [
+        {
+          "title": "html",
+          "skill": "javaScript+css",
+          "img": "web-javaScript",
+          "link": "/web-javascript/"
+        },
+        {
+          "title": "css",
+          "skill": "javaScript+css",
+          "img": "web-javaScript",
+          "link": "/web-javascript/"
+        },
+        {
+          "title": "javascript",
+          "skill": "javaScript+css",
+          "img": "web-javaScript",
+          "link": "/web-javascript/"
+        }
+      ]
+    },
+    {
+      "name": "vue",
+      "items": [
+        {
+          "title": "vue2.x",
+          "skill": "Vuepress",
+          "img": "web-vue",
+          "link": "/web-vue/"
+        },
+        {
+          "title": "vue3.x",
+          "skill": "Vuepress",
+          "img": "web-vue",
+          "link": "/web-vue/"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "items": [
+        {
+          "title": "web-react",
+          "skill": "Vuepress",
+          "img": "web-react",
+          "link": "/web-react/"
+        }
+      ]
+    },
+    {
+      "name": "打包工具",
+      "items": [
+        {
+          "title": "webpack",
+          "skill": "Vuepress",
+          "img": "web-webpack",
+          "link": "/web-webpack/"
+        }
+      ]
+    }
+  ]
+}

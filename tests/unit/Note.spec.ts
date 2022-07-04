@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
-import Note from "@/components/Note.vue";
+import Note from "@/components/FrontendNote.vue";
 
 describe("Note.vue", () => {
   it("导航组件", () => {
