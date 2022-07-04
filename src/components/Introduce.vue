@@ -18,6 +18,10 @@
           </div>
         </el-col>
       </el-row>
+      <div
+        id="map"
+        class="map"
+      />
     </div>
   </Common>
 </template>
@@ -36,12 +40,36 @@ export default {
     ...mapState("introduce", ["op", "content"]),
   },
   mounted() {
+    let {
+      Map,
+      View,
+      layer: { WebGLTile: TileLayer },
+      source: { OSM },
+    } = window.ol;
+    new Map({
+      target: document.getElementById('map'),
+      layers: [
+        new TileLayer({
+          source: new OSM(),
+        }),
+      ],
+      view: new View({
+        center: [12579156, 3274244],
+        zoom: 12,
+      }),
+    });
     getProject().then((res) => {});
   },
 };
 </script>
 
 <style lang="scss" scoped>
+.map {
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+}
 .center {
   margin-top: 20px;
   text-align: center;

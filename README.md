@@ -24,4 +24,4 @@ npm run test:e2e
 npm run lint
 ```
 ### Customize configuration
-See [预览地址]](https://zhoubichuan.github.io/Project-Vue-Resume/).
+See [预览地址]](/Project-Vue-Resume/).

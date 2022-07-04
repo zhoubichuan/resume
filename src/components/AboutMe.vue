@@ -5,10 +5,6 @@
       :key="index"
     >
       <card :op="item" />
-      <div
-        ref="map"
-        class="map"
-      />
     </div>
   </common>
 </template>
@@ -28,35 +24,10 @@ export default {
   computed: {
     ...mapState("aboutMe", ["op", "cardOp", "content"]),
   },
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-  mounted() {
-    let {
-      Map,
-      View,
-      layer: { WebGLTile: TileLayer },
-      source: { OSM },
-    } = ol;
-    new Map({
-      target: this.$refs.map,
-      layers: [
-        new TileLayer({
-          source: new OSM(),
-        }),
-      ],
-      view: new View({
-        center: [12579156, 3274244],
-        zoom: 12,
-      }),
-    });
-  },
 };
 </script>
 
 <style lang="scss" scoped>
-.map {
-  width: 300px;
-  height: 100px;
-}
 .grid-content {
   text-align: center;
 }

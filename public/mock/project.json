@@ -13,31 +13,31 @@
           "title": "javascript笔记",
           "skill": "javaScript+css",
           "img": "web-JavaScript",
-          "link": "https://zhoubichuan.github.io/web-javascript/"
+          "link": "/web-javascript/"
         },
         {
           "title": "企业网站",
           "skill": "javaScript+css",
           "img": "Project-JavaScript-CompanyWebsite",
-          "link": "https://zhoubichuan.github.io/Project-JavaScript-CompanyWebsite/"
+          "link": "/Project-JavaScript-CompanyWebsite/"
         },
         {
           "title": "后台管理系统",
           "skill": "jQuery+BootStrapt",
           "img": "Project-Bootstrapt-BackManagmentSystem",
-          "link": "https://zhoubichuan.github.io/Project-Bootstrapt-BackManagmentSystem/"
+          "link": "/Project-Bootstrapt-BackManagmentSystem/"
         },
         {
           "title": "flybird游戏",
           "skill": "canvas+css",
           "img": "fly-bird",
-          "link": "https://zhoubichuan.github.io/Project-JavaScript.Canvas-Flybird/"
+          "link": "/Project-JavaScript.Canvas-Flybird/"
         },
         {
           "title": "微信跳一跳游戏",
           "skill": "webGL(three.js)+css",
           "img": "Project-Three.js-TiaoYiTiao",
-          "link": "https://zhoubichuan.github.io/Project-Three.js-TiaoYiTiao/"
+          "link": "/Project-Three.js-TiaoYiTiao/"
         },
         {
           "title": "微信小程序",
@@ -58,25 +58,25 @@
           "title": "vue笔记",
           "skill": "Vuepress",
           "img": "web-Vue",
-          "link": "https://zhoubichuan.github.io/web-vue/"
+          "link": "/web-vue/"
         },
         {
           "title": "微信",
           "skill": "Vue+less",
           "img": "Project-Vue-weChat",
-          "link": "https://zhoubichuan.github.io/Project-Vue-weChat/"
+          "link": "/Project-Vue-weChat/"
         },
         {
           "title": "饿了么",
           "img": "Project-Vue-eleSell",
           "skill": "Vue+less",
-          "link": "https://zhoubichuan.github.io/Project-Vue-eleSell"
+          "link": "/Project-Vue-eleSell"
         },
         {
           "title": "点餐系统",
           "img": "Project-Vue-Ordering",
           "skill": "Vue+less",
-          "link": "https://zhoubichuan.github.io/Project-Vue-Ordering/"
+          "link": "/Project-Vue-Ordering/"
         }
       ]
     },
@@ -87,7 +87,7 @@
           "title": "zhufengCourseApp",
           "img": "Project-React.TS-app",
           "skill": "React+TS+less",
-          "link": "https://zhoubichuan.github.io/Project-React.TS-app/"
+          "link": "/Project-React.TS-app/"
         },
         {
           "title": "weChatApp",
@@ -102,7 +102,7 @@
       "items": [
         {
           "title": "珠峰课堂",
-          "link": "https://zhoubichuan.github.io/Project-React.TS-app/"
+          "link": "/Project-React.TS-app/"
         }
       ]
     },

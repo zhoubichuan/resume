@@ -14,28 +14,25 @@ export default {
             title: "企业网站",
             skill: "javaScript+css",
             img: "website",
-            link:
-              "https://zhoubichuan.github.io/website/",
+            link:"/website/",
           },
           {
             title: "后台管理系统",
             skill: "jQuery+BootStrapt",
             img: "managment",
-            link:
-              "https://zhoubichuan.github.io/managment/",
+            link:"/managment/",
           },
           {
             title: "flybird游戏",
             skill: "canvas+css",
             img: "fly-bird",
-            link:
-              "https://zhoubichuan.github.io/flybird/",
+            link:"/flybird/",
           },
           {
             title: "微信跳一跳游戏",
             skill: "webGL(three.js)+css",
             img: "jump",
-            link: "https://zhoubichuan.github.io/jump/",
+            link: "/jump/",
           },
           {
             title: "微信小程序",
@@ -56,19 +53,19 @@ export default {
             title: "微信",
             skill: "Vue+less",
             img: "Project-Vue-weChat",
-            link: "https://zhoubichuan.github.io/Project-Vue-weChat/",
+            link: "/Project-Vue-weChat/",
           },
           {
             title: "饿了么",
             img: "elesell",
             skill: "Vue+less",
-            link: "https://zhoubichuan.github.io/elesell",
+            link: "/elesell",
           },
           {
             title: "点餐系统",
             img: "order",
             skill: "Vue+less",
-            link: "https://zhoubichuan.github.io/order/",
+            link: "/order/",
           },
         ],
       },
@@ -79,7 +76,7 @@ export default {
             title: "zhufengCourseApp",
             img: "classroom",
             skill: "React+TS+less",
-            link: "https://zhoubichuan.github.io/classroom/",
+            link: "/classroom/",
           },
           {
             title: "weChatApp",
@@ -94,7 +91,7 @@ export default {
         items: [
           {
             title: "珠峰课堂",
-            link: "https://zhoubichuan.github.io/Project-React.TS-app/",
+            link: "/Project-React.TS-app/",
           },
         ],
       },

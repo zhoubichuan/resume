@@ -28,7 +28,7 @@
             :href="item2.link"
           >
             <iframe
-              :src="`https://zhoubichuan.github.io/${item2.img}/`"
+              :src="`/${item2.img}/`"
             />
             <div class="mask">
               <p>{{ item2.title }}</p>
