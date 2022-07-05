@@ -8,7 +8,7 @@
       />
       <about-me />
       <skill />
-      <common :op="{ id: 'note', title: '前端项目' }">
+      <common :op="{ id: 'note', title: 'web项目' }">
         <Work
           class="work"
           :op="project"
@@ -30,6 +30,12 @@
         <Work
           class="work"
           :op="operation"
+        />
+      </common>
+      <common :op="{ id: 'note', title: 'web其他' }">
+        <Work
+          class="work"
+          :op="other"
         />
       </common>
       <!-- <Experience /> -->
@@ -93,6 +99,12 @@ export default {
     this.$api.getOperationNote({}).then(
       (res) => {
         this.operation = res.data;
+      },
+      (err) => {}
+    );
+    this.$api.getOtherNote({}).then(
+      (res) => {
+        this.other = res.data;
       },
       (err) => {}
     );

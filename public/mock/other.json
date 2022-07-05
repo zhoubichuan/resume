@@ -1,0 +1,37 @@
+{
+  "data": [
+    {
+      "name": "算法",
+      "items": [
+        {
+          "title": "web-arithmetic",
+          "skill": "arithmetic",
+          "img": "arithmetic",
+          "link": "/web-arithmetic/"
+        }
+      ]
+    },
+    {
+      "name": "面试总结",
+      "items": [
+        {
+          "title": "web-interview",
+          "skill": "interview",
+          "img": "interview",
+          "link": "/web-interview/"
+        }
+      ]
+    },
+    {
+      "name": "git",
+      "items": [
+        {
+          "title": "jenkins",
+          "skill": "Vuepress",
+          "img": "web-vue",
+          "link": "/web-git/"
+        }
+      ]
+    }
+  ]
+}

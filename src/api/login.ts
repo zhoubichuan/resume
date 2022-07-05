@@ -20,3 +20,10 @@ export function getOperationNote(data: any): any {
     params: data
   })
 }
+export function getOtherNote(data: any): any {
+  return request({
+    url: './mock/operation.json',
+    method: 'get',
+    params: data
+  })
+}

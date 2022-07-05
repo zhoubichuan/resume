@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "name": "javaScript",
+      "name": "javascript",
       "items": [
         {
           "title": "我的博客",
@@ -10,35 +10,45 @@
           "link": "https://github.com/zhoubichuan/zhoubichuan.github.io"
         },
         {
-          "title": "javascript笔记",
-          "skill": "javaScript+css",
-          "img": "web-JavaScript",
-          "link": "/web-javascript/"
-        },
-        {
           "title": "企业网站",
-          "skill": "javaScript+css",
-          "img": "Project-JavaScript-CompanyWebsite",
-          "link": "/Project-JavaScript-CompanyWebsite/"
+          "skill": "javascript+css",
+          "img": "website",
+          "link": "/website/"
         },
         {
           "title": "后台管理系统",
-          "skill": "jQuery+BootStrapt",
-          "img": "Project-Bootstrapt-BackManagmentSystem",
-          "link": "/Project-Bootstrapt-BackManagmentSystem/"
-        },
+          "skill": "managment",
+          "img": "managment",
+          "link": "/managment/"
+        }
+      ]
+    },
+    {
+      "name": "可视化",
+      "items": [
         {
           "title": "flybird游戏",
           "skill": "canvas+css",
           "img": "fly-bird",
-          "link": "/Project-JavaScript.Canvas-Flybird/"
+          "link": "/jump/"
         },
         {
-          "title": "微信跳一跳游戏",
+          "title": "微信跳一跳",
           "skill": "webGL(three.js)+css",
           "img": "Project-Three.js-TiaoYiTiao",
           "link": "/Project-Three.js-TiaoYiTiao/"
         },
+        {
+          "title": "force",
+          "skill": "d3.js",
+          "img": "force",
+          "link": "/force/"
+        }
+      ]
+    },
+    {
+      "name": "小程序",
+      "items": [
         {
           "title": "微信小程序",
           "skill": "---",
@@ -52,25 +62,19 @@
       ]
     },
     {
-      "name": "Vue",
+      "name": "vue",
       "items": [
         {
-          "title": "vue笔记",
-          "skill": "Vuepress",
-          "img": "web-Vue",
-          "link": "/web-vue/"
-        },
-        {
-          "title": "微信",
+          "title": "vue微信",
           "skill": "Vue+less",
           "img": "Project-Vue-weChat",
           "link": "/Project-Vue-weChat/"
         },
         {
           "title": "饿了么",
-          "img": "Project-Vue-eleSell",
+          "img": "elementsell",
           "skill": "Vue+less",
-          "link": "/Project-Vue-eleSell"
+          "link": "/elementsell"
         },
         {
           "title": "点餐系统",
@@ -81,33 +85,30 @@
       ]
     },
     {
-      "name": "React",
+      "name": "react",
       "items": [
         {
-          "title": "zhufengCourseApp",
+          "title": "课堂",
           "img": "Project-React.TS-app",
           "skill": "React+TS+less",
           "link": "/Project-React.TS-app/"
         },
         {
-          "title": "weChatApp",
+          "title": "react微信",
           "img": "Project-React-weChat",
           "skill": "React+less",
           "link": "http://zhoubichuan.github.io/Project-React-weChat"
-        }
-      ]
-    },
-    {
-      "name": "Angular",
-      "items": [
+        },
         {
-          "title": "珠峰课堂",
-          "link": "/Project-React.TS-app/"
+          "title": "abstract-react",
+          "img": "Project-React-weChat",
+          "skill": "React+less",
+          "link": "/abstract-react/"
         }
       ]
     },
     {
-      "name": "node.js",
+      "name": "node",
       "items": [
         {
           "title": "CMS系统",
@@ -120,6 +121,16 @@
       "name": "express",
       "items": [
         {
+          "title": "abstract-express",
+          "skill": "Egg.js+AntDesignPro+MySQL",
+          "link": "/abstract-express/"
+        }
+      ]
+    },
+    {
+      "name": "koa",
+      "items": [
+        {
           "title": "CMS系统",
           "skill": "Egg.js+AntDesignPro+MySQL",
           "link": "wwww.123.com"
@@ -127,7 +138,7 @@
       ]
     },
     {
-      "name": "koa",
+      "name": "egg",
       "items": [
         {
           "title": "CMS系统",
