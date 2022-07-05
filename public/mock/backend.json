@@ -56,10 +56,10 @@
           "link": "/web-redis/"
         },
         {
-          "title": "redis",
-          "skill": "redis",
-          "img": "web-redis",
-          "link": "/web-redis/"
+          "title": "mongodb",
+          "skill": "mongodb",
+          "img": "web-mongodb",
+          "link": "/web-mongodb/"
         }
       ]
     }
