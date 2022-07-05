@@ -74,7 +74,7 @@
           "title": "饿了么",
           "img": "elementsell",
           "skill": "Vue+less",
-          "link": "/elementsell"
+          "link": "/Project-Vue-eleSell"
         },
         {
           "title": "点餐系统",
@@ -101,9 +101,15 @@
         },
         {
           "title": "abstract-react",
-          "img": "Project-React-weChat",
+          "img": "abstract-react",
           "skill": "React+less",
           "link": "/abstract-react/"
+        },
+        {
+          "title": "antdpro-demo",
+          "img": "antdpro-demo",
+          "skill": "React+less",
+          "link": "/antdpro-demo/"
         }
       ]
     },
