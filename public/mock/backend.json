@@ -1,41 +1,37 @@
 {
   "data": [
     {
-      "name": "node",
+      "name": "后端语言",
       "items": [
         {
-          "title": "note",
-          "skill": "Vuepress",
+          "title": "node",
+          "skill": "node",
           "img": "web-note",
           "link": "/web-node/"
+        },
+        {
+          "title": "java",
+          "skill": "java",
+          "img": "web-java",
+          "link": "/web-java/"
         }
       ]
     },
     {
-      "name": "express",
+      "name": "后端框架",
       "items": [
         {
           "title": "express",
           "skill": "Vuepress",
           "img": "web-express",
           "link": "/web-express/"
-        }
-      ]
-    },
-    {
-      "name": "koa",
-      "items": [
+        },
         {
           "title": "koa",
           "skill": "Vuepress",
           "img": "web-koa",
           "link": "/web-koa/"
-        }
-      ]
-    },
-    {
-      "name": "egg",
-      "items": [
+        },
         {
           "title": "egg.js",
           "skill": "Vuepress",
@@ -45,13 +41,25 @@
       ]
     },
     {
-      "name": "java",
+      "name": "数据库",
       "items": [
         {
-          "title": "java",
-          "skill": "Vuepress",
-          "img": "web-java",
-          "link": "/web-java/"
+          "title": "mysql",
+          "skill": "mysql",
+          "img": "web-mysql",
+          "link": "/web-mysql/"
+        },
+        {
+          "title": "redis",
+          "skill": "redis",
+          "img": "web-redis",
+          "link": "/web-redis/"
+        },
+        {
+          "title": "redis",
+          "skill": "redis",
+          "img": "web-redis",
+          "link": "/web-redis/"
         }
       ]
     }
