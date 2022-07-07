@@ -7,7 +7,7 @@
           "title": "我的博客",
           "skill": "javaScript+css",
           "img": "zhoubichuan.github.io",
-          "link": "https://github.com/zhoubichuan/zhoubichuan.github.io"
+          "link": "/"
         },
         {
           "title": "企业网站",
@@ -29,14 +29,14 @@
         {
           "title": "flybird游戏",
           "skill": "canvas+css",
-          "img": "fly-bird",
-          "link": "/jump/"
+          "img": "flybird",
+          "link": "/flybird/"
         },
         {
           "title": "微信跳一跳",
           "skill": "webGL(three.js)+css",
-          "img": "Project-Three.js-TiaoYiTiao",
-          "link": "/Project-Three.js-TiaoYiTiao/"
+          "img": "jump",
+          "link": "/jump/"
         },
         {
           "title": "force",
@@ -67,20 +67,26 @@
         {
           "title": "vue微信",
           "skill": "Vue+less",
-          "img": "Project-Vue-weChat",
-          "link": "/Project-Vue-weChat/"
+          "img": "wechat-vue",
+          "link": "/wechat-vue/"
         },
         {
           "title": "饿了么",
           "img": "elementsell",
           "skill": "Vue+less",
-          "link": "/Project-Vue-eleSell"
+          "link": "/elementsell"
         },
         {
           "title": "点餐系统",
-          "img": "Project-Vue-Ordering",
+          "img": "order",
           "skill": "Vue+less",
-          "link": "/Project-Vue-Ordering/"
+          "link": "/order/"
+        },
+        {
+          "title": "abstract-vue",
+          "img": "abstract-vue",
+          "skill": "Vue+less",
+          "link": "/abstract-vue/"
         }
       ]
     },
@@ -88,10 +94,10 @@
       "name": "react",
       "items": [
         {
-          "title": "课堂",
-          "img": "Project-React.TS-app",
+          "title": "手机课堂",
+          "img": "classroom",
           "skill": "React+TS+less",
-          "link": "/Project-React.TS-app/"
+          "link": "/classroom/"
         },
         {
           "title": "react微信",
@@ -169,11 +175,6 @@
         {
           "title": "新闻爬虫",
           "skill": "cheerio+mysql+nodemailer",
-          "link": "wwww.123.com"
-        },
-        {
-          "title": "珠峰课堂",
-          "skill": "React+Redux",
           "link": "wwww.123.com"
         }
       ]
