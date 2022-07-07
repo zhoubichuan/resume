@@ -22,7 +22,7 @@ export function getOperationNote(data: any): any {
 }
 export function getOtherNote(data: any): any {
   return request({
-    url: './mock/operation.json',
+    url: './mock/other.json',
     method: 'get',
     params: data
   })

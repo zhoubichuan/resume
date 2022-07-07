@@ -17,7 +17,7 @@
     "generateAnalyzFile": "webpack --profile --json > stats.json",
     "analyz": "cross-env NODE_ENV=production npm_config_report=true npm run build",
     "deploy": "bash deploy.sh",
-    "gh-pages": "bash deploy_gh-pages.sh"
+    "gh-pages": "bash github.sh"
   },
   "dependencies": {
     "async-validator": "1.11.5",

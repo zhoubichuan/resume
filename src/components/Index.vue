@@ -8,31 +8,31 @@
       />
       <about-me />
       <skill />
-      <common :op="{ id: 'note', title: 'web项目' }">
+      <common :op="{ id: 'project', title: 'web项目' }">
         <Work
           class="work"
           :op="project"
         />
       </common>
-      <common :op="{ id: 'note', title: '前端笔记' }">
+      <common :op="{ id: 'front', title: '前端笔记' }">
         <Work
           class="work"
           :op="frontend"
         />
       </common>
-      <common :op="{ id: 'note', title: '后端笔记' }">
+      <common :op="{ id: 'back', title: '后端笔记' }">
         <Work
           class="work"
           :op="backend"
         />
       </common>
-      <common :op="{ id: 'note', title: '运维笔记' }">
+      <common :op="{ id: 'operation', title: '运维笔记' }">
         <Work
           class="work"
           :op="operation"
         />
       </common>
-      <common :op="{ id: 'note', title: 'web其他' }">
+      <common :op="{ id: 'other', title: 'web其他' }">
         <Work
           class="work"
           :op="other"
@@ -67,6 +67,7 @@ export default {
       frontend: "",
       backend: "",
       operation: "",
+      other: ""
     };
   },
   methods: {

@@ -26,8 +26,8 @@
       "name": "git",
       "items": [
         {
-          "title": "jenkins",
-          "skill": "Vuepress",
+          "title": "git",
+          "skill": "git",
           "img": "web-vue",
           "link": "/web-git/"
         }
