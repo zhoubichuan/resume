@@ -12,6 +12,7 @@
       <el-row
         :gutter="24"
         style="margin: 0"
+        v-if="activeName == '_' +current"
       >
         <el-col
           :xs="12"
@@ -27,9 +28,7 @@
             class="box"
             :href="item2.link"
           >
-            <iframe
-              :src="`/${item2.img}/`"
-            />
+            <iframe :src="`/${item2.img}/`" />
             <div class="mask">
               <p>{{ item2.title }}</p>
               <p>技术要点：{{ item2.skill }}</p>
@@ -49,11 +48,13 @@ export default {
   },
   data() {
     return {
-      activeName: "_0",
+      activeName: "0",
+      current: '0'
     };
   },
   methods: {
     handleClick(tab, event) {
+      this.current = tab.index
       console.log(tab, event);
     },
   },

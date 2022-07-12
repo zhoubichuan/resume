@@ -67,7 +67,7 @@ export default {
       frontend: "",
       backend: "",
       operation: "",
-      other: ""
+      other: "",
     };
   },
   methods: {
