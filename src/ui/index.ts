@@ -75,6 +75,8 @@ import {
   // Message,
   Notification,
 } from "element-ui";
+import WebEcharts from 'web-echarts' // eslint-disable-line
+
 import "element-ui/lib/theme-chalk/index.css";
 const coms = [
   Pagination,
@@ -153,7 +155,6 @@ const coms = [
   // Message,
   // Notification,
 ];
-
 export default {
   install(Vue: any) {
     // Vue.use(Loading.directive)
@@ -167,5 +168,6 @@ export default {
     // Vue.prototype.$prompt = MessageBox.prompt
     // Vue.prototype.$notify = Notification
     // Vue.prototype.$message = Message
+    Vue.use(WebEcharts)
   },
 };

@@ -50,6 +50,7 @@ module.exports = {
     config.resolve.alias
       .set("@", resolve("src"))
       .set('assets',resolve('src/assets'))
+      .set('views',resolve('src/views'))
       .set("static", resolve("static"))
 
     // 压缩图片
@@ -152,6 +153,13 @@ module.exports = {
         libraryTarget: "umd",
         jsonpFunction: `webpackJsonp_${name}`,
       },
+      plugins:[
+        new webpack.DllReferencePlugin({
+          manifest: path.resolve(__dirname, "dist", "manifest.json"),
+          // 指定需要用到的 manifest 文件，
+          // webpack 会根据这个 manifest 文件的信息，分析出哪些模块无需打包，直接从另外的文件暴露出来的内容中获取
+        }),
+      ]
     }
     if (isDev) {
       targetobj.plugins = [
