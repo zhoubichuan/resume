@@ -51,7 +51,7 @@ module.exports = {
       .set("@", resolve("src"))
       .set('assets',resolve('src/assets'))
       .set('views',resolve('src/views'))
-      .set("static", resolve("static"))
+      .set("static", resolve("src/static"))
 
     // 压缩图片
     // 需要 npm i -D image-webpack-loader

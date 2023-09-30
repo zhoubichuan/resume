@@ -12,14 +12,19 @@ export default [
   },
   {
     path: "/demo",
-    name: "account",
+    name: "demo",
     component: (): any => import("@/views/demo/index.vue"),
-    children: [
-      {
-        path: "echarts:id",
-        name: "echarts",
-        component: (): any => import("@/views/echarts/index.vue"),
-      }
-    ],
+    // children: [
+    //   {
+    //     path: "echarts",
+    //     name: "echarts",
+    //     component: (): any => import("@/views/echarts/index.vue"),
+    //   }
+    // ],
+  },
+  {
+    path: "/echarts",
+    name: "echarts",
+    component: (): any => import("@/views/echarts/index.vue"),
   },
 ];

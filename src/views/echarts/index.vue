@@ -1,72 +1,49 @@
 <template>
-  <div class="async-component">
-    远程组件
-    <component :is="remote" v-if="remote" v-bind="$attrs" v-on="$listeners" />
+  <div class="demo-page">
+    <div class="handle">
+      <input
+        class="select"
+        type="text"
+        :value="value"
+      >
+      <button @click="handleClick">
+        修改
+      </button>
+    </div>
+    <remoteLoad :url="url" />
   </div>
 </template>
-
-<script>
-import Vue from "vue/dist/vue.common.js";
-import { loadModule } from "vue3-sfc-loader/dist/vue2-sfc-loader.js";
+  <script>
+import remoteLoad from "./remote.vue";
 export default {
-  name: "AsyncComponent",
-  inheritAttrs: false,
-  props: {
-    // 组件url
-    url: {
-      type: String,
-      required: true,
-    },
+  components: {
+    remoteLoad,
   },
   data() {
     return {
-      remote: null,
+      value: "https://zhoubichuan.com/web-echarts/demo/1-2-13-1.vue",
+      url: localStorage.currentMapDemoUrl,
     };
   },
-  watch: {
-    url: {
-      immediate: true,
-      handler(url) {
-        url && this.load(url);
-      },
-    },
-  },
   methods: {
-    // 加载
-    async load(url) {
-      const com = await loadModule(url, {
-        moduleCache: {
-          vue: Vue,
-        },
-        // 获取文件
-        async getFile(url) {
-          const res = await fetch(url);
-          if (!res.ok) {
-            throw Object.assign(new Error(`${res.statusText}  ${url}`), {
-              res,
-            });
-          }
-          return {
-            getContentData: (asBinary) =>
-              asBinary ? res.arrayBuffer() : res.text(),
-          };
-        },
-        // 添加样式
-        addStyle(textContent) {
-          const style = Object.assign(document.createElement("style"), {
-            textContent,
-          });
-          const ref = document.head.getElementsByTagName("style")[0] || null;
-          document.head.insertBefore(style, ref);
-        },
-      });
-      this.remote = com;
+    handleClick() {
+      localStorage.currentMapDemoUrl = this.value;
     },
   },
 };
 </script>
+
 <style>
-.async-component {
+.demo-page {
+  height: 100vh;
   width: 100%;
+  position: relative;
+}
+.handle {
+  position: absolute;
+  left: 0;
+}
+.select{
+    width: 400px;
 }
 </style>

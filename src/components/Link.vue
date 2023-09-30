@@ -4,7 +4,7 @@
       <div class="box-card">
         <el-card>
           <img
-            src="../../static/github.jpg"
+            src="../static/github.jpg"
             alt="图片"
           >
           <h3>我的gitHub：</h3>
@@ -18,7 +18,7 @@
       <div class="box-card">
         <el-card>
           <img
-            src="../../static/juejin.jpg"
+            src="../static/juejin.jpg"
             alt="图片"
           >
           <h3>我的掘金:</h3>
