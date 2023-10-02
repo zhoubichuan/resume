@@ -33,7 +33,8 @@ interface Props{
 function render() {
   // const routerBase = '/resume'
   const router = new VueRouter({
-    base: window.__POWERED_BY_QIANKUN__ ? '/resume' : process.env.BASE_URL,
+    // base: window.__POWERED_BY_QIANKUN__ ? '/resume' : process.env.BASE_URL,注释微前端
+    base: process.env.BASE_URL,
     mode: 'history',
     routes
   })
