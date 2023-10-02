@@ -1,15 +1,15 @@
 <template>
   <div class="demo-page">
-    <div class="handle">
+    <!-- <div class="handle">
       <input
         class="select"
         type="text"
-        :value="value"
+        v-model="value"
       >
       <button @click="handleClick">
         修改
       </button>
-    </div>
+    </div> -->
     <remoteLoad :url="url" />
   </div>
 </template>
@@ -22,7 +22,8 @@ export default {
   data() {
     return {
       value: "https://zhoubichuan.com/web-echarts/demo/1-2-13-1.vue",
-      url: localStorage.currentMapDemoUrl,
+      // url: localStorage.currentMapDemoUrl,
+      url: location.search.replace("?", ""),
     };
   },
   methods: {
@@ -43,7 +44,7 @@ export default {
   position: absolute;
   left: 0;
 }
-.select{
-    width: 400px;
+.select {
+  width: 400px;
 }
 </style>
