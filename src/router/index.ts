@@ -8,7 +8,7 @@ export default [
   {
     path: "/",
     name: "Home",
-    component: Index,
+    component: (): any => import("@/views/echarts/index.vue")
   },
   {
     path: "/demo",
