@@ -13,16 +13,15 @@ jobs:
     # 服务器环境：最新版 Ubuntu
     runs-on: ubuntu-latest
     steps:
-      # 拉取代码
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v1
+      - name: Install Node.js
+        uses: actions/setup-node@v1
         with:
-          persist-credentials: false
-
-      # 生成静态文件
-      - name: Build
-        run: npm install && npm run build
-
+          node-version: "16.5.0"
+      - name: Install npm dependencies
+        run: npm install
+      - name: Run build task
+        run: npm run build
       # 部署到 GitHub Pages
       - name: Deploy
         # 使用别人写好的一个 action
