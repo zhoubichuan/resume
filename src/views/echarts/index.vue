@@ -23,7 +23,9 @@ export default {
     return {
       value: "https://zhoubichuan.com/web-echarts/demo/1-2-13-1.vue",
       // url: localStorage.currentMapDemoUrl,
-      url: location.search.replace("?", ""),
+      url:
+        "https://zhoubichuan.com/web-echarts/demo/" +
+        location.search.replace("?", ""),
     };
   },
   methods: {
