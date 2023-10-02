@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "name": "javascript",
+      "items": [
+        {
+          "title": "html",
+          "skill": "html",
+          "img": "web-html",
+          "link": "/web-html/"
+        },
+        {
+          "title": "css",
+          "skill": "css",
+          "img": "web-css",
+          "link": "/web-css/"
+        },
+        {
+          "title": "javascript",
+          "skill": "javascript",
+          "img": "web-javascript",
+          "link": "/web-javascript/"
+        }
+      ]
+    },
+    {
+      "name": "vue",
+      "items": [
+        {
+          "title": "vue2.x",
+          "skill": "vue",
+          "img": "web-vue",
+          "link": "/web-vue/"
+        },
+        {
+          "title": "vue3.x",
+          "skill": "vue3",
+          "img": "web-vue",
+          "link": "/web-vue/"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "items": [
+        {
+          "title": "web-react",
+          "skill": "react",
+          "img": "web-react",
+          "link": "/web-react/"
+        }
+      ]
+    },
+    {
+      "name": "打包工具",
+      "items": [
+        {
+          "title": "webpack",
+          "skill": "webpack",
+          "img": "web-webpack",
+          "link": "/web-webpack/"
+        },
+        {
+          "title": "vite",
+          "skill": "vite",
+          "img": "web-vite",
+          "link": "/web-vite/"
+        }
+      ]
+    },
+    {
+      "name": "前端地图",
+      "items": [
+        {
+          "title": "openlayers",
+          "skill": "openlayers",
+          "img": "web-openlayers",
+          "link": "/web-openlayers/"
+        },
+        {
+          "title": "cesium",
+          "skill": "cesium",
+          "img": "web-cesium",
+          "link": "/web-cesium/"
+        }
+      ]
+    },
+    {
+      "name": "webgl",
+      "items": [
+        {
+          "title": "webgl",
+          "skill": "webgl",
+          "img": "web-webgl",
+          "link": "/web-webgl/"
+        },
+        {
+          "title": "three.js",
+          "skill": "three.js",
+          "img": "web-three",
+          "link": "/web-three/"
+        },
+        {
+          "title": "d3.js",
+          "skill": "d3.js",
+          "img": "web-d3",
+          "link": "/web-d3/"
+        }
+      ]
+    }
+  ]
+}

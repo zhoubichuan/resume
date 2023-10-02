@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "name": "nginx",
+      "items": [
+        {
+          "title": "nginx",
+          "skill": "javaScript+css",
+          "img": "web-javaScript",
+          "link": "/web-nginx/"
+        }
+      ]
+    },
+    {
+      "name": "jenkins",
+      "items": [
+        {
+          "title": "jenkins",
+          "skill": "Vuepress",
+          "img": "web-vue",
+          "link": "/web-jenkins/"
+        }
+      ]
+    },
+    {
+      "name": "gitlab",
+      "items": [
+        {
+          "title": "gitlab",
+          "skill": "Vuepress",
+          "img": "web-react",
+          "link": "/web-gitlab/"
+        }
+      ]
+    },
+    {
+      "name": "linux",
+      "items": [
+        {
+          "title": "web-note",
+          "skill": "Vuepress",
+          "img": "web-note",
+          "link": "/web-node/"
+        }
+      ]
+    },
+    {
+      "name": "devops",
+      "items": [
+        {
+          "title": "devops",
+          "skill": "Vuepress",
+          "img": "web-express",
+          "link": "/web-devops/"
+        }
+      ]
+    }
+  ]
+}

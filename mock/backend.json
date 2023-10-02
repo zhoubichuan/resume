@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "name": "后端语言",
+      "items": [
+        {
+          "title": "node",
+          "skill": "node",
+          "img": "web-note",
+          "link": "/web-node/"
+        },
+        {
+          "title": "java",
+          "skill": "java",
+          "img": "web-java",
+          "link": "/web-java/"
+        }
+      ]
+    },
+    {
+      "name": "后端框架",
+      "items": [
+        {
+          "title": "express",
+          "skill": "Vuepress",
+          "img": "web-express",
+          "link": "/web-express/"
+        },
+        {
+          "title": "koa",
+          "skill": "Vuepress",
+          "img": "web-koa",
+          "link": "/web-koa/"
+        },
+        {
+          "title": "egg.js",
+          "skill": "Vuepress",
+          "img": "web-egg",
+          "link": "/web-egg/"
+        }
+      ]
+    },
+    {
+      "name": "数据库",
+      "items": [
+        {
+          "title": "mysql",
+          "skill": "mysql",
+          "img": "web-mysql",
+          "link": "/web-mysql/"
+        },
+        {
+          "title": "redis",
+          "skill": "redis",
+          "img": "web-redis",
+          "link": "/web-redis/"
+        },
+        {
+          "title": "mongodb",
+          "skill": "mongodb",
+          "img": "web-mongodb",
+          "link": "/web-mongodb/"
+        }
+      ]
+    }
+  ]
+}
