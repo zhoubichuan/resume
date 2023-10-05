@@ -38,7 +38,8 @@ export default {
       } else {
         name = name.split("=")[1];
       }
-      // console.log(`http://localhost:3010/web-${type}/demo/${name}`);
+      // type = "openlayers";
+      // name = "1-1-0-0.vue";
       // return `http://localhost:3010/web-${type}/demo/${name}`;
       return `https://zhoubichuan.com/web-${type}/demo/${name}`;
     },
@@ -63,5 +64,9 @@ export default {
 }
 .select {
   width: 400px;
+}
+.map {
+  height: 400px;
+  width: 100%;
 }
 </style>

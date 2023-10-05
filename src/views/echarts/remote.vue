@@ -28,7 +28,6 @@ export default {
     url: {
       immediate: true,
       handler(url) {
-        console.log("--as-dfasdfasdf", url);
         url && this.load(url);
       },
     },
