@@ -21,12 +21,25 @@ export default {
   },
   data() {
     return {
-      value: "https://zhoubichuan.com/web-echarts/demo/1-2-13-1.vue",
+      value: "http://localhost:8090/resume/echarts/?1-2-13-1.vue",
       // url: localStorage.currentMapDemoUrl,
-      url:
-        "https://zhoubichuan.com/web-echarts/demo/" +
-        location.search.replace("?", ""),
     };
+  },
+  computed: {
+    url() {
+      let [name, type] = location.search.replace("?", "").split("&");
+      if (!type) {
+        type = "echarts";
+      } else {
+        type = type.split("=")[1];
+      }
+      if (!name) {
+        name = "echarts";
+      } else {
+        name = name.split("=")[1];
+      }
+      return `https://zhoubichuan.com/web-${type}/demo/${name}`;
+    },
   },
   methods: {
     handleClick() {
