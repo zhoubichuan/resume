@@ -1,4 +1,4 @@
-import request from "@/request";
+import request from "@/util/request";
 export function getFrontendNote(data: any): any {
   return request({
     url: "./mock/frontend.json",
@@ -26,14 +26,4 @@ export function getOtherNote(data: any): any {
     method: "get",
     params: data,
   });
-}
-export function getMap(index = 1) {
-  return request({
-    url: `https://zhoubichuan.com/antdpro-express/api/list/data/${index}?current=1&pageSize=2000`,
-    method: "get",
-  });
-  // return request({
-  //   url: "mock/map" + index + ".json",
-  //   method: "get",
-  // });
 }

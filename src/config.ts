@@ -1,6 +1,6 @@
 import * as api from '@/api'
 
-import service from '@/request'
+import service from '@/util/request'
 import * as echarts from 'echarts'
 import * as china from './static/json/china.json'
 import * as china2 from './static/json/china2.json'

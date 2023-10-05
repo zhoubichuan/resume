@@ -11,13 +11,13 @@ import i18n from "./i18n";
 import "moment/locale/zh-cn";
 import directive from "./directive";
 import filter from "./filter";
-import utils from "./utils";
+import util from "./util";
 import config from '@/config'
 import VueRouter from "vue-router";
 
 Vue.use(directive);
 Vue.use(filter);
-Vue.use(utils);
+Vue.use(util);
 Vue.prototype.$log = console.log;
 // Vue.prototype.$_ = _
 Vue.prototype.$moment = moment;
