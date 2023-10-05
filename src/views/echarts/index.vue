@@ -27,7 +27,7 @@ export default {
   },
   computed: {
     url() {
-      let [name, type] = location.search.replace("?", "").split("&");
+      let [type, name] = location.search.replace("?", "").split("&");
       if (!type) {
         type = "echarts";
       } else {
@@ -38,6 +38,8 @@ export default {
       } else {
         name = name.split("=")[1];
       }
+      // console.log(`http://localhost:3010/web-${type}/demo/${name}`);
+      // return `http://localhost:3010/web-${type}/demo/${name}`;
       return `https://zhoubichuan.com/web-${type}/demo/${name}`;
     },
   },
