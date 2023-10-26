@@ -19,4 +19,7 @@ export default {
     padding: 0;
   }
 }
+body{
+  background: url('/bg.svg') 50%/cover no-repeat;
+}
 </style>

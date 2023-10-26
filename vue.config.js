@@ -14,9 +14,9 @@ function resolve(dir) {
 }
 
 module.exports = {
-  assetsDir: "dist",
+  assetsDir: "resume",
   publicPath: "/resume/",
-  outputDir:'resume',
+  outputDir: 'resume',
   runtimeCompiler: true,
   lintOnSave: false,
   transpileDependencies: ["vue-particles"],
@@ -49,8 +49,8 @@ module.exports = {
     // 配置别名
     config.resolve.alias
       .set("@", resolve("src"))
-      .set('assets',resolve('src/assets'))
-      .set('views',resolve('src/views'))
+      .set('assets', resolve('src/assets'))
+      .set('views', resolve('src/views'))
       .set("static", resolve("src/static"))
 
     // 压缩图片
@@ -100,11 +100,11 @@ module.exports = {
       .test(/\.(png|jpg|gif)$/i)
       .use("url-loader")
       .loader("url-loader")
-      // .tap((options) =>
-      //   merge(options, {
-      //     // limit: 5120,
-      //   })
-      // )
+    // .tap((options) =>
+    //   merge(options, {
+    //     // limit: 5120,
+    //   })
+    // )
 
     config.module
       .rule("image")
@@ -153,7 +153,7 @@ module.exports = {
         libraryTarget: "umd",
         jsonpFunction: `webpackJsonp_${name}`,
       },
-      plugins:[
+      plugins: [
         new webpack.DllReferencePlugin({
           manifest: path.resolve(__dirname, "dist", "manifest.json"),
           // 指定需要用到的 manifest 文件，
