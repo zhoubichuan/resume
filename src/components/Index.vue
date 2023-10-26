@@ -8,36 +8,11 @@
       />
       <about-me />
       <skill />
-      <common :op="{ id: 'project', title: 'web项目' }">
-        <Work
-          class="work"
-          :op="project"
-        />
-      </common>
-      <common :op="{ id: 'front', title: '前端笔记' }">
-        <Work
-          class="work"
-          :op="frontend"
-        />
-      </common>
-      <common :op="{ id: 'back', title: '后端笔记' }">
-        <Work
-          class="work"
-          :op="backend"
-        />
-      </common>
-      <common :op="{ id: 'operation', title: '运维笔记' }">
-        <Work
-          class="work"
-          :op="operation"
-        />
-      </common>
-      <common :op="{ id: 'other', title: 'web其他' }">
-        <Work
-          class="work"
-          :op="other"
-        />
-      </common>
+      <skill2 />
+      <skill3 />
+      <skill4 />
+      <project />
+      <note />
       <!-- <Experience /> -->
       <link-me />
       <message />
@@ -50,6 +25,11 @@ import NavItem from "./Nav";
 import Introduce from "@/components/Introduce";
 import AboutMe from "@/components/AboutMe";
 import Skill from "@/components/Skill";
+import Skill2 from "@/components/Skill2";
+import Skill3 from "@/components/Skill3";
+import Skill4 from "@/components/Skill4";
+import Project from "@/components/Project";
+import Note from "@/components/Note";
 // import Experience from "@/components/experience";
 import LinkMe from "@/components/Link";
 import Message from "@/components/Message";
@@ -114,6 +94,10 @@ export default {
     Introduce,
     AboutMe,
     Skill,
+    Skill2,
+    Skill3,
+    Skill4,
+    Project,
     NavItem,
     LinkMe,
     Message,

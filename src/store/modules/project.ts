@@ -13,90 +13,62 @@ export default {
           {
             title: "企业网站",
             skill: "javaScript+css",
-            img: "website",
-            link:"/website/",
+            link: "https://zhoubichuan.github.io/website/",
           },
           {
             title: "后台管理系统",
             skill: "jQuery+BootStrapt",
-            img: "managment",
-            link:"/managment/",
+            link: "https://zhoubichuan.github.io/managment/",
           },
           {
             title: "flybird游戏",
             skill: "canvas+css",
-            img: "fly-bird",
-            link:"/flybird/",
+            link: "https://zhoubichuan.github.io/flybird/",
           },
           {
             title: "微信跳一跳游戏",
             skill: "webGL(three.js)+css",
-            img: "jump",
-            link: "/jump/",
-          },
-          {
-            title: "微信小程序",
-            skill: "---",
-            link: "wwww.123.com",
-          },
-          {
-            title: "微信公众号",
-            skill: "---",
-            link: "wwww.123.com",
-          },
+            link: "https://zhoubichuan.github.io/jump/",
+          }
         ],
       },
       {
-        name: "Vue",
+        name: "vue",
         items: [
           {
             title: "微信",
             skill: "Vue+less",
-            img: "Project-Vue-weChat",
-            link: "/Project-Vue-weChat/",
+            link: "https://zhoubichuan.github.io/Project-Vue-weChat/",
           },
           {
             title: "饿了么",
-            img: "elesell",
             skill: "Vue+less",
             link: "/elesell",
           },
           {
             title: "点餐系统",
-            img: "order",
             skill: "Vue+less",
             link: "/order/",
           },
         ],
       },
       {
-        name: "React",
+        name: "react",
         items: [
           {
             title: "zhufengCourseApp",
-            img: "classroom",
             skill: "React+TS+less",
             link: "/classroom/",
           },
           {
             title: "weChatApp",
-            img: "Project-React-weChat",
             skill: "React+less",
             link: "http://zhoubichuan.github.io/Project-React-weChat",
           },
         ],
       },
       {
-        name: "Angular",
-        items: [
-          {
-            title: "珠峰课堂",
-            link: "/Project-React.TS-app/",
-          },
-        ],
-      },
-      {
-        name: "node.js",
+        name: "node",
         items: [
           {
             title: "CMS系统",
