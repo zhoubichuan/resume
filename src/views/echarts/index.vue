@@ -21,7 +21,7 @@ export default {
   },
   data() {
     return {
-      value: "http://localhost:8090/resume/echarts/?1-2-13-1.vue",
+      value: "http://localhost:8090/resume/echarts/?type=echarts&name=1-2-13-1.vue",
       // url: localStorage.currentMapDemoUrl,
     };
   },
@@ -40,7 +40,7 @@ export default {
       }
       // type = "openlayers";
       // name = "1-1-0-0.vue";
-      // return `http://localhost:3010/web-${type}/demo/${name}`;
+      // return `http://localhost:3009/web-${type}/demo/${name}`;
       return `https://zhoubichuan.com/web-${type}/demo/${name}`;
     },
   },
