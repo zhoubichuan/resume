@@ -12,6 +12,9 @@ export default {
 
 <style lang="scss">
 .resume-app {
+  height: 100%;
+  width: 100%;
+  position: absolute;
   li {
     list-style: none;
   }
@@ -20,6 +23,6 @@ export default {
   }
 }
 body{
-  background: url('/bg.svg') 50%/cover no-repeat;
+  // background: url('/bg.svg') 50%/cover no-repeat;
 }
 </style>
