@@ -13,11 +13,11 @@ export default [
   {
     path: "/demo",
     name: "demo",
-    component: (): any => import("@/views/demo/index.vue"),
+    component: (): any => import("@/views/echarts/index.vue"),
   },
   {
-    path: "/echarts",
-    name: "echarts",
-    component: (): any => import("@/views/echarts/index.vue"),
+    path: "/demourl",
+    name: "demourl",
+    component: (): any => import("@/views/demourl/index.vue"),
   },
 ];

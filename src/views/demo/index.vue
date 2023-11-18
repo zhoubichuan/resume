@@ -1,10 +1,67 @@
 <template>
-  <div>1111</div>
+  <div class="demo-page">
+    <component
+      v-if="comps"
+      :is="comps"
+    />
+  </div>
 </template>
-<script>
+  <script>
 export default {
   data() {
-    return {};
+    return {
+      comps: "",
+    };
+  },
+  mounted() {
+    this.init();
+  },
+  methods: {
+    init() {
+      let [type, name] = location.search.replace("?", "").split("&");
+      if (!type) {
+        type = "echarts";
+      } else {
+        type = type.split("=")[1];
+      }
+      if (!name) {
+        name = "echarts";
+      } else {
+        name = name.split("=")[1];
+      }
+      if (type === "echarts") {
+        // http://localhost:8090/resume/echarts/?type=echarts&name=1-2-13-1.vue
+        // eslint-disable-next-line @typescript-eslint/no-var-requires
+        this.comps = require(`web-echarts/demo/${name}`).default;
+      }
+      // if (type === "openlayers") {
+      //   // eslint-disable-next-line @typescript-eslint/no-var-requires
+      //   this.comps = require(`web-openlayers/demo/${name}`).default;
+      // }
+      // if (type === "cesium") {
+      //   // eslint-disable-next-line @typescript-eslint/no-var-requires
+      //   this.comps = require(`web-cesium/demo/${name}`).default;
+      // }
+    },
   },
 };
 </script>
+
+<style>
+.demo-page {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.handle {
+  position: absolute;
+  left: 0;
+}
+.select {
+  width: 400px;
+}
+.map {
+  height: 400px;
+  width: 100%;
+}
+</style>
