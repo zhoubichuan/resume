@@ -30,7 +30,7 @@ export default {
         name = name.split("=")[1];
       }
       if (type === "echarts") {
-        // http://localhost:8090/resume/echarts/?type=echarts&name=1-2-13-1.vue
+        // http://localhost:8090/resume/demo/?type=echarts&name=1-2-13-1.vue
         // eslint-disable-next-line @typescript-eslint/no-var-requires
         this.comps = require(`web-echarts/demo/${name}`).default;
       }

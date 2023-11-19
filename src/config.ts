@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 import * as api from '@/api'
 
 import service from '@/util/request'
@@ -17,6 +18,10 @@ export default {
     Vue.prototype.$china4 = china4.default
     Vue.prototype.$world = world.default
     Vue.prototype.$world2 = world2.default
+    Vue.prototype.$beijingsvg = require('./static/beijingsvg').default
+    Vue.prototype.$beijingsvg2 = require('./static/beijingsvg2').default
+    Vue.prototype.$zhongguosvg = require('./static/zhongguosvg').default
+    Vue.prototype.$zhongguosvg2 = require('./static/zhongguosvg2').default
     // Vue.prototype.$SliderRight = SliderRight
     Vue.prototype.$service = service
     Vue.prototype.$api = api

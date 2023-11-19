@@ -8,12 +8,12 @@ export default [
   {
     path: "/",
     name: "Home",
-    component: (): any => import("@/views/echarts/index.vue")
+    component: (): any => import("@/views/demo/index.vue")
   },
   {
     path: "/demo",
     name: "demo",
-    component: (): any => import("@/views/echarts/index.vue"),
+    component: (): any => import("@/views/demo/index.vue"),
   },
   {
     path: "/demourl",
