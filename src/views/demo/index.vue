@@ -34,14 +34,14 @@ export default {
         // eslint-disable-next-line @typescript-eslint/no-var-requires
         this.comps = require(`web-echarts/demo/${name}`).default;
       }
-      // if (type === "openlayers") {
-      //   // eslint-disable-next-line @typescript-eslint/no-var-requires
-      //   this.comps = require(`web-openlayers/demo/${name}`).default;
-      // }
-      // if (type === "cesium") {
-      //   // eslint-disable-next-line @typescript-eslint/no-var-requires
-      //   this.comps = require(`web-cesium/demo/${name}`).default;
-      // }
+      if (type === "openlayers") {
+        // eslint-disable-next-line @typescript-eslint/no-var-requires
+        this.comps = require(`web-openlayers/demo/${name}`).default;
+      }
+      if (type === "cesium") {
+        // eslint-disable-next-line @typescript-eslint/no-var-requires
+        this.comps = require(`web-cesium/demo/${name}`).default;
+      }
     },
   },
 };
