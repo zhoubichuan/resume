@@ -76,7 +76,7 @@ import {
   Notification,
 } from "element-ui";
 import WebEcharts from 'web-echarts' // eslint-disable-line
-
+import WebOpenlayers from 'web-openlayers' // eslint-disable-line
 import "element-ui/lib/theme-chalk/index.css";
 const coms = [
   Pagination,
@@ -169,5 +169,6 @@ export default {
     // Vue.prototype.$notify = Notification
     // Vue.prototype.$message = Message
     Vue.use(WebEcharts)
+    Vue.use(WebOpenlayers)
   },
 };
