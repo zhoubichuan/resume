@@ -23,7 +23,7 @@ export default {
     Vue.prototype.$zhongguosvg = require('./static/zhongguosvg').default
     Vue.prototype.$zhongguosvg2 = require('./static/zhongguosvg2').default
     // Vue.prototype.$SliderRight = SliderRight
-    Vue.prototype.$service = service
+    Vue.prototype.$axios = Vue.prototype.$service = service
     Vue.prototype.$api = api
     Vue.config.productionTip = false
     Vue.prototype.$log = console.log
