@@ -11,7 +11,7 @@
       <skill2 />
       <skill3 />
       <skill4 />
-      <project />
+      <!-- <project /> -->
       <note />
       <!-- <Experience /> -->
       <link-me />
@@ -28,13 +28,12 @@ import Skill from "@/components/Skill";
 import Skill2 from "@/components/Skill2";
 import Skill3 from "@/components/Skill3";
 import Skill4 from "@/components/Skill4";
-import Project from "@/components/Project";
-import Note from "@/components/Note";
+// import Project from "@/components/Project";
 // import Experience from "@/components/experience";
 import LinkMe from "@/components/Link";
 import Message from "@/components/Message";
-import Common from "../common/Common";
-import Work from "../common/Work";
+// import Common from "../common/Common";
+// import Work from "../common/Work";
 export default {
   name: "Index",
   data() {
@@ -97,12 +96,12 @@ export default {
     Skill2,
     Skill3,
     Skill4,
-    Project,
+    // Project,
     NavItem,
     LinkMe,
     Message,
-    Common,
-    Work,
+    // Common,
+    // Work,
   },
 };
 </script>

@@ -1,6 +1,5 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Index from "@/components/Index.vue";
 
 Vue.use(Router);
 
@@ -8,7 +7,7 @@ export default [
   {
     path: "/",
     name: "Home",
-    component: (): any => import("@/views/demo/index.vue")
+    component: (): any => import("@/components/Index.vue"),
   },
   {
     path: "/demo",

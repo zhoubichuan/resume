@@ -14,7 +14,7 @@ function resolve(dir) {
 }
 
 module.exports = {
-  assetsDir: "resume",
+  assetsDir: "./",
   publicPath: "/resume/",
   outputDir: 'resume',
   runtimeCompiler: true,
