@@ -27,13 +27,14 @@ Vue.use(UI);
 Vue.use(config)
 Vue.config.productionTip = false;
 let app: any = null
-interface Props{
+interface Props {
   routerBase: string
 }
+console.log(process.env.BASE_URL, ' process.env.BASE_URL,')
 function render() {
   // const routerBase = '/resume'
   const router = new VueRouter({
-    base: window.__POWERED_BY_QIANKUN__ ? '/resume' : process.env.BASE_URL,
+    base: '/resume',
     mode: 'history',
     routes
   })

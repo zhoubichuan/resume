@@ -1,11 +1,12 @@
 <template>
   <el-container>
     <el-main>
+      <router-link
+        :to="{ path: '/demo/?type=echarts&name=1-2-13-1.vue' }"
+        >1-2-13-1.vue</router-link
+      >
       <introduce />
-      <nav-item
-        @stopScoll="isStopScoll"
-        :class="navStop ? 'navStop' : ''"
-      />
+      <nav-item @stopScoll="isStopScoll" :class="navStop ? 'navStop' : ''" />
       <about-me />
       <skill />
       <skill2 />

@@ -6,7 +6,7 @@ Vue.use(Router);
 export default [
   {
     path: "/",
-    name: "Home",
+    name: "home",
     component: (): any => import("@/components/Index.vue"),
   },
   {
