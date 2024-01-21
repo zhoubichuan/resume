@@ -6,13 +6,17 @@ Vue.use(Router);
 export default [
   {
     path: "/",
+    component: (): any => import("@/views/demo/index.vue"),
+  },
+  {
+    path: "/home",
     name: "home",
     component: (): any => import("@/components/Index.vue"),
   },
   {
     path: "/demo",
     name: "demo",
-    component: (): any => import("@/views/demo/index.vue"),
+    redirect: "/",
   },
   {
     path: "/demourl",
