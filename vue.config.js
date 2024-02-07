@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const { name } = require("./package.json")
 const lodash = require("lodash")
 const path = require("path")
@@ -5,7 +6,7 @@ const merge = require("webpack-merge")
 const CompressionWebpackPlugin = require("compression-webpack-plugin") // 开启gzip压缩， 按需引用
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin
 const webpack = require("webpack")
-
+const px2rem = require('postcss-px2rem')
 const isDev = process.env.NODE_ENV === "dev"
 console.error(process.env.NODE_ENV, "process.env.NODE_ENV ")
 
@@ -51,10 +52,10 @@ module.exports = {
       .set("@", resolve("src"))
       .set('assets', resolve('src/assets'))
       .set('views', resolve('src/views'))
-      .set("static", resolve("src/static"))
+      .set("static", resolve("static"))
+      .set("WebEcharts", resolve("web-echarts/components"))
 
-    // 压缩图片
-    // 需要 npm i -D image-webpack-loader
+    // 压缩图片 需要 npm i -D image-webpack-loader
     config.module
       .rule("images")
       .use("image-webpack-loader")
@@ -100,11 +101,11 @@ module.exports = {
       .test(/\.(png|jpg|gif)$/i)
       .use("url-loader")
       .loader("url-loader")
-    // .tap((options) =>
-    //   merge(options, {
-    //     // limit: 5120,
-    //   })
-    // )
+      .tap((options) =>
+        merge(options, {
+          limit: 5120,
+        })
+      )
 
     config.module
       .rule("image")
@@ -143,10 +144,6 @@ module.exports = {
    * 使用整体替换来修改配置
    */
   configureWebpack: () => {
-    //提供全局的变量，在模块中使用无需用require引入
-    new webpack.ProvidePlugin({
-      _: lodash,
-    })
     let targetobj = {
       output: {
         library: `${name}-[name]`,
@@ -154,25 +151,27 @@ module.exports = {
         jsonpFunction: `webpackJsonp_${name}`,
       },
       plugins: [
-        new webpack.DllReferencePlugin({
-          manifest: path.resolve(__dirname, "dist", "manifest.json"),
-          // 指定需要用到的 manifest 文件，
-          // webpack 会根据这个 manifest 文件的信息，分析出哪些模块无需打包，直接从另外的文件暴露出来的内容中获取
+        //提供全局变量，在模块中使用无需用require引入
+        new webpack.ProvidePlugin({
+          _: lodash,
         }),
+        // 动态链接库：指定需要用到的 manifest 文件，webpack 会根据这个 manifest 文件的信息，分析出哪些模块无需打包，直接从另外的文件暴露出来的内容中获取
+        // new webpack.DllReferencePlugin({
+        //   manifest: path.resolve(__dirname, "dist", "manifest.json"),
+        // }),
       ]
     }
     if (isDev) {
-      targetobj.plugins = [
+      targetobj.plugins.concat([
         // 分析各种包的大小
         new webpack.DefinePlugin({
           "process.env": {
             NODE_ENV: JSON.stringify(process.env.NODE_ENV),
           },
         }),
-      ]
-      return targetobj
+      ])
     } else {
-      targetobj.plugins = [
+      targetobj.plugins.concat([
         // 需要 npm i -D compression-webpack-plugin
         new CompressionWebpackPlugin({
           filename: "[path].gz[query]",
@@ -181,9 +180,9 @@ module.exports = {
           threshold: 10240,
           minRatio: 0.8,
         }),
-      ]
-      return targetobj
+      ])
     }
+    return targetobj
   },
   css: {
     extract: true,
@@ -197,6 +196,14 @@ module.exports = {
           primary: "#fff",
         },
       },
+      postcss: {
+        plugins: [
+          px2rem({
+            // 基准大小 baseSize，需要和rem.js中相同
+            remUnit: 16
+          })
+        ]
+      }
     },
   },
   devServer: {

@@ -1,3 +1,4 @@
+import './rem'
 const util: any = {
   getCurrentTime() {
     return "";

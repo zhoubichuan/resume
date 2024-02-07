@@ -1,0 +1,4 @@
+[submodule "web-echarts"]
+	path = web-echarts
+	url = https://gitee.com/zhoubichuan/web-echarts.git
+	branch = master

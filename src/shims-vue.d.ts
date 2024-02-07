@@ -10,7 +10,10 @@ declare module 'web-echarts' {
   // import Vue from 'vue'
   // export default Vue
 }
-
+declare module 'WebEcharts' {
+  // import Vue from 'vue'
+  // export default Vue
+}
 declare module 'web-openlayers' {
   // import Vue from 'vue'
   // export default Vue
