@@ -75,9 +75,10 @@ import {
   // Message,
   Notification,
 } from "element-ui";
-// import WebEcharts from 'web-echarts' // eslint-disable-line
-import WebEcharts from 'WebEcharts' // eslint-disable-line
-import WebOpenlayers from 'web-openlayers' // eslint-disable-line
+// import WebEcharts from 'web-echarts'
+import WebEcharts from 'WebEcharts' 
+// import WebOpenlayers from 'web-openlayers'
+import WebOpenlayers from 'WebOpenlayers' 
 import "element-ui/lib/theme-chalk/index.css";
 const coms = [
   Pagination,

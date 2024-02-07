@@ -37,7 +37,7 @@ export default {
       if (type === "openlayers") {
         // http://localhost:8090/resume/demo/?type=openlayers&name=1-1-0-0.vue
         // eslint-disable-next-line @typescript-eslint/no-var-requires
-        this.comps = require(`web-openlayers/demo/${name}`).default;
+        this.comps = require(`WebOpenlayers/demo/${name}`).default;
       }
       // if (type === "cesium") {
       //   // eslint-disable-next-line @typescript-eslint/no-var-requires

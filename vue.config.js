@@ -54,7 +54,7 @@ module.exports = {
       .set('views', resolve('src/views'))
       .set("static", resolve("static"))
       .set("WebEcharts", resolve("web-echarts/components"))
-
+      .set("WebOpenlayers", resolve("web-openlayers/components"))
     // 压缩图片 需要 npm i -D image-webpack-loader
     config.module
       .rule("images")
