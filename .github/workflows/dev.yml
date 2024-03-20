@@ -8,13 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 切代码到 runner
-      - uses: actions/checkout@v1
+      - name: Checkout repository
+        uses: actions/checkout@v2
         with:
-          submodules: true
+          submodules: recursive
       # 下载 git submodule
-      - uses: srt32/git-actions@v0.0.3
-        with:
-          args: git submodule update --init --recursive
+      - name: Update submodules
+        run: |
+          git submodule update --remote
       # 使用 node 16.5.0
       - name: Install Node.js
         uses: actions/setup-node@v1
