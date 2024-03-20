@@ -1,0 +1,16 @@
+.demo-page {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.handle {
+  position: absolute;
+  left: 0;
+}
+.select {
+  width: 25rem;
+}
+.map {
+  height: 25rem;
+  width: 100%;
+}
