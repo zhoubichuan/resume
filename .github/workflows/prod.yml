@@ -9,7 +9,7 @@ jobs:
     steps:
       # 切代码到 runner
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
         with:
           submodules: recursive
       # 下载 git submodule
