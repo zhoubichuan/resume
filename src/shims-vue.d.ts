@@ -6,6 +6,10 @@ declare module '*.json' {
   const value: any;
   export default value;
 }
+declare module 'echarts-gl' {
+  // import Vue from 'vue'
+  // export default Vue
+}
 declare module 'web-echarts' {
   // import Vue from 'vue'
   // export default Vue
