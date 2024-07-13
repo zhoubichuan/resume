@@ -32,12 +32,12 @@ export default {
       if (type === "echarts") {
         // http://localhost:8090/resume/demo/?type=echarts&name=1-2-13-1.vue
         // eslint-disable-next-line @typescript-eslint/no-var-requires
-        this.comps = require(`WebEcharts/demo/${name}`).default;
+        this.comps = require(`web-echarts/demo/${name}`).default;
       }
       if (type === "openlayers") {
         // http://localhost:8090/resume/demo/?type=openlayers&name=1-1-0-0.vue
         // eslint-disable-next-line @typescript-eslint/no-var-requires
-        this.comps = require(`WebOpenlayers/demo/${name}`).default;
+        this.comps = require(`web-openlayers/demo/${name}`).default;
       }
       // if (type === "cesium") {
       //   // eslint-disable-next-line @typescript-eslint/no-var-requires
