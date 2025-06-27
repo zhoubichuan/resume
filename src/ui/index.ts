@@ -76,9 +76,7 @@ import {
   Notification,
 } from "element-ui";
 import WebEcharts from 'web-echarts'
-// import WebEcharts from 'WebEcharts'
 import WebOpenlayers from 'web-openlayers'
-// import WebOpenlayers from 'WebOpenlayers' 
 import "element-ui/lib/theme-chalk/index.css";
 const coms = [
   Pagination,

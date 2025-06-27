@@ -12,6 +12,9 @@ cnpm install
 
 ```
 npm run dev
+sudo ln -s /Users/zhoubichuan/web-echarts/components /Users/zhoubichuan/resume/web-echarts
+sudo ln -s /Users/zhoubichuan/web-openlayers/components /Users/zhoubichuan/resume/web-openlayers
+sudo ln -s /Users/zhoubichuan/web-cesium/components /Users/zhoubichuan/resume/web-cesium
 ```
 
 - 打包项目

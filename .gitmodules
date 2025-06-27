@@ -1,7 +1,0 @@
-[submodule "web-echarts"]
-	path = web-echarts
-	url = https://gitee.com/zhoubichuan/web-echarts.git
-	branch = master
-[submodule "web-openlayers"]
-	path = web-openlayers
-	url = https://gitee.com/zhoubichuan/web-openlayers.git

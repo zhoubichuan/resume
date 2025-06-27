@@ -6,7 +6,7 @@
     />
   </div>
 </template>
-  <script>
+<script>
 export default {
   data() {
     return {
@@ -32,17 +32,22 @@ export default {
       if (type === "echarts") {
         // http://localhost:8090/resume/demo/?type=echarts&name=1-2-13-1.vue
         // eslint-disable-next-line @typescript-eslint/no-var-requires
-        this.comps = require(`web-echarts/demo/${name}`).default;
+        this.comps =require(`../../../web-echarts/demo/${name}`).default
       }
       if (type === "openlayers") {
         // http://localhost:8090/resume/demo/?type=openlayers&name=1-1-0-0.vue
         // eslint-disable-next-line @typescript-eslint/no-var-requires
-        this.comps = require(`web-openlayers/demo/${name}`).default;
+        // this.comps = require(`@/web-openlayers/demo/${name}`).default;
       }
-      // if (type === "cesium") {
-      //   // eslint-disable-next-line @typescript-eslint/no-var-requires
-      //   this.comps = require(`web-cesium/demo/${name}`).default;
-      // }
+      if (type === "cesium") {
+        // eslint-disable-next-line @typescript-eslint/no-var-requires
+        // this.comps = require(`@/web-cesium/demo/${name}`).default;
+      }
+      if (type === "template") {
+        // http://localhost:8090/resume/demo/?type=openlayers&name=1-1-0-0.vue
+        // eslint-disable-next-line @typescript-eslint/no-var-requires
+        // this.comps = require(`web-template/demo/${name}`).default;
+      }
     },
   },
 };
@@ -54,13 +59,16 @@ export default {
   width: 100%;
   position: relative;
 }
+
 .handle {
   position: absolute;
   left: 0;
 }
+
 .select {
   width: 400px;
 }
+
 .map {
   height: 100%;
   width: 100%;
