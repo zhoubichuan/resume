@@ -7,7 +7,7 @@ const CompressionWebpackPlugin = require("compression-webpack-plugin") // 开启
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin
 const webpack = require("webpack")
 const px2rem = require('postcss-px2rem')
-const isDev = process.env.NODE_ENV === "development"
+const isDev = process.env.NODE_ENV === "dev"
 console.error(process.env.NODE_ENV, "process.env.NODE_ENV ")
 
 function resolve(dir) {
@@ -27,6 +27,7 @@ module.exports = {
   chainWebpack: (config) => {
     config.plugin("html").tap((args) => {
       args[0].title = "我的简历"
+      args[0].versiontime = new Date().toLocaleString()
       return args
     })
     // 修复热更新失效
@@ -53,9 +54,9 @@ module.exports = {
       .set('assets', resolve('src/assets'))
       .set('views', resolve('src/views'))
       .set("static", resolve("static"))
-      .set("@echarts", isDev ? resolve("web-echarts") : resolve("../web-echarts"))
-      .set("@openlayers", isDev ? resolve("web-openlayers") : resolve("../web-openlayers"))
-      .set("@cesium", isDev ? resolve("web-cesium") : resolve("../web-cesium"))
+      .set("@echarts", resolve("web-echarts"))
+      .set("@openlayers", resolve("web-openlayers"))
+      .set("@cesium", resolve("web-cesium"))
     // 压缩图片 需要 npm i -D image-webpack-loader
     config.module
       .rule("images")

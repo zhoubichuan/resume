@@ -10,6 +10,8 @@
     "sit": "vue-cli-service serve --mode sit",
     "uat": "vue-cli-service serve --mode uat",
     "prod": "vue-cli-service serve --mode prod",
+    "scp:uat": "scp -r ./resume/* root@zhoubichuan.com:/usr/src/zhoubichuan/uat/resume/",
+    "scp:prod": "scp -r ./resume/* root@zhoubichuan.com:/usr/src/zhoubichuan/prod/resume/",
     "build": "npm run build:prod",
     "build:dev": "vue-cli-service build --mode dev",
     "build:sit": "vue-cli-service build --mode sit",
