@@ -32,10 +32,4 @@ module.exports = {
       },
     },
   ],
-
-  'extends': [
-    'plugin:vue/strongly-recommended',
-    'eslint:recommended',
-    '@vue/typescript/recommended'
-  ]
 };

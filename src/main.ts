@@ -14,6 +14,11 @@ import filter from "./filter";
 import util from "./util";
 import config from '@/config'
 import VueRouter from "vue-router";
+// 新增QiankunProps定义和函数返回类型
+interface QiankunProps {
+  routerBase?: string;
+  fns?: Array<(msg: string) => void>;
+}
 
 Vue.use(directive);
 Vue.use(filter);
@@ -32,9 +37,8 @@ interface Props {
 }
 console.log(process.env.BASE_URL, ' process.env.BASE_URL,')
 function render() {
-  // const routerBase = '/resume'
   const router = new VueRouter({
-    base: '/resume',
+    base: window.__POWERED_BY_QIANKUN__ ? '/resume/' : '/child/resume',
     mode: 'history',
     routes
   })
@@ -48,14 +52,14 @@ function render() {
 if (!window.__POWERED_BY_QIANKUN__) {
   render()
 }
-export async function bootstrap(props: any) {
+export async function bootstrap(props: QiankunProps): Promise<void> {
   console.log(props)
 }
-export async function mount(props: any) {
+export async function mount(props: QiankunProps): Promise<void> {
   render()
   // props.fns.forEach(fn => fn('加载完成'))
 }
-export async function unmount() {
+export async function unmount(props: QiankunProps): Promise<void> {
   app.$destory()
   console.log(app, 'app')
 }

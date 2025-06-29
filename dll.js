@@ -1,7 +1,9 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 let path = require("path")
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 let webpack = require("webpack")
 module.exports = {
-  mode: "development",
+  mode: "dev",
   entry: {
     react: ["vue", "vuex"], // 这个例子我们打包 react react-dom 作为公共类库
   },

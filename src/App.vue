@@ -5,6 +5,7 @@
 </template>
 
 <script>
+
 export default {
   name: "App",
 };
@@ -21,8 +22,5 @@ export default {
   .el-main {
     padding: 0;
   }
-}
-body{
-  // background: url('/bg.svg') 50%/cover no-repeat;
 }
 </style>

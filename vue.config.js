@@ -4,9 +4,9 @@ const lodash = require("lodash")
 const path = require("path")
 const merge = require("webpack-merge")
 const CompressionWebpackPlugin = require("compression-webpack-plugin") // 开启gzip压缩， 按需引用
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin
+// const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin
 const webpack = require("webpack")
-const px2rem = require('postcss-px2rem')
+// const px2rem = require('postcss-px2rem')
 const isDev = process.env.NODE_ENV === "dev"
 console.error(process.env.NODE_ENV, "process.env.NODE_ENV ")
 
@@ -16,7 +16,7 @@ function resolve(dir) {
 
 module.exports = {
   assetsDir: "./",
-  publicPath: "/resume/",
+  publicPath: "/child/resume/",
   outputDir: 'resume',
   runtimeCompiler: true,
   lintOnSave: false,
@@ -198,14 +198,14 @@ module.exports = {
           primary: "#fff",
         },
       },
-      postcss: {
-        plugins: [
-          px2rem({
-            // 基准大小 baseSize，需要和rem.js中相同
-            remUnit: 16
-          })
-        ]
-      }
+      // postcss: {
+      //   plugins: [
+      //     px2rem({
+      //       // 基准大小 baseSize，需要和rem.js中相同
+      //       remUnit: 16
+      //     })
+      //   ]
+      // }
     },
   },
   devServer: {

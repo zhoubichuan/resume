@@ -1,10 +1,9 @@
 <template>
   <el-container>
     <el-main>
-      <router-link
-        :to="{ path: '/demo/?type=echarts&name=1-2-13-1.vue' }"
-        >1-2-13-1.vue</router-link
-      >
+      <router-link :to="{ path: '/demo/?type=echarts&name=1-2-13-1.vue' }">
+        1-2-13-1.vue
+      </router-link>
       <introduce />
       <nav-item @stopScoll="isStopScoll" :class="navStop ? 'navStop' : ''" />
       <about-me />
@@ -63,31 +62,31 @@ export default {
       (res) => {
         this.project = res.data;
       },
-      (err) => {}
+      (err) => void 0
     );
     this.$api.getFrontendNote({}).then(
       (res) => {
         this.frontend = res.data;
       },
-      (err) => {}
+      (err) => void 0
     );
     this.$api.getBackendNote({}).then(
       (res) => {
         this.backend = res.data;
       },
-      (err) => {}
+      (err) => void 0
     );
     this.$api.getOperationNote({}).then(
       (res) => {
         this.operation = res.data;
       },
-      (err) => {}
+      (err) => void 0
     );
     this.$api.getOtherNote({}).then(
       (res) => {
         this.other = res.data;
       },
-      (err) => {}
+      (err) => void 0
     );
   },
   components: {
@@ -111,12 +110,14 @@ export default {
 .el-main {
   padding: 0 !important;
 }
+
 .navStop {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
 }
+
 .center {
   padding-top: 20px;
   text-align: center;
@@ -143,6 +144,7 @@ export default {
 .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
 }
+
 .center {
   margin-top: 20px;
   text-align: center;
@@ -161,6 +163,7 @@ export default {
   display: table;
   content: "";
 }
+
 .clearfix:after {
   clear: both;
 }

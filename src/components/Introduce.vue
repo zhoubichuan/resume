@@ -2,26 +2,15 @@
   <Common :op="op">
     <div class="main">
       <el-row :gutter="20">
-        <el-col
-          :span="12"
-          :offset="6"
-          style="width: 100%"
-        >
+        <el-col :span="12" :offset="6" style="width: 100%">
           <div class="grid-content bg-purple">
-            <p
-              class="center"
-              v-for="(item, index) in content"
-              :key="index"
-            >
+            <p class="center" v-for="(item, index) in content" :key="index">
               {{ item }}
             </p>
           </div>
         </el-col>
       </el-row>
-      <div
-        id="map"
-        class="map"
-      />
+      <div id="map" class="map" />
     </div>
   </Common>
 </template>
@@ -58,7 +47,7 @@ export default {
         zoom: 12,
       }),
     });
-    getProject().then((res) => {});
+    getProject().then((res) => void 0);
   },
 };
 </script>
@@ -70,10 +59,12 @@ export default {
   text-align: center;
   margin: 0 auto;
 }
+
 .center {
   margin-top: 20px;
   text-align: center;
 }
+
 .photo {
   width: 100px;
   height: 100px;
